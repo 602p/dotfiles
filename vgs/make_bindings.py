@@ -31,7 +31,7 @@ with open("bindings.txt", 'w') as fd:
 			if key!="_title":
 				fd.write("\tbindsym "+key.lower()+" ")
 				if type(member)==list:
-					fd.write("exec bash ~/.i3/pasta.sh \""+member[1]+"\"; mode \"default\"")
+					fd.write("exec bash ~/.i3/pasta.sh \""+member[1].replace(",","")+"\"; mode \"default\"")
 				else:
 					fd.write(" mode \""+get_mode_name(path+key)+"\"")
 				fd.write("\n")

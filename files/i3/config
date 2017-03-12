@@ -183,7 +183,7 @@ mode "$mode_shitpost" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+ mode "$mode_shitpost"
+bindsym $mod+p mode "$mode_shitpost"
 
 #gaps 10
 
@@ -207,278 +207,276 @@ bindsym XF86Calculator workspace Z:py
 exec i3-msg
 
 
-
-
 ###START VGS AUTOGEN###
-mode ">VN - S: Support | D: Driver | W: Where to? | H: Hold vehicle | V: Vehicle ready | C: Covering fire | E: Escort | R: I need a ride" {
+mode ">VSA - T: Turrets | V: Vehicle | S: Sensors | F: Flag | B: Base | G: Generator | A: Attack" {
+    bindsym t exec bash ~/.i3/pasta.sh "I'll attack the enemy turrets."; mode "default"
+    bindsym v exec bash ~/.i3/pasta.sh "I'll attack the enemy vehicle."; mode "default"
+    bindsym s exec bash ~/.i3/pasta.sh "I'll attack the enemy sensors."; mode "default"
+    bindsym f exec bash ~/.i3/pasta.sh "I'll go for the enemy flag."; mode "default"
+    bindsym b exec bash ~/.i3/pasta.sh "I will attack the enemy base."; mode "default"
+    bindsym g exec bash ~/.i3/pasta.sh "I'll attack the enemy generator."; mode "default"
+    bindsym a exec bash ~/.i3/pasta.sh "I will attack."; mode "default"
+
+    bindsym Return mode "default"
+
+    bindsym Escape mode "default"
+}
+mode ">VG - S: Shazbot | N: No | W: Woohoo | H: Hi | R: *Respond | T: *Taunt | Q: Quiet | B: Bye | C: *Compliment | Y: Yes | O: Ooops" {
+    bindsym s exec bash ~/.i3/pasta.sh "SHAZBOT"; mode "default"
+    bindsym n exec bash ~/.i3/pasta.sh "No"; mode "default"
+    bindsym w exec bash ~/.i3/pasta.sh "Woohoo"; mode "default"
+    bindsym h exec bash ~/.i3/pasta.sh "Hi"; mode "default"
+    bindsym r  mode ">VGR - D: Don't know | T: Thanks | W: Wait | A: Any Time"
+    bindsym t  mode ">VGT - T: THAT was graceful! | B: Best you can do? | G: I am the greatest! | A: Awww... | W: When will you learn?"
+    bindsym q exec bash ~/.i3/pasta.sh "Quiet"; mode "default"
+    bindsym b exec bash ~/.i3/pasta.sh "Bye"; mode "default"
+    bindsym c  mode ">VGC - S: Great shot | N: Nice move | G: Good game | A: Awesome | Y: You Rock"
+    bindsym y exec bash ~/.i3/pasta.sh "Yes"; mode "default"
+    bindsym o exec bash ~/.i3/pasta.sh "Ooops"; mode "default"
+
+    bindsym Return mode "default"
+
+    bindsym Escape mode "default"
+}
+mode ">VN - V: Vehicle ready | S: Support | D: Driver | C: Covering fire | W: Where to? | E: Escort | H: Hold vehicle | R: I need a ride" {
+    bindsym v exec bash ~/.i3/pasta.sh "Vehicle ready. Need a ride?"; mode "default"
     bindsym s exec bash ~/.i3/pasta.sh "I need support!"; mode "default"
     bindsym d exec bash ~/.i3/pasta.sh "I need a driver."; mode "default"
-    bindsym w exec bash ~/.i3/pasta.sh "Where to?"; mode "default"
-    bindsym h exec bash ~/.i3/pasta.sh "Hold that vehicle! I'm coming!"; mode "default"
-    bindsym v exec bash ~/.i3/pasta.sh "Vehicle ready. Need a ride?"; mode "default"
     bindsym c exec bash ~/.i3/pasta.sh "Need covering fire."; mode "default"
+    bindsym w exec bash ~/.i3/pasta.sh "Where to?"; mode "default"
     bindsym e exec bash ~/.i3/pasta.sh "I need an escort."; mode "default"
+    bindsym h exec bash ~/.i3/pasta.sh "Hold that vehicle! I'm coming!"; mode "default"
     bindsym r exec bash ~/.i3/pasta.sh "I need a ride"; mode "default"
 
     bindsym Return mode "default"
 
     bindsym Escape mode "default"
 }
-mode ">VR - S: Sensors | G: Generator | V: Vehicle | T: Turrets" {
-    bindsym s exec bash ~/.i3/pasta.sh "Repair our sensors!"; mode "default"
-    bindsym g exec bash ~/.i3/pasta.sh "Repair our generator!"; mode "default"
-    bindsym v exec bash ~/.i3/pasta.sh "Repair the vehicle!"; mode "default"
-    bindsym t exec bash ~/.i3/pasta.sh "Repair our turrets!"; mode "default"
+mode ">VGR - D: Don't know | T: Thanks | W: Wait | A: Any Time" {
+    bindsym d exec bash ~/.i3/pasta.sh "I don't know."; mode "default"
+    bindsym t exec bash ~/.i3/pasta.sh "Thanks"; mode "default"
+    bindsym w exec bash ~/.i3/pasta.sh "Wait"; mode "default"
+    bindsym a exec bash ~/.i3/pasta.sh "Any Time"; mode "default"
 
     bindsym Return mode "default"
 
     bindsym Escape mode "default"
 }
-mode ">VF - S: Secure | D: Defend | G: Give me | T: Take | R: Retrieve | F: I have the flag" {
-    bindsym s exec bash ~/.i3/pasta.sh "Our flag is secure!"; mode "default"
-    bindsym d exec bash ~/.i3/pasta.sh "Defend our flag!"; mode "default"
-    bindsym g exec bash ~/.i3/pasta.sh "Give me the flag!"; mode "default"
-    bindsym t exec bash ~/.i3/pasta.sh "Take the flag from me!"; mode "default"
-    bindsym r exec bash ~/.i3/pasta.sh "Retrieve our flag!"; mode "default"
-    bindsym f exec bash ~/.i3/pasta.sh "I have the flag! "; mode "default"
-
-    bindsym Return mode "default"
-
-    bindsym Escape mode "default"
-}
-mode ">VA - D: Disrupt | G: Generator | V: Vehicle | A: Attack | S: Sensors | R: Reinforce | B: Base | W: Wait | T: Turrets | C: Chase | F: Flag" {
-    bindsym d exec bash ~/.i3/pasta.sh "Disrupt the enemy defense!"; mode "default"
-    bindsym g exec bash ~/.i3/pasta.sh "Destroy the enemy generator!"; mode "default"
-    bindsym v exec bash ~/.i3/pasta.sh "Destroy the enemy vehicle!"; mode "default"
-    bindsym a exec bash ~/.i3/pasta.sh "Attack"; mode "default"
-    bindsym s exec bash ~/.i3/pasta.sh "Destroy the enemy sensors!"; mode "default"
-    bindsym r exec bash ~/.i3/pasta.sh "Reinforce the offense."; mode "default"
-    bindsym b exec bash ~/.i3/pasta.sh "Attack the enemy base!"; mode "default"
-    bindsym w exec bash ~/.i3/pasta.sh "Wait for my signal before attack. "; mode "default"
-    bindsym t exec bash ~/.i3/pasta.sh "Destroy enemy turrets!"; mode "default"
-    bindsym c exec bash ~/.i3/pasta.sh "Chase the enemy flag carrier!"; mode "default"
-    bindsym f exec bash ~/.i3/pasta.sh "Get the enemy flag! "; mode "default"
-
-    bindsym Return mode "default"
-
-    bindsym Escape mode "default"
-}
-mode ">VSD - S: Sensors | D: Defend | B: Base | G: Generator | T: Turrets | V: Vehicle | F: Flag" {
-    bindsym s exec bash ~/.i3/pasta.sh "I'll defend our sensors."; mode "default"
-    bindsym d exec bash ~/.i3/pasta.sh "I will defend."; mode "default"
-    bindsym b exec bash ~/.i3/pasta.sh "I will defend our base."; mode "default"
-    bindsym g exec bash ~/.i3/pasta.sh "I'll defend our generator."; mode "default"
-    bindsym t exec bash ~/.i3/pasta.sh "I'll defend our turrets."; mode "default"
-    bindsym v exec bash ~/.i3/pasta.sh "I'll defend our vehicle."; mode "default"
-    bindsym f exec bash ~/.i3/pasta.sh "I will defend our flag."; mode "default"
-
-    bindsym Return mode "default"
-
-    bindsym Escape mode "default"
-}
-mode ">VGT - B: Best you can do? | W: When will you learn? | G: I am the greatest! | T: THAT was graceful! | A: Awww..." {
-    bindsym b exec bash ~/.i3/pasta.sh "Is that the best you can do?"; mode "default"
-    bindsym w exec bash ~/.i3/pasta.sh "When will you learn?"; mode "default"
-    bindsym g exec bash ~/.i3/pasta.sh "I am the greatest!"; mode "default"
-    bindsym t exec bash ~/.i3/pasta.sh "THAT was graceful!"; mode "default"
-    bindsym a exec bash ~/.i3/pasta.sh "Awww, that's too bad!"; mode "default"
-
-    bindsym Return mode "default"
-
-    bindsym Escape mode "default"
-}
-mode ">VW - V: Vehicle | E: Enemies" {
-    bindsym v exec bash ~/.i3/pasta.sh "Incoming enemy vehicle!"; mode "default"
-    bindsym e exec bash ~/.i3/pasta.sh "Incoming hostiles!"; mode "default"
-
-    bindsym Return mode "default"
-
-    bindsym Escape mode "default"
-}
-mode ">VE - S: Sensors destroyed | D: Disarray | T: Turrets destroyed | G: Generator destroyed | V: Vehicle destroyed" {
-    bindsym s exec bash ~/.i3/pasta.sh "The enemy sensors are destroyed."; mode "default"
-    bindsym d exec bash ~/.i3/pasta.sh "The enemy is in disarray."; mode "default"
-    bindsym t exec bash ~/.i3/pasta.sh "The enemy turrets are destroyed."; mode "default"
-    bindsym g exec bash ~/.i3/pasta.sh "The enemy generator is destroyed."; mode "default"
-    bindsym v exec bash ~/.i3/pasta.sh "The enemy vehicle is destroyed."; mode "default"
-
-    bindsym Return mode "default"
-
-    bindsym Escape mode "default"
-}
-mode ">V - N: *Need | D: *Defend | G: *Global | V: *Very Quick | E: *Enemy | A: *Attack | S: *Self | R: *Repair | B: *Base | W: *Warning | T: *Target | C: *Command | F: *Flag" {
-    bindsym n  mode ">VN - S: Support | D: Driver | W: Where to? | H: Hold vehicle | V: Vehicle ready | C: Covering fire | E: Escort | R: I need a ride"
-    bindsym d  mode ">VD - S: Sensors | B: Base | T: Turrets | M: Me | G: Generator | V: Vehicle | R: Reinforce | C: Flag carrier | E: Entrances | F: Flag"
-    bindsym g  mode ">VG - N: No | H: Hi | Y: Yes | Q: Quiet | S: Shazbot | B: Bye | T: *Taunt | W: Woohoo | O: Ooops | C: *Compliment | R: *Respond"
-    bindsym v  mode ">VV - N: No | D: Don't know | M: Move | H: Help! | Y: Yes | C: Cease fire | S: Sorry | B: Base secure? | W: Wait | T: Thanks | A: Anytime"
-    bindsym e  mode ">VE - S: Sensors destroyed | D: Disarray | T: Turrets destroyed | G: Generator destroyed | V: Vehicle destroyed"
-    bindsym a  mode ">VA - D: Disrupt | G: Generator | V: Vehicle | A: Attack | S: Sensors | R: Reinforce | B: Base | W: Wait | T: Turrets | C: Chase | F: Flag"
-    bindsym s  mode ">VS - D: *Defend | T: *Task | A: *Attack | R: *Repair"
-    bindsym r  mode ">VR - S: Sensors | G: Generator | V: Vehicle | T: Turrets"
-    bindsym b  mode ">VB - S: Secure | C: Clear | E: Enemy in base | R: Retake"
-    bindsym w  mode ">VW - V: Vehicle | E: Enemies"
-    bindsym t  mode ">VT - N: Need | D: Destroyed | B: Base | T: Turret | M: Fire on my target | W: Wait | S: Sensors | V: Vehicle | A: Acquired | F: Flag"
-    bindsym c  mode ">VC - D: Declined | C: Completed | A: Acknowledged | W: Assignment?"
-    bindsym f  mode ">VF - S: Secure | D: Defend | G: Give me | T: Take | R: Retrieve | F: I have the flag"
-
-    bindsym Return mode "default"
-
-    bindsym Escape mode "default"
-}
-mode ">VD - S: Sensors | B: Base | T: Turrets | M: Me | G: Generator | V: Vehicle | R: Reinforce | C: Flag carrier | E: Entrances | F: Flag" {
-    bindsym s exec bash ~/.i3/pasta.sh "Defend our sensors!"; mode "default"
-    bindsym b exec bash ~/.i3/pasta.sh "Defend our base!"; mode "default"
-    bindsym t exec bash ~/.i3/pasta.sh "Defend our turrets!"; mode "default"
-    bindsym m exec bash ~/.i3/pasta.sh "Cover me! "; mode "default"
-    bindsym g exec bash ~/.i3/pasta.sh "Defend our generator! "; mode "default"
-    bindsym v exec bash ~/.i3/pasta.sh "Defend our vehicle!"; mode "default"
-    bindsym r exec bash ~/.i3/pasta.sh "Reinforce our defense!"; mode "default"
-    bindsym c exec bash ~/.i3/pasta.sh "Defend the flag carrier!"; mode "default"
-    bindsym e exec bash ~/.i3/pasta.sh "Defend the entrances!"; mode "default"
-    bindsym f exec bash ~/.i3/pasta.sh "Defend our flag!"; mode "default"
-
-    bindsym Return mode "default"
-
-    bindsym Escape mode "default"
-}
-mode ">VG - N: No | H: Hi | Y: Yes | Q: Quiet | S: Shazbot | B: Bye | T: *Taunt | W: Woohoo | O: Ooops | C: *Compliment | R: *Respond" {
-    bindsym n exec bash ~/.i3/pasta.sh "No"; mode "default"
-    bindsym h exec bash ~/.i3/pasta.sh "Hi"; mode "default"
-    bindsym y exec bash ~/.i3/pasta.sh "Yes"; mode "default"
-    bindsym q exec bash ~/.i3/pasta.sh "Quiet"; mode "default"
-    bindsym s exec bash ~/.i3/pasta.sh "SHAZBOT"; mode "default"
-    bindsym b exec bash ~/.i3/pasta.sh "Bye"; mode "default"
-    bindsym t  mode ">VGT - B: Best you can do? | W: When will you learn? | G: I am the greatest! | T: THAT was graceful! | A: Awww..."
-    bindsym w exec bash ~/.i3/pasta.sh "Woohoo"; mode "default"
-    bindsym o exec bash ~/.i3/pasta.sh "Ooops"; mode "default"
-    bindsym c  mode ">VGC - N: Nice move | S: Great shot | G: Good game | Y: You Rock | A: Awesome"
-    bindsym r  mode ">VGR - D: Don't know | T: Thanks | A: Any Time | W: Wait"
-
-    bindsym Return mode "default"
-
-    bindsym Escape mode "default"
-}
-mode ">VSR - S: Sensors | B: Base | T: Turrets | G: Generator | V: Vehicle" {
-    bindsym s exec bash ~/.i3/pasta.sh "I'll repair our sensors."; mode "default"
-    bindsym b exec bash ~/.i3/pasta.sh "I'll repair our base."; mode "default"
-    bindsym t exec bash ~/.i3/pasta.sh "I'll repair our turrets."; mode "default"
-    bindsym g exec bash ~/.i3/pasta.sh "I'll repair our generator."; mode "default"
-    bindsym v exec bash ~/.i3/pasta.sh "I'll repair the vehicle."; mode "default"
-
-    bindsym Return mode "default"
-
-    bindsym Escape mode "default"
-}
-mode ">VS - D: *Defend | T: *Task | A: *Attack | R: *Repair" {
-    bindsym d  mode ">VSD - S: Sensors | D: Defend | B: Base | G: Generator | T: Turrets | V: Vehicle | F: Flag"
-    bindsym t  mode ">VST - S: Deploy sensors | D: Set up defenses | O: On it | T: Deploy turrets | V: Vehicle | C: Cover | F: Deploy forcefields"
-    bindsym a  mode ">VSA - S: Sensors | B: Base | T: Turrets | G: Generator | V: Vehicle | A: Attack | F: Flag"
-    bindsym r  mode ">VSR - S: Sensors | B: Base | T: Turrets | G: Generator | V: Vehicle"
-
-    bindsym Return mode "default"
-
-    bindsym Escape mode "default"
-}
-mode ">VB - S: Secure | C: Clear | E: Enemy in base | R: Retake" {
-    bindsym s exec bash ~/.i3/pasta.sh "Secure our base!"; mode "default"
-    bindsym c exec bash ~/.i3/pasta.sh "Our base is clear."; mode "default"
-    bindsym e exec bash ~/.i3/pasta.sh "The enemy is in our base."; mode "default"
-    bindsym r exec bash ~/.i3/pasta.sh "Retake our base!"; mode "default"
-
-    bindsym Return mode "default"
-
-    bindsym Escape mode "default"
-}
-mode ">VC - D: Declined | C: Completed | A: Acknowledged | W: Assignment?" {
+mode ">VC - D: Declined | A: Acknowledged | C: Completed | W: Assignment?" {
     bindsym d exec bash ~/.i3/pasta.sh "Declined"; mode "default"
-    bindsym c exec bash ~/.i3/pasta.sh "Completed"; mode "default"
     bindsym a exec bash ~/.i3/pasta.sh "Acknowledged"; mode "default"
+    bindsym c exec bash ~/.i3/pasta.sh "Completed"; mode "default"
     bindsym w exec bash ~/.i3/pasta.sh "What's my assignment?"; mode "default"
 
     bindsym Return mode "default"
 
     bindsym Escape mode "default"
 }
-mode ">VV - N: No | D: Don't know | M: Move | H: Help! | Y: Yes | C: Cease fire | S: Sorry | B: Base secure? | W: Wait | T: Thanks | A: Anytime" {
+mode ">VA - S: Sensors | B: Base | G: Generator | D: Disrupt | W: Wait | R: Reinforce | T: Turrets | V: Vehicle | F: Flag | A: Attack | C: Chase" {
+    bindsym s exec bash ~/.i3/pasta.sh "Destroy the enemy sensors!"; mode "default"
+    bindsym b exec bash ~/.i3/pasta.sh "Attack the enemy base!"; mode "default"
+    bindsym g exec bash ~/.i3/pasta.sh "Destroy the enemy generator!"; mode "default"
+    bindsym d exec bash ~/.i3/pasta.sh "Disrupt the enemy defense!"; mode "default"
+    bindsym w exec bash ~/.i3/pasta.sh "Wait for my signal before attack. "; mode "default"
+    bindsym r exec bash ~/.i3/pasta.sh "Reinforce the offense."; mode "default"
+    bindsym t exec bash ~/.i3/pasta.sh "Destroy enemy turrets!"; mode "default"
+    bindsym v exec bash ~/.i3/pasta.sh "Destroy the enemy vehicle!"; mode "default"
+    bindsym f exec bash ~/.i3/pasta.sh "Get the enemy flag! "; mode "default"
+    bindsym a exec bash ~/.i3/pasta.sh "Attack"; mode "default"
+    bindsym c exec bash ~/.i3/pasta.sh "Chase the enemy flag carrier!"; mode "default"
+
+    bindsym Return mode "default"
+
+    bindsym Escape mode "default"
+}
+mode ">VT - T: Turret | V: Vehicle | M: Fire on my target | S: Sensors | F: Flag | B: Base | D: Destroyed | A: Acquired | W: Wait | N: Need" {
+    bindsym t exec bash ~/.i3/pasta.sh "Target the turret! I'm in position."; mode "default"
+    bindsym v exec bash ~/.i3/pasta.sh "Target the vehicle! I'm in position."; mode "default"
+    bindsym m exec bash ~/.i3/pasta.sh "Fire on my target"; mode "default"
+    bindsym s exec bash ~/.i3/pasta.sh "Target the sensors! I'm in position."; mode "default"
+    bindsym f exec bash ~/.i3/pasta.sh "Target the enemy flag! I'm in position."; mode "default"
+    bindsym b exec bash ~/.i3/pasta.sh "Target the enemy base! I'm in position."; mode "default"
+    bindsym d exec bash ~/.i3/pasta.sh "Target destroyed."; mode "default"
+    bindsym a exec bash ~/.i3/pasta.sh "Target acquired."; mode "default"
+    bindsym w exec bash ~/.i3/pasta.sh "Wait! I'll be in range soon."; mode "default"
+    bindsym n exec bash ~/.i3/pasta.sh "I need a target painted!"; mode "default"
+
+    bindsym Return mode "default"
+
+    bindsym Escape mode "default"
+}
+mode ">VB - S: Secure | E: Enemy in base | C: Clear | R: Retake" {
+    bindsym s exec bash ~/.i3/pasta.sh "Secure our base!"; mode "default"
+    bindsym e exec bash ~/.i3/pasta.sh "The enemy is in our base."; mode "default"
+    bindsym c exec bash ~/.i3/pasta.sh "Our base is clear."; mode "default"
+    bindsym r exec bash ~/.i3/pasta.sh "Retake our base!"; mode "default"
+
+    bindsym Return mode "default"
+
+    bindsym Escape mode "default"
+}
+mode ">VSD - T: Turrets | V: Vehicle | S: Sensors | F: Flag | B: Base | G: Generator | D: Defend" {
+    bindsym t exec bash ~/.i3/pasta.sh "I'll defend our turrets."; mode "default"
+    bindsym v exec bash ~/.i3/pasta.sh "I'll defend our vehicle."; mode "default"
+    bindsym s exec bash ~/.i3/pasta.sh "I'll defend our sensors."; mode "default"
+    bindsym f exec bash ~/.i3/pasta.sh "I will defend our flag."; mode "default"
+    bindsym b exec bash ~/.i3/pasta.sh "I will defend our base."; mode "default"
+    bindsym g exec bash ~/.i3/pasta.sh "I'll defend our generator."; mode "default"
+    bindsym d exec bash ~/.i3/pasta.sh "I will defend."; mode "default"
+
+    bindsym Return mode "default"
+
+    bindsym Escape mode "default"
+}
+mode ">VD - T: Turrets | V: Vehicle | S: Sensors | F: Flag | B: Base | G: Generator | C: Flag carrier | M: Me | E: Entrances | R: Reinforce" {
+    bindsym t exec bash ~/.i3/pasta.sh "Defend our turrets!"; mode "default"
+    bindsym v exec bash ~/.i3/pasta.sh "Defend our vehicle!"; mode "default"
+    bindsym s exec bash ~/.i3/pasta.sh "Defend our sensors!"; mode "default"
+    bindsym f exec bash ~/.i3/pasta.sh "Defend our flag!"; mode "default"
+    bindsym b exec bash ~/.i3/pasta.sh "Defend our base!"; mode "default"
+    bindsym g exec bash ~/.i3/pasta.sh "Defend our generator! "; mode "default"
+    bindsym c exec bash ~/.i3/pasta.sh "Defend the flag carrier!"; mode "default"
+    bindsym m exec bash ~/.i3/pasta.sh "Cover me! "; mode "default"
+    bindsym e exec bash ~/.i3/pasta.sh "Defend the entrances!"; mode "default"
+    bindsym r exec bash ~/.i3/pasta.sh "Reinforce our defense!"; mode "default"
+
+    bindsym Return mode "default"
+
+    bindsym Escape mode "default"
+}
+mode ">VV - M: Move | S: Sorry | N: No | D: Don't know | W: Wait | H: Help! | T: Thanks | B: Base secure? | A: Anytime | C: Cease fire | Y: Yes" {
+    bindsym m exec bash ~/.i3/pasta.sh "Move"; mode "default"
+    bindsym s exec bash ~/.i3/pasta.sh "Sorry"; mode "default"
     bindsym n exec bash ~/.i3/pasta.sh "No"; mode "default"
     bindsym d exec bash ~/.i3/pasta.sh "I don't know."; mode "default"
-    bindsym m exec bash ~/.i3/pasta.sh "Move"; mode "default"
+    bindsym w exec bash ~/.i3/pasta.sh "Wait"; mode "default"
     bindsym h exec bash ~/.i3/pasta.sh "Help!"; mode "default"
-    bindsym y exec bash ~/.i3/pasta.sh "Yes"; mode "default"
-    bindsym c exec bash ~/.i3/pasta.sh "Cease fire"; mode "default"
-    bindsym s exec bash ~/.i3/pasta.sh "Sorry"; mode "default"
+    bindsym t exec bash ~/.i3/pasta.sh "Thanks"; mode "default"
     bindsym b exec bash ~/.i3/pasta.sh "Is our base secure?"; mode "default"
-    bindsym w exec bash ~/.i3/pasta.sh "Wait"; mode "default"
-    bindsym t exec bash ~/.i3/pasta.sh "Thanks"; mode "default"
     bindsym a exec bash ~/.i3/pasta.sh "Anytime"; mode "default"
+    bindsym c exec bash ~/.i3/pasta.sh "Cease fire"; mode "default"
+    bindsym y exec bash ~/.i3/pasta.sh "Yes"; mode "default"
 
     bindsym Return mode "default"
 
     bindsym Escape mode "default"
 }
-mode ">VSA - S: Sensors | B: Base | T: Turrets | G: Generator | V: Vehicle | A: Attack | F: Flag" {
-    bindsym s exec bash ~/.i3/pasta.sh "I'll attack the enemy sensors."; mode "default"
-    bindsym b exec bash ~/.i3/pasta.sh "I will attack the enemy base."; mode "default"
-    bindsym t exec bash ~/.i3/pasta.sh "I'll attack the enemy turrets."; mode "default"
-    bindsym g exec bash ~/.i3/pasta.sh "I'll attack the enemy generator."; mode "default"
-    bindsym v exec bash ~/.i3/pasta.sh "I'll attack the enemy vehicle."; mode "default"
-    bindsym a exec bash ~/.i3/pasta.sh "I will attack."; mode "default"
-    bindsym f exec bash ~/.i3/pasta.sh "I'll go for the enemy flag."; mode "default"
+mode ">VW - E: Enemies | V: Vehicle" {
+    bindsym e exec bash ~/.i3/pasta.sh "Incoming hostiles!"; mode "default"
+    bindsym v exec bash ~/.i3/pasta.sh "Incoming enemy vehicle!"; mode "default"
 
     bindsym Return mode "default"
 
     bindsym Escape mode "default"
 }
-mode ">VGC - N: Nice move | S: Great shot | G: Good game | Y: You Rock | A: Awesome" {
-    bindsym n exec bash ~/.i3/pasta.sh "Nice move"; mode "default"
+mode ">VE - T: Turrets destroyed | V: Vehicle destroyed | S: Sensors destroyed | G: Generator destroyed | D: Disarray" {
+    bindsym t exec bash ~/.i3/pasta.sh "The enemy turrets are destroyed."; mode "default"
+    bindsym v exec bash ~/.i3/pasta.sh "The enemy vehicle is destroyed."; mode "default"
+    bindsym s exec bash ~/.i3/pasta.sh "The enemy sensors are destroyed."; mode "default"
+    bindsym g exec bash ~/.i3/pasta.sh "The enemy generator is destroyed."; mode "default"
+    bindsym d exec bash ~/.i3/pasta.sh "The enemy is in disarray."; mode "default"
+
+    bindsym Return mode "default"
+
+    bindsym Escape mode "default"
+}
+mode ">V - S: *Self | N: *Need | G: *Global | D: *Defend | W: *Warning | E: *Enemy | R: *Repair | T: *Target | V: *Very Quick | F: *Flag | A: *Attack | B: *Base | C: *Command" {
+    bindsym s  mode ">VS - D: *Defend | T: *Task | A: *Attack | R: *Repair"
+    bindsym n  mode ">VN - V: Vehicle ready | S: Support | D: Driver | C: Covering fire | W: Where to? | E: Escort | H: Hold vehicle | R: I need a ride"
+    bindsym g  mode ">VG - S: Shazbot | N: No | W: Woohoo | H: Hi | R: *Respond | T: *Taunt | Q: Quiet | B: Bye | C: *Compliment | Y: Yes | O: Ooops"
+    bindsym d  mode ">VD - T: Turrets | V: Vehicle | S: Sensors | F: Flag | B: Base | G: Generator | C: Flag carrier | M: Me | E: Entrances | R: Reinforce"
+    bindsym w  mode ">VW - E: Enemies | V: Vehicle"
+    bindsym e  mode ">VE - T: Turrets destroyed | V: Vehicle destroyed | S: Sensors destroyed | G: Generator destroyed | D: Disarray"
+    bindsym r  mode ">VR - S: Sensors | V: Vehicle | T: Turrets | G: Generator"
+    bindsym t  mode ">VT - T: Turret | V: Vehicle | M: Fire on my target | S: Sensors | F: Flag | B: Base | D: Destroyed | A: Acquired | W: Wait | N: Need"
+    bindsym v  mode ">VV - M: Move | S: Sorry | N: No | D: Don't know | W: Wait | H: Help! | T: Thanks | B: Base secure? | A: Anytime | C: Cease fire | Y: Yes"
+    bindsym f  mode ">VF - T: Take | S: Secure | F: I have the flag | G: Give me | D: Defend | R: Retrieve"
+    bindsym a  mode ">VA - S: Sensors | B: Base | G: Generator | D: Disrupt | W: Wait | R: Reinforce | T: Turrets | V: Vehicle | F: Flag | A: Attack | C: Chase"
+    bindsym b  mode ">VB - S: Secure | E: Enemy in base | C: Clear | R: Retake"
+    bindsym c  mode ">VC - D: Declined | A: Acknowledged | C: Completed | W: Assignment?"
+
+    bindsym Return mode "default"
+
+    bindsym Escape mode "default"
+}
+mode ">VS - D: *Defend | T: *Task | A: *Attack | R: *Repair" {
+    bindsym d  mode ">VSD - T: Turrets | V: Vehicle | S: Sensors | F: Flag | B: Base | G: Generator | D: Defend"
+    bindsym t  mode ">VST - T: Deploy turrets | V: Vehicle | S: Deploy sensors | O: On it | F: Deploy forcefields | D: Set up defenses | C: Cover"
+    bindsym a  mode ">VSA - T: Turrets | V: Vehicle | S: Sensors | F: Flag | B: Base | G: Generator | A: Attack"
+    bindsym r  mode ">VSR - T: Turrets | V: Vehicle | S: Sensors | B: Base | G: Generator"
+
+    bindsym Return mode "default"
+
+    bindsym Escape mode "default"
+}
+mode ">VSR - T: Turrets | V: Vehicle | S: Sensors | B: Base | G: Generator" {
+    bindsym t exec bash ~/.i3/pasta.sh "I'll repair our turrets."; mode "default"
+    bindsym v exec bash ~/.i3/pasta.sh "I'll repair the vehicle."; mode "default"
+    bindsym s exec bash ~/.i3/pasta.sh "I'll repair our sensors."; mode "default"
+    bindsym b exec bash ~/.i3/pasta.sh "I'll repair our base."; mode "default"
+    bindsym g exec bash ~/.i3/pasta.sh "I'll repair our generator."; mode "default"
+
+    bindsym Return mode "default"
+
+    bindsym Escape mode "default"
+}
+mode ">VGC - S: Great shot | N: Nice move | G: Good game | A: Awesome | Y: You Rock" {
     bindsym s exec bash ~/.i3/pasta.sh "Great shot"; mode "default"
+    bindsym n exec bash ~/.i3/pasta.sh "Nice move"; mode "default"
     bindsym g exec bash ~/.i3/pasta.sh "Good game"; mode "default"
-    bindsym y exec bash ~/.i3/pasta.sh "You Rock"; mode "default"
     bindsym a exec bash ~/.i3/pasta.sh "Awesome"; mode "default"
+    bindsym y exec bash ~/.i3/pasta.sh "You Rock"; mode "default"
 
     bindsym Return mode "default"
 
     bindsym Escape mode "default"
 }
-mode ">VGR - D: Don't know | T: Thanks | A: Any Time | W: Wait" {
-    bindsym d exec bash ~/.i3/pasta.sh "I don't know."; mode "default"
-    bindsym t exec bash ~/.i3/pasta.sh "Thanks"; mode "default"
-    bindsym a exec bash ~/.i3/pasta.sh "Any Time"; mode "default"
-    bindsym w exec bash ~/.i3/pasta.sh "Wait"; mode "default"
+mode ">VR - S: Sensors | V: Vehicle | T: Turrets | G: Generator" {
+    bindsym s exec bash ~/.i3/pasta.sh "Repair our sensors!"; mode "default"
+    bindsym v exec bash ~/.i3/pasta.sh "Repair the vehicle!"; mode "default"
+    bindsym t exec bash ~/.i3/pasta.sh "Repair our turrets!"; mode "default"
+    bindsym g exec bash ~/.i3/pasta.sh "Repair our generator!"; mode "default"
 
     bindsym Return mode "default"
 
     bindsym Escape mode "default"
 }
-mode ">VST - S: Deploy sensors | D: Set up defenses | O: On it | T: Deploy turrets | V: Vehicle | C: Cover | F: Deploy forcefields" {
-    bindsym s exec bash ~/.i3/pasta.sh "I'm deploying sensors."; mode "default"
-    bindsym d exec bash ~/.i3/pasta.sh "I'll set up defenses."; mode "default"
-    bindsym o exec bash ~/.i3/pasta.sh "I'm on it."; mode "default"
+mode ">VF - T: Take | S: Secure | F: I have the flag | G: Give me | D: Defend | R: Retrieve" {
+    bindsym t exec bash ~/.i3/pasta.sh "Take the flag from me!"; mode "default"
+    bindsym s exec bash ~/.i3/pasta.sh "Our flag is secure!"; mode "default"
+    bindsym f exec bash ~/.i3/pasta.sh "I have the flag! "; mode "default"
+    bindsym g exec bash ~/.i3/pasta.sh "Give me the flag!"; mode "default"
+    bindsym d exec bash ~/.i3/pasta.sh "Defend our flag!"; mode "default"
+    bindsym r exec bash ~/.i3/pasta.sh "Retrieve our flag!"; mode "default"
+
+    bindsym Return mode "default"
+
+    bindsym Escape mode "default"
+}
+mode ">VST - T: Deploy turrets | V: Vehicle | S: Deploy sensors | O: On it | F: Deploy forcefields | D: Set up defenses | C: Cover" {
     bindsym t exec bash ~/.i3/pasta.sh "I'm deploying turrets."; mode "default"
     bindsym v exec bash ~/.i3/pasta.sh "I'll get a vehicle ready."; mode "default"
-    bindsym c exec bash ~/.i3/pasta.sh "I'll cover you."; mode "default"
+    bindsym s exec bash ~/.i3/pasta.sh "I'm deploying sensors."; mode "default"
+    bindsym o exec bash ~/.i3/pasta.sh "I'm on it."; mode "default"
     bindsym f exec bash ~/.i3/pasta.sh "I'll deploy forcefields."; mode "default"
+    bindsym d exec bash ~/.i3/pasta.sh "I'll set up defenses."; mode "default"
+    bindsym c exec bash ~/.i3/pasta.sh "I'll cover you."; mode "default"
 
     bindsym Return mode "default"
 
     bindsym Escape mode "default"
 }
-mode ">VT - N: Need | D: Destroyed | B: Base | T: Turret | M: Fire on my target | W: Wait | S: Sensors | V: Vehicle | A: Acquired | F: Flag" {
-    bindsym n exec bash ~/.i3/pasta.sh "I need a target painted!"; mode "default"
-    bindsym d exec bash ~/.i3/pasta.sh "Target destroyed."; mode "default"
-    bindsym b exec bash ~/.i3/pasta.sh "Target the enemy base! I'm in position."; mode "default"
-    bindsym t exec bash ~/.i3/pasta.sh "Target the turret! I'm in position."; mode "default"
-    bindsym m exec bash ~/.i3/pasta.sh "Fire on my target"; mode "default"
-    bindsym w exec bash ~/.i3/pasta.sh "Wait! I'll be in range soon."; mode "default"
-    bindsym s exec bash ~/.i3/pasta.sh "Target the sensors! I'm in position."; mode "default"
-    bindsym v exec bash ~/.i3/pasta.sh "Target the vehicle! I'm in position."; mode "default"
-    bindsym a exec bash ~/.i3/pasta.sh "Target acquired."; mode "default"
-    bindsym f exec bash ~/.i3/pasta.sh "Target the enemy flag! I'm in position."; mode "default"
+mode ">VGT - T: THAT was graceful! | B: Best you can do? | G: I am the greatest! | A: Awww... | W: When will you learn?" {
+    bindsym t exec bash ~/.i3/pasta.sh "THAT was graceful!"; mode "default"
+    bindsym b exec bash ~/.i3/pasta.sh "Is that the best you can do?"; mode "default"
+    bindsym g exec bash ~/.i3/pasta.sh "I am the greatest!"; mode "default"
+    bindsym a exec bash ~/.i3/pasta.sh "Awww that's too bad!"; mode "default"
+    bindsym w exec bash ~/.i3/pasta.sh "When will you learn?"; mode "default"
 
     bindsym Return mode "default"
 
     bindsym Escape mode "default"
 }
-bindsym $mod+v mode ">V - N: *Need | D: *Defend | G: *Global | V: *Very Quick | E: *Enemy | A: *Attack | S: *Self | R: *Repair | B: *Base | W: *Warning | T: *Target | C: *Command | F: *Flag"
+bindsym $mod+v mode ">V - S: *Self | N: *Need | G: *Global | D: *Defend | W: *Warning | E: *Enemy | R: *Repair | T: *Target | V: *Very Quick | F: *Flag | A: *Attack | B: *Base | C: *Command"
 
 ###END VGS AUTOGEN###
