@@ -32,6 +32,7 @@ bindsym $mod+Shift+Return exec konsole -e python3
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym --release $mod+Shift+w exec xkill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
@@ -83,6 +84,19 @@ mode "$mode_layout" {
 }
 
 bindsym $mod+Escape mode "$mode_layout"
+
+set $mode_vimnav HJKL Nav
+mode "$mode_vimnav" {
+    bindsym --release h exec xvkbd -text "\[Left]"
+    bindsym --release l exec xvkbd -text "\[Right]"
+    bindsym --release j exec xvkbd -text "\[Up]"
+    bindsym --release k exec xvkbd -text "\[Down]"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+n mode "$mode_vimnav"
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
