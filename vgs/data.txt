@@ -1,0 +1,123 @@
+VGCA || Awesome || || Global || Compliment
+VGCG || Good game || || Global || Compliment
+VGCN || Nice move || || Global || Compliment
+VGCS || Great shot || || Global || Compliment
+VGCY || You Rock || || Global || Compliment
+VGRA || Any Time || || Global || Respond
+VGRD || Don't know || I don't know. || Global || Respond
+VGRT || Thanks || || Global || Respond
+VGRW || Wait || || Global || Respond
+VGTA || Awww... || Awww, that's too bad! || Global || Taunt
+VGTB || Best you can do? || Is that the best you can do? || Global || Taunt
+VGTG || I am the greatest! ||  || Global || Taunt
+VGTT || THAT was graceful! ||  || Global || Taunt
+VGTW || When will you learn? ||  || Global || Taunt
+VGY || Yes ||  || Global ||
+VGN || No ||  || Global ||
+VGH || Hi ||  || Global ||
+VGB || Bye ||  || Global ||
+VGO || Ooops ||  || Global ||
+VGQ || Quiet||  || Global ||
+VGS || Shazbot ||  SHAZBOT  || Global ||
+VGW || Woohoo ||  || Global ||
+VAA || Attack || || Attack ||
+VAB || Base || Attack the enemy base! || Attack ||
+VAC || Chase || Chase the enemy flag carrier! || Attack ||
+VAD || Disrupt || Disrupt the enemy defense! || Attack ||
+VAF || Flag || Get the enemy flag! ''Attack the enemy flag. This generally means the Heavy Offence should target the enemy flag stand as a capper is coming in for a run and needs a clear path.'' || Attack ||
+VAG || Generator || Destroy the enemy generator! || Attack ||
+VAR || Reinforce || Reinforce the offense. || Attack ||
+VAS || Sensors || Destroy the enemy sensors! || Attack ||
+VAT || Turrets || Destroy enemy turrets! || Attack ||
+VAV || Vehicle || Destroy the enemy vehicle! || Attack ||
+VAW || Wait || Wait for my signal before attack. ''Good time to get in position.'' || Attack ||
+VDB || Base || Defend our base! || Defend ||
+VDC || Flag carrier || Defend the flag carrier! || Defend ||
+VDE || Entrances || Defend the entrances! || Defend ||
+VDF || Flag || Defend our flag! || Defend ||
+VDG || Generator || Defend our generator! ''A way to let the team know somebody is in the generator room.'' || Defend ||
+VDM || Me || Cover me! ''Generally used when you have the flag.'' || Defend ||
+VDR || Reinforce || Reinforce our defense! || Defend ||
+VDS || Sensors || Defend our sensors! || Defend ||
+VDT || Turrets || Defend our turrets! || Defend ||
+VDV || Vehicle || Defend our vehicle! || Defend ||
+VRG || Generator || Repair our generator! || Repair ||
+VRS || Sensors || Repair our sensors! || Repair ||
+VRT || Turrets || Repair our turrets! || Repair ||
+VRV || Vehicle || Repair the vehicle! || Repair ||
+VBC || Clear || Our base is clear. || Base ||
+VBE || Enemy in base || The enemy is in our base. || Base ||
+VBR || Retake || Retake our base! || Base ||
+VBS || Secure || Secure our base! || Base ||
+VCA || Acknowledged ||  || Command ||
+VCC || Completed ||  || Command ||
+VCD || Declined ||  || Command ||
+VCW || Assignment? || What's my assignment? || Command ||
+VED || Disarray || The enemy is in disarray. || Enemy ||
+VEG || Generator destroyed || The enemy generator is destroyed. || Enemy ||
+VES || Sensors destroyed || The enemy sensors are destroyed. || Enemy ||
+VET || Turrets destroyed || The enemy turrets are destroyed. || Enemy ||
+VEV || Vehicle destroyed || The enemy vehicle is destroyed. || Enemy ||
+VFD || Defend || Defend our flag! || Flag ||
+VFF || I have the flag || I have the flag! ''Can indicate you are about to take the flag at high speeds so others don't take it.'' || Flag ||
+VFG || Give me || Give me the flag! || Flag ||
+VFR || Retrieve || Retrieve our flag! || Flag ||
+VFS || Secure || Our flag is secure! || Flag ||
+VFT || Take || Take the flag from me! || Flag ||
+VNC || Covering fire || Need covering fire. || Need ||
+VND || Driver || I need a driver. || Need ||
+VNE || Escort || I need an escort. || Need ||
+VNH || Hold vehicle || Hold that vehicle! I'm coming! || Need ||
+VNR || I need a ride ||  || Need ||
+VNS || Support || I need support! || Need ||
+VNV || Vehicle ready || Vehicle ready. Need a ride? || Need ||
+VNW || Where to? ||  || Need ||
+VSAA || Attack || I will attack. || Self || Attack
+VSAB || Base || I will attack the enemy base. || Self || Attack
+VSAF || Flag || I'll go for the enemy flag. || Self || Attack
+VSAG || Generator || I'll attack the enemy generator. || Self || Attack
+VSAS || Sensors || I'll attack the enemy sensors. || Self || Attack
+VSAT || Turrets || I'll attack the enemy turrets. || Self || Attack
+VSAV || Vehicle || I'll attack the enemy vehicle. || Self || Attack
+VSDB || Base || I will defend our base. || Self || Defend
+VSDD || Defend || I will defend. || Self || Defend
+VSDF || Flag || I will defend our flag. || Self || Defend
+VSDG || Generator || I'll defend our generator. || Self || Defend
+VSDS || Sensors || I'll defend our sensors. || Self || Defend
+VSDT || Turrets || I'll defend our turrets. || Self || Defend
+VSDV || Vehicle || I'll defend our vehicle. || Self || Defend
+VSRB || Base || I'll repair our base. || Self || Repair
+VSRG || Generator || I'll repair our generator. || Self || Repair
+VSRS || Sensors || I'll repair our sensors. || Self || Repair
+VSRT || Turrets || I'll repair our turrets. || Self || Repair
+VSRV || Vehicle || I'll repair the vehicle. || Self || Repair
+VSTC || Cover || I'll cover you. || Self || Task
+VSTD || Set up defenses || I'll set up defenses. || Self || Task
+VSTF || Deploy forcefields || I'll deploy forcefields. || Self || Task
+VSTO || On it || I'm on it. || Self || Task
+VSTS || Deploy sensors || I'm deploying sensors. || Self || Task
+VSTT || Deploy turrets || I'm deploying turrets. || Self || Task
+VSTV || Vehicle || I'll get a vehicle ready. || Self || Task
+VTA || Acquired || Target acquired. || Target ||
+VTB || Base || Target the enemy base! I'm in position. || Target ||
+VTD || Destroyed || Target destroyed. || Target ||
+VTF || Flag || Target the enemy flag! I'm in position. || Target ||
+VTM || Fire on my target ||  || Target ||
+VTN || Need || I need a target painted! || Target ||
+VTS || Sensors || Target the sensors! I'm in position. || Target ||
+VTT || Turret || Target the turret! I'm in position. || Target ||
+VTV || Vehicle || Target the vehicle! I'm in position. || Target ||
+VTW || Wait || Wait! I'll be in range soon. || Target ||
+VWE || Enemies || Incoming hostiles! || Warning ||
+VWV || Vehicle || Incoming enemy vehicle! || Warning ||
+VVY || Yes ||  || Very Quick ||
+VVN || No ||  || Very Quick ||
+VVA || Anytime ||  || Very Quick ||
+VVB || Base secure? || Is our base secure? || Very Quick ||
+VVC || Cease fire ||  || Very Quick ||
+VVD || Don't know || I don't know. || Very Quick ||
+VVH || Help! ||  || Very Quick ||
+VVM || Move ||  || Very Quick ||
+VVS || Sorry ||  || Very Quick ||
+VVT || Thanks ||  || Very Quick ||
+VVW || Wait ||  || Very Quick ||
