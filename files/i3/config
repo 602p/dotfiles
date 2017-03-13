@@ -98,6 +98,16 @@ mode "$mode_vimnav" {
 
 bindsym $mod+n mode "$mode_vimnav"
 
+set $mode_music (p) play/pause
+mode "$mode_music" {
+    bindsym --release p exec bash -c "xdotool key Super+7 k Super+7"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+m mode "$mode_music"
+
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
@@ -184,7 +194,7 @@ mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym h exec --no-startup-id kdesudo bash -c "$Locker && systemctl hibernate"; mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
 
@@ -216,7 +226,7 @@ exec --no-startup-id i3-msg 'workspace 3:edit; exec subl'
 exec --no-startup-id i3-msg 'workspace 6:stat; exec konsole -e htop'
 exec --no-startup-id i3-msg 'workspace 5:file; exec dolphin'
 exec --no-startup-id i3-msg 'workspace Z:py; exec konsole -e python3'
-assign [title=".*Google Chrome.*"] 2:web
+#assign [title=".*Google Chrome.*"] 2:web
 
 bindsym XF86MonBrightnessUp exec bash ~/.i3/bright_up.sh
 bindsym XF86MonBrightnessDown exec bash ~/.i3/bright_down.sh
