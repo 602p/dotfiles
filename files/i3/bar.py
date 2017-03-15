@@ -40,6 +40,6 @@ if __name__ == '__main__':
         j = json.loads(line)
         # insert information into the start of the json, but could be anywhere
         # CHANGE THIS LINE TO INSERT SOMETHING ELSE
-        j.insert(4, {'full_text' : '☀%03i%%'%get_brightness(), 'name' : 'bright', 'color':'#aaaa00'})
+        j.insert(4, {'full_text' : '☀%i%%'%get_brightness(), 'name' : 'bright', 'color':'#aaaa00'})
         # and echo back new encoded json
         print_line(prefix+json.dumps(j))
