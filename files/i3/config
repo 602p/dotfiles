@@ -7,7 +7,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec konsole
-bindsym $mod+Shift+Return exec konsole -e python3
+bindsym $mod+Shift+Return exec google-chrome
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -17,7 +17,8 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
-bindsym $mod+Tab focus left
+bindsym $mod+Tab focus right
+bindsym $mod+Shift+Tab focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
