@@ -74,15 +74,17 @@ mode "$mode_vimnav" {
 
 bindsym $mod+n mode "$mode_vimnav"
 
-set $mode_music (p) play/pause
-mode "$mode_music" {
-    bindsym --release p exec bash -c "xdotool key Super+7 k Super+7"
+bindsym $mod+Shift+m mark quickmark
+bindsym $mod+m [con_mark="quickmark"] focus
 
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
+bindsym $mod+Shift+comma mark quickmark2
+bindsym $mod+comma [con_mark="quickmark2"] focus
 
-bindsym $mod+m mode "$mode_music"
+bindsym $mod+Shift+period mark quickmark3
+bindsym $mod+period [con_mark="quickmark3"] focus
+
+bindsym $mod+Shift+slash mark quickmark3
+bindsym $mod+slash [con_mark="quickmark3"] focus
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
@@ -161,6 +163,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status --config ~/.i3/i3status.conf | python3 ~/.i3/bar.py
+        strip_workspace_numbers yes
 }
 
 set $Locker xscreensaver-command -lock && sleep 1
