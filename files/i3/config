@@ -66,7 +66,7 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-set $mode_layout (h) Horiz. Split (v) Vert. Split (s) Stack (t) Tab (e) Split
+set $mode_layout (h) Horiz. Split (v) Vert. Split (s) Stack (t) Tab (e) Split (f) Toggle Focus-follows-Mouse
 mode "$mode_layout" {
     # split in horizontal orientation
     bindsym h split h; mode "default"
@@ -78,6 +78,8 @@ mode "$mode_layout" {
     bindsym s layout stacking; mode "default"
     bindsym t layout tabbed; mode "default"
     bindsym e layout toggle split; mode "default"
+
+    bindsym f exec python ~/.i3/toggle_ffm.py; mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -205,10 +207,11 @@ mode "$mode_system" {
 
 bindsym $mod+Home mode "$mode_system"
 
-set $mode_settings (o) Touchpad On (d) Touchpad Disabled
+set $mode_settings (o) Touchpad On (d) Touchpad Disabled (s) Screenshot > ~/screenshots
 mode "$mode_settings" {
     bindsym o exec synclient TapButton1=1&; exec synclient TapButton2=3&; mode "default"
     bindsym d exec synclient TapButton1=0&; exec synclient TapButton2=0&; mode "default"
+    bindsym s exec mkdir ~/screenshots; exec bash -c "cd screenshots&&scrot"; mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -522,3 +525,5 @@ mode ">VGT - T: THAT was graceful! | B: Best you can do? | G: I am the greatest!
 bindsym $mod+v mode ">V - S: *Self | N: *Need | G: *Global | D: *Defend | W: *Warning | E: *Enemy | R: *Repair | T: *Target | V: *Very Quick | F: *Flag | A: *Attack | B: *Base | C: *Command"
 
 ###END VGS AUTOGEN###
+
+focus_follows_mouse no #toggle_ffm toggle this
