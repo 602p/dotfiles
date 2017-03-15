@@ -74,8 +74,8 @@ mode "$mode_vimnav" {
 
 bindsym $mod+n mode "$mode_vimnav"
 
-bindsym $mod+Shift+m mark quickmark
-bindsym $mod+m [con_mark="quickmark"] focus
+bindsym $mod+Shift+m mark quickmark1
+bindsym $mod+m [con_mark="quickmark1"] focus
 
 bindsym $mod+Shift+comma mark quickmark2
 bindsym $mod+comma [con_mark="quickmark2"] focus
@@ -83,8 +83,8 @@ bindsym $mod+comma [con_mark="quickmark2"] focus
 bindsym $mod+Shift+period mark quickmark3
 bindsym $mod+period [con_mark="quickmark3"] focus
 
-bindsym $mod+Shift+slash mark quickmark3
-bindsym $mod+slash [con_mark="quickmark3"] focus
+bindsym $mod+Shift+slash mark quickmark4
+bindsym $mod+slash [con_mark="quickmark4"] focus
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
@@ -216,7 +216,7 @@ exec --no-startup-id i3-msg 'workspace 2:web; exec google-chrome'
 exec --no-startup-id i3-msg 'workspace 3:edit; exec subl'
 exec --no-startup-id i3-msg 'workspace 6:stat; exec konsole -e htop'
 exec --no-startup-id i3-msg 'workspace 5:file; exec dolphin'
-exec --no-startup-id i3-msg 'workspace Z:py; exec konsole -e python3'
+exec --no-startup-id i3-msg 'workspace 999:py; exec konsole -e python3'
 #assign [title=".*Google Chrome.*"] 2:web
 
 bindsym XF86MonBrightnessUp exec bash ~/.i3/bright_up.sh
@@ -224,7 +224,7 @@ bindsym XF86MonBrightnessDown exec bash ~/.i3/bright_down.sh
 bindsym XF86AudioRaiseVolume exec bash ~/.i3/vol_up.sh
 bindsym XF86AudioLowerVolume exec bash ~/.i3/vol_down.sh
 bindsym XF86AudioMute exec bash ~/.i3/vol_mute.sh
-bindsym XF86Calculator workspace Z:py
+bindsym XF86Calculator workspace 999:py
 
 exec i3-msg
 
