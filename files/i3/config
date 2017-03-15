@@ -75,16 +75,18 @@ mode "$mode_vimnav" {
 bindsym $mod+n mode "$mode_vimnav"
 
 bindsym $mod+Shift+m mark quickmark1
-bindsym $mod+m [con_mark="quickmark1"] focus
+bindsym $mod+m mark --add quickmark_snapback; [con_mark="quickmark1"] focus
 
 bindsym $mod+Shift+comma mark quickmark2
-bindsym $mod+comma [con_mark="quickmark2"] focus
+bindsym $mod+comma mark --add quickmark_snapback; [con_mark="quickmark2"] focus
 
 bindsym $mod+Shift+period mark quickmark3
-bindsym $mod+period [con_mark="quickmark3"] focus
+bindsym $mod+period mark --add quickmark_snapback; [con_mark="quickmark3"] focus
 
 bindsym $mod+Shift+slash mark quickmark4
-bindsym $mod+slash [con_mark="quickmark4"] focus
+bindsym $mod+slash mark --add quickmark_snapback; [con_mark="quickmark4"] focus
+
+bindsym $mod+BackSpace [con_mark="quickmark_snapback"] focus
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
