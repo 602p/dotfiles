@@ -2,3 +2,4 @@ alias python=python3
 alias pip=pip3
 alias timer="time python -c \"input('Press [Enter] or [Ctrl+C] to stop...')\""
 alias wifi="python3 ~/Documents/dotfiles/wifimanager.py"
+alias dice="python3 ~/Documents/dotfiles/dice.py"
