@@ -131,11 +131,6 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10:scratch
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -171,13 +166,13 @@ bar {
 
 set $Locker xscreensaver-command -lock && sleep 1
 
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (Shift+e) logout, (Shift+u) suspend, (Shift+h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
-    bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id kdesudo bash -c "$Locker && systemctl hibernate"; mode "default"
-    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym Shift+u exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym Shift+h exec --no-startup-id kdesudo bash -c "$Locker && systemctl hibernate"; mode "default"
+    bindsym Shift+r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
 
     # back to normal: Enter or Escape
@@ -187,11 +182,13 @@ mode "$mode_system" {
 
 bindsym $mod+Home mode "$mode_system"
 
-set $mode_settings (o) Touchpad On (d) Touchpad Disabled (s) Screenshot > ~/screenshots
+set $mode_settings (o) Touchpad On (d) Touchpad Disabled (s) Screenshot > ~/screenshots (r) Reload (Shift+r) Restart [LOGOUT]
 mode "$mode_settings" {
     bindsym o exec synclient TapButton1=1&; exec synclient TapButton2=3&; mode "default"
     bindsym d exec synclient TapButton1=0&; exec synclient TapButton2=0&; mode "default"
     bindsym s exec mkdir ~/screenshots; exec bash -c "cd screenshots&&scrot"; mode "default"
+    bindsym r reload; mode "default"
+    bindsym Shift+r restart
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -209,6 +206,20 @@ mode "$mode_shitpost" {
 }
 
 bindsym $mod+p mode "$mode_shitpost"
+
+set $mode_music (Space) play/pause (s) Mark as video (o) Open
+
+mode "$mode_music" {
+    bindsym space exec bash ~/.i3/play_pause.sh; mode "default"
+    bindsym s mark --add music_player; mode "default"
+    bindsym o mark --add quickmark_snapback; [con_mark="music_player"] focus; mode "default"
+    bindsym $mod+o mark --add quickmark_snapback; [con_mark="music_player"] focus; mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+o mode "$mode_music"
 
 #gaps 10
 
