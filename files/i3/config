@@ -105,17 +105,17 @@ exec i3-msg "workspace 1:sh"
 
 # switch to workspace
 workspace 1:sh output LVDS1
-bindsym $mod+1 workspace 1:sh
-bindsym $mod+2 workspace 2:web
-bindsym XF86HomePage workspace 2:web
-bindsym $mod+3 workspace 3:edit
-bindsym $mod+4 workspace 4:chat
-bindsym $mod+5 workspace 5:file
-bindsym $mod+6 workspace 6:stat
-bindsym $mod+7 workspace 7:watch
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10:scratch
+bindsym $mod+1 mark --add quickmark_snapback; workspace 1:sh
+bindsym $mod+2 mark --add quickmark_snapback; workspace 2:web
+bindsym XF86HomePage mark --add quickmark_snapback; workspace 2:web
+bindsym $mod+3 mark --add quickmark_snapback; workspace 3:edit
+bindsym $mod+4 mark --add quickmark_snapback; workspace 4:chat
+bindsym $mod+5 mark --add quickmark_snapback; workspace 5:file
+bindsym $mod+6 mark --add quickmark_snapback; workspace 6:stat
+bindsym $mod+7 mark --add quickmark_snapback; workspace 7:watch
+bindsym $mod+8 mark --add quickmark_snapback; workspace 8
+bindsym $mod+9 mark --add quickmark_snapback; workspace 9
+bindsym $mod+0 mark --add quickmark_snapback; workspace 10:scratch
 bindsym F12 workspace 1:sh
 workspace_auto_back_and_forth yes
 
