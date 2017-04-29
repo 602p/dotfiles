@@ -132,7 +132,8 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10:scratch
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
+set $mode_resize Resize w/ arrow keys. Hold shift for fine
+mode "$mode_resize" {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
@@ -150,12 +151,17 @@ mode "resize" {
         bindsym Up resize shrink height 5 px or 5 ppt
         bindsym Right resize grow width 5 px or 5 ppt
 
+        bindsym Shift+Left resize shrink width 1 px or 1 ppt
+        bindsym Shift+Down resize grow height 1 px or 1 ppt
+        bindsym Shift+Up resize shrink height 1 px or 1 ppt
+        bindsym Shift+Right resize grow width 1 px or 1 ppt
+
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "$mode_resize"
 
 # Start i3bar to display a workspace bar (plus the system information i4status
 # finds out, if available)
