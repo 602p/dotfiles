@@ -1,10 +1,15 @@
 import sys
 import json
+import subprocess
 
 def get_brightness():
     with open("/sys/class/backlight/acpi_video0/brightness", 'r') as b:
         with open("/sys/class/backlight/acpi_video0/max_brightness", 'r') as m:
             return (int(b.read())/int(m.read()))*100
+
+def get_ram_usage():
+    return (float([i for i in subprocess.check_output("free -h | grep Mem:", shell=True).decode("ascii").split(" ") if i][2][:-1])/7.8)*100
+
 
 def print_line(message):
     """ Non-buffered printing to stdout. """
@@ -40,6 +45,7 @@ if __name__ == '__main__':
         j = json.loads(line)
         # insert information into the start of the json, but could be anywhere
         # CHANGE THIS LINE TO INSERT SOMETHING ELSE
-        j.insert(4, {'full_text' : '☀%i%%'%get_brightness(), 'name' : 'bright', 'color':'#aaaa00'})
+        j.insert(4, {'full_text' : '☀%03i%%'%get_brightness(), 'name' : 'bright', 'color':'#aaaa00'})
+        j.insert(5, {'full_text' : '%02i%% R'%get_ram_usage(), 'name' : 'ram'})
         # and echo back new encoded json
         print_line(prefix+json.dumps(j))
