@@ -23,5 +23,6 @@
 	"theme_size_xs": true,
 	"theme_tab_font_sm": true,
 	"theme_tab_selected_label_bold": true,
-	"theme_tab_selected_overlined": true
+	"theme_tab_selected_overlined": true,
+	"folder_exclude_patterns":["__pycache__"]
 }
