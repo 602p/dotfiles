@@ -6,8 +6,8 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole
-bindsym $mod+Shift+Return exec google-chrome
+bindsym $mod+Return exec terminator
+bindsym $mod+Shift+Return exec google-chrome --high-dpi-support=1 --force-device-scale-factor=1
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -41,7 +41,7 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-set $mode_layout (h) Horiz. Split (v) Vert. Split (s) Stack (t) Tab (e) Split (f) Toggle Focus-follows-Mouse
+set $mode_layout (h) Horiz. Split (v) Vert. Split (s) Stack (t) Tab (e) Split (o) Other output (f) Toggle Focus-follows-Mouse
 mode "$mode_layout" {
     # split in horizontal orientation
     bindsym h split h; mode "default"
@@ -55,6 +55,8 @@ mode "$mode_layout" {
     bindsym e layout toggle split; mode "default"
 
     bindsym f exec python ~/.i3/toggle_ffm.py; mode "default"
+
+    bindsym o move workspace to output up
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -201,6 +203,15 @@ mode "$mode_settings" {
 }
 bindsym $mod+End mode "$mode_settings"
 
+set $mode_settings2 (q) Sound Options (w) WICD
+mode "$mode_settings2" {
+    bindsym q mark --add quickmark_snapback; workspace temp; mode "default"; exec terminator -e alsamixer && i3-msg [con_mark="quickmark_snapback"] focus
+    bindsym w mark --add quickmark_snapback; workspace temp; mode "default"; exec bash -c "wicd-client -n && i3-msg [con_mark=\"quickmark_snapback\"] focus"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Prior mode "$mode_settings2"
+
 set $mode_shitpost (s) Shruggie (c) Commie Tree
 
 mode "$mode_shitpost" {
@@ -231,12 +242,13 @@ bindsym $mod+o mode "$mode_music"
 
 exec xscreensaver -nosplash
 #exec xbindkeys
-exec --no-startup-id i3-msg 'workspace 1:sh; exec konsole'
+exec wicd-client -t
+exec --no-startup-id i3-msg 'workspace 1:sh; exec terminator'
 exec --no-startup-id i3-msg 'workspace 2:web; exec google-chrome'
 exec --no-startup-id i3-msg 'workspace 3:edit; exec subl'
-exec --no-startup-id i3-msg 'workspace 6:stat; exec konsole -e htop'
+exec --no-startup-id i3-msg 'workspace 6:stat; exec terminator -e htop'
 exec --no-startup-id i3-msg 'workspace 5:file; exec dolphin'
-exec --no-startup-id i3-msg 'workspace 999:py; exec konsole -e python3'
+exec --no-startup-id i3-msg 'workspace 999:py; exec terminator -e python3'
 #assign [title=".*Google Chrome.*"] 2:web
 
 bindsym XF86MonBrightnessUp exec bash ~/.i3/bright_up.sh

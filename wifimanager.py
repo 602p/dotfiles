@@ -4,7 +4,7 @@ import subprocess
 import collections
 import datetime
 import os
-
+import time
 WiFiNetwork=collections.namedtuple("WiFiNetwork", ['name', 'security'])
 
 def runcmd(cmdline):
@@ -100,6 +100,7 @@ def main(scr):
 			os.system(command)
 			return
 		scr.refresh()
+		time.sleep(0.05)
 
 try:
 	wrapper(main)
