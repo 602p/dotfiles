@@ -6,7 +6,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec roxterm
 bindsym $mod+Shift+Return exec google-chrome --high-dpi-support=1 --force-device-scale-factor=1
 
 # kill focused window
@@ -212,13 +212,14 @@ mode "$mode_settings2" {
 }
 bindsym $mod+Prior mode "$mode_settings2"
 
-set $mode_shitpost (s) Shruggie (c) Commie Tree (q) Inverted ? (e) Inverted !
+set $mode_shitpost (s) Shruggie (c) Commie Tree (q) Inverted ? (e) Inverted ! (n) enyeae thign
 
 mode "$mode_shitpost" {
     bindsym s exec bash ~/.i3/shruggie.sh; mode "default"
     bindsym c exec bash ~/.i3/tree.sh; mode "default"
     bindsym Shift+question exec bash ~/.i3/qmark.sh; mode "default"
     bindsym Shift+exclam exec bash ~/.i3/exclaim.sh; mode "default"
+    bindsym n exec bash ~/.i3/funnyn.sh; mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
