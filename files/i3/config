@@ -246,6 +246,8 @@ bindsym $mod+o mode "$mode_music"
 exec xscreensaver -nosplash
 #exec xbindkeys
 exec wicd-client -t
+exec xinput --set-prop "11" "Device Accel Constant Deceleration" 0.45
+exec xinput set-prop "11" "Evdev Middle Button Emulation" 1
 exec --no-startup-id i3-msg 'workspace 1:sh; exec terminator'
 exec --no-startup-id i3-msg 'workspace 2:web; exec google-chrome'
 exec --no-startup-id i3-msg 'workspace 3:edit; exec subl'
