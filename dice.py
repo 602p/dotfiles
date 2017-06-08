@@ -22,7 +22,7 @@ for thing in sys.argv[1].split("+"):
 				value+=roll
 			else:
 				rolls=[random.randint(1, int(thing.split("d")[1])) for _ in range(int(thing.split("d")[0]))]
-				value+=sum(values)
+				value+=sum(rolls)
 		else:
 			value+=int(thing)
 
