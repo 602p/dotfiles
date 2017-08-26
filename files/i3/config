@@ -41,7 +41,7 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-set $mode_layout (h) Horiz. Split (v) Vert. Split (s) Stack (t) Tab (e) Split (o) Other output (f) Toggle Focus-follows-Mouse
+set $mode_layout (h) Horiz. Split (v) Vert. Split (s) Stack (t) Tab (e) Split (o) Other output
 mode "$mode_layout" {
     # split in horizontal orientation
     bindsym h split h; mode "default"
@@ -190,23 +190,26 @@ mode "$mode_system" {
 
 bindsym $mod+Home mode "$mode_system"
 
-set $mode_settings (o) Touchpad On (d) Touchpad Disabled (s) Screenshot > ~/screenshots (r) Reload (Shift+r) Restart [LOGOUT]
+set $mode_settings (o) Touchpad On (d) Touchpad Disabled (f) Toggle Focus-follows-Mouse (s) Screenshot > ~/screenshots (r) Reload (Shift+r) Restart [LOGOUT]
 mode "$mode_settings" {
     bindsym o exec synclient TapButton1=1&; exec synclient TapButton2=3&; mode "default"
     bindsym d exec synclient TapButton1=0&; exec synclient TapButton2=0&; mode "default"
     bindsym s exec mkdir ~/screenshots; exec bash -c "cd screenshots&&scrot"; mode "default"
     bindsym r reload; mode "default"
     bindsym Shift+r restart
+    bindsym f exec python ~/.i3/toggle_ffm.py; mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 bindsym $mod+End mode "$mode_settings"
 
-set $mode_settings2 (q) Sound Options (w) WICD
+set $mode_settings2 (q) Sound Options (w) WICD (a) ARandR (z) goto WS
 mode "$mode_settings2" {
     bindsym q mark --add quickmark_snapback; workspace temp; mode "default"; exec terminator -e alsamixer && i3-msg [con_mark="quickmark_snapback"] focus
     bindsym w mark --add quickmark_snapback; workspace temp; mode "default"; exec bash -c "wicd-client -n && i3-msg [con_mark=\"quickmark_snapback\"] focus"
+    bindsym a mark --add quickmark_snapback; workspace temp; mode "default"; exec bash -c "arandr && i3-msg [con_mark=\"quickmark_snapback\"] focus"
+    bindsym z workspace temp
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
