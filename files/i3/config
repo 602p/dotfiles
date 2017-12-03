@@ -6,7 +6,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec roxterm
+bindsym $mod+Return exec terminator
 bindsym $mod+Shift+Return exec google-chrome --high-dpi-support=1 --force-device-scale-factor=1
 
 # kill focused window
@@ -56,7 +56,7 @@ mode "$mode_layout" {
 
     bindsym f exec python ~/.i3/toggle_ffm.py; mode "default"
 
-    bindsym o move workspace to output up
+    bindsym o move workspace to output left
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -168,7 +168,7 @@ bindsym $mod+r mode "$mode_resize"
 # Start i3bar to display a workspace bar (plus the system information i4status
 # finds out, if available)
 bar {
-        status_command i3status --config ~/.i3/i3status.conf | python3 ~/.i3/bar.py
+        status_command i3status --config ~/.i3/i3status.conf | python3.6 ~/.i3/bar.py
         strip_workspace_numbers yes
 }
 

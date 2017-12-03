@@ -6,10 +6,15 @@
 		".git"
 	],
 	"font_face": "RobotoMono Nerd Font",
-	"font_size": 14,
+	"font_size": 11,
 	"ignored_packages":
 	[
+		"RustAutoComplete",
 		"Vintage"
+	],
+	"rulers":
+	[
+		80
 	],
 	"theme": "Boxy Monokai.sublime-theme",
 	"theme_sidebar_font_xl": true,

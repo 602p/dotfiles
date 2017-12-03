@@ -165,3 +165,8 @@ function nonzero_return() {
 }
 
 export PS1="\[\e[41m\]\`nonzero_return\`\[\e[m\]\[\e[34m\]\`parse_git_branch\`\[\e[m\]\W\[\e[32m\]\\$\[\e[m\] "
+
+source /usr/share/autojump/autojump.sh
+export PATH=/usr/lib/dart/bin:$PATH
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH="$HOME/.cargo/bin":$PATH
