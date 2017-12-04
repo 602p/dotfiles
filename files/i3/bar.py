@@ -3,6 +3,7 @@ import json
 import subprocess
 
 def get_brightness():
+    return 0
     with open("/sys/class/backlight/acpi_video0/brightness", 'r') as b:
         with open("/sys/class/backlight/acpi_video0/max_brightness", 'r') as m:
             return (int(b.read())/int(m.read()))*100
