@@ -6,7 +6,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+Return exec google-chrome --high-dpi-support=1 --force-device-scale-factor=1
 
 # kill focused window
@@ -206,10 +206,10 @@ bindsym $mod+End mode "$mode_settings"
 
 set $mode_settings2 (q) Sound Options (w) nmtui (a) ARandR (s) SShuttle into ACM (z) goto WS
 mode "$mode_settings2" {
-    bindsym q mark --add quickmark_snapback; workspace tool; mode "default"; exec terminator -e alsamixer && i3-msg [con_mark="quickmark_snapback"] focus
-    bindsym w mark --add quickmark_snapback; workspace tool; mode "default"; exec terminator -e nmtui-connect && i3-msg [con_mark="quickmark_snapback"] focus
+    bindsym q mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e alsamixer && i3-msg [con_mark="quickmark_snapback"] focus
+    bindsym w mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e nmtui-connect && i3-msg [con_mark="quickmark_snapback"] focus
     bindsym a mark --add quickmark_snapback; workspace tool; mode "default"; exec bash -c "arandr && i3-msg [con_mark=\"quickmark_snapback\"] focus"
-    bindsym s mark --add quickmark_snapback; workspace tool; mode "default"; exec terminator -e python3 -m sshuttle -r acm.umn.edu 0/0 && i3-msg [con_mark="quickmark_snapback"] focus
+    bindsym s mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e python3 -m sshuttle -r argo.acm.umn.edu 0/0 && i3-msg [con_mark="quickmark_snapback"] focus
     bindsym z workspace tool; mode "default"
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -310,12 +310,12 @@ exec xscreensaver -nosplash
 #exec xbindkeys
 exec wicd-client -t
 exec bash ~/.i3/setup_mouse.sh
-exec --no-startup-id i3-msg 'workspace 1:sh; exec terminator'
+exec --no-startup-id i3-msg 'workspace 1:sh; exec urxvt'
 exec --no-startup-id i3-msg 'workspace 2:web; exec google-chrome'
 exec --no-startup-id i3-msg 'workspace 3:edit; exec subl'
-exec --no-startup-id i3-msg 'workspace 6:stat; exec terminator -e htop'
+exec --no-startup-id i3-msg 'workspace 6:stat; exec urxvt -e htop'
 exec --no-startup-id i3-msg 'workspace 5:file; exec dolphin'
-exec --no-startup-id i3-msg 'workspace 999:py; exec terminator -e python3'
+exec --no-startup-id i3-msg 'workspace 999:py; exec urxvt -e python3'
 #assign [title=".*Google Chrome.*"] 2:web
 
 bindsym XF86MonBrightnessUp exec bash ~/.i3/bright_up.sh

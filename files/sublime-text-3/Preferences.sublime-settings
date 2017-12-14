@@ -6,7 +6,7 @@
 		".git"
 	],
 	"font_face": "RobotoMono Nerd Font",
-	"font_size": 11,
+	"font_size": 12,
 	"ignored_packages":
 	[
 		"RustAutoComplete",

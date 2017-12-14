@@ -7,3 +7,4 @@ cp ~/.bashrc files/bashrc
 cp ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings files/sublime-text-3
 cp "$(echo ~)/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap" files/sublime-text-3
 cp ~/.config/sublime-text-3/Packages/Boxy\ Theme/schemes/* files/sublime-text-3
+cp ~/.Xresources files/Xresources

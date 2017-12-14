@@ -1,0 +1,31 @@
+*.font: xft:Nimbus Mono:size=11:antialias=true
+
+*.background:  #1e1f29
+*.foreground:  #ebece6
+*.cursorColor: #ebece6
+*.color0:      #000000
+*.color10:     #50fb7c
+*.color11:     #f0fb8c
+*.color12:     #49baff
+*.color13:     #fc4cb4
+*.color14:     #8be9fe
+*.color15:     #ededec
+*.color1:      #fc4346
+*.color2:      #50fb7c
+*.color3:      #f0fb8c
+*.color4:      #49baff
+*.color5:      #fc4cb4
+*.color6:      #8be9fe
+*.color7:      #ededec
+*.color8:      #555555
+*.color9:      #fc4346
+
+URxvt.background: [90]#1e1f29
+URxvt.depth: 32
+URxvt.saveLines: 1000000
+URxvt.scrollBar: false
+URxvt.scrollTtyKeypress: true
+URxvt.scrollTtyOutput: false
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+Xft.dpi: 100
