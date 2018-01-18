@@ -331,6 +331,7 @@ bindsym XF86AudioMute exec bash ~/.i3/vol_mute.sh
 bindsym XF86Calculator workspace 999:py
 
 exec i3-msg
+exec xset b 0
 
 
 ###START VGS AUTOGEN###
