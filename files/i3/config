@@ -314,6 +314,7 @@ bindsym $mod+o mode "$mode_music"
 exec xscreensaver -nosplash
 #exec xbindkeys
 exec wicd-client -t
+exec rm ~/.ssh-agent-info
 exec bash ~/.i3/setup_mouse.sh
 exec --no-startup-id i3-msg 'workspace 1:sh; exec urxvt'
 exec --no-startup-id i3-msg 'workspace 2:web; exec google-chrome'

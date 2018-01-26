@@ -170,3 +170,12 @@ source /usr/share/autojump/autojump.sh
 export PATH=/usr/lib/dart/bin:$PATH
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$HOME/.cargo/bin":$PATH
+export PYTHONSTARTUP="$HOME/.pythonrc.py"
+
+source ~/.ssh-agent-info
+if [ $? != 0 ]; then
+   echo Setting up ssh-agent
+   ssh-agent > ~/.ssh-agent-info
+   source ~/.ssh-agent-info
+   ssh-add
+fi

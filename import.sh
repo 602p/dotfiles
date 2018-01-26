@@ -4,6 +4,7 @@ mkdir files/sublime-text-3
 cp -r ~/.i3/* files/i3
 cp ~/.bash_aliases files/bash_aliases
 cp ~/.bashrc files/bashrc
+cp ~/.pythonrc.py files/pythonrc.py
 cp ~/.config/sublime-text-3/ files/sublime-text-3 -r
 #cp "$(echo ~)/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap" files/sublime-text-3
 #cp ~/.config/sublime-text-3/Packages/Boxy\ Theme/schemes/* files/sublime-text-3
