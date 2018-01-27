@@ -179,3 +179,5 @@ if [ $? != 0 ]; then
    source ~/.ssh-agent-info
    ssh-add
 fi
+
+eval `opam config env`
