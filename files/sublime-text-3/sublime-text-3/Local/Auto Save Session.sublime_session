@@ -1,6 +1,7 @@
 {
 	"folder_history":
 	[
+		"/home/louis/Documents/sports-medicine-manager",
 		"/home/louis/Documents/CSCI",
 		"/home/louis/Documents/CSCI_2041",
 		"/home/louis/Documents/jag",
@@ -789,6 +790,14 @@
 				"selected_items":
 				[
 					[
+						"ass",
+						"associated_player"
+					],
+					[
+						"name",
+						"sensor_name"
+					],
+					[
 						"iter",
 						"iterator"
 					],
@@ -953,38 +962,45 @@
 			"buffers":
 			[
 				{
-					"file": "/home/louis/Documents/CSCI/1133/repo-goess006/lab2/olympics.py",
+					"file": "/home/louis/.i3/config",
 					"settings":
 					{
-						"buffer_size": 452,
+						"buffer_size": 26613,
 						"encoding": "UTF-8",
 						"line_ending": "Unix"
 					}
 				},
 				{
-					"file": "/home/louis/Documents/CSCI/2041/repo-goess006/Lab_02/lab_02.ml",
+					"file": "/home/louis/.i3/set_fullwidth.sh",
 					"settings":
 					{
-						"buffer_size": 532,
+						"buffer_size": 969,
 						"line_ending": "Unix"
 					}
 				},
 				{
-					"contents": "let g xs =\n\tlet rec double  = function\n\t\t| [] -> []\n\t\t| x::xs -> (x*2)::xs\n\tin let rec product  = function\n\t\t| [] -> 1\n\t\t| x::xs -> x*product xs\n\tin product (double xs)",
-					"file": "/home/louis/Documents/CSCI/2041/repo-goess006/misclib/test.ml",
-					"file_size": 168,
-					"file_write_time": 131614723031798348,
+					"contents": "ｔｈｉｓ ｉｓ ｍｅ ｔｙｐｉｎｇ ｉｎ ＦＵＬＬＷＩＤＴＨ ｍｏｄｅ\nand back to normal",
 					"settings":
 					{
-						"buffer_size": 168,
+						"buffer_size": 54,
+						"line_ending": "Unix",
+						"name": "ｔｈｉｓ ｉｓ ｍｅ ｔｙｐｉｎｇ ｉｎ ＦＵＬＬＷＩＤＴＨ ｍｏｄｅ"
+					}
+				},
+				{
+					"file": "/home/louis/.i3/make_set_fullwidth.py",
+					"settings":
+					{
+						"buffer_size": 385,
+						"encoding": "UTF-8",
 						"line_ending": "Unix"
 					}
 				},
 				{
-					"file": "/home/louis/.i3/config",
+					"file": "/home/louis/.i3/unset_fullwidth.sh",
 					"settings":
 					{
-						"buffer_size": 29144,
+						"buffer_size": 25,
 						"encoding": "UTF-8",
 						"line_ending": "Unix"
 					}
@@ -1214,24 +1230,32 @@
 			},
 			"expanded_folders":
 			[
-				"/home/louis/.i3",
-				"/home/louis/Documents/CSCI",
-				"/home/louis/Documents/CSCI/1133",
-				"/home/louis/Documents/CSCI/1133/repo-goess006",
-				"/home/louis/Documents/CSCI/1133/repo-goess006/lab1",
-				"/home/louis/Documents/CSCI/1133/repo-goess006/lab2",
-				"/home/louis/Documents/CSCI/2041",
-				"/home/louis/Documents/CSCI/2041/repo-goess006",
-				"/home/louis/Documents/CSCI/2041/repo-goess006/Lab_02",
-				"/home/louis/Documents/CSCI/2041/repo-goess006/misclib"
+				"/home/louis/.i3"
 			],
 			"file_history":
 			[
+				"/home/louis/.i3/funnyn.sh",
+				"/home/louis/.i3/p_fullwidth.sh",
+				"/home/louis/Documents/CSCI/2041/repo-goess006/misclib/lists.ml",
+				"/home/louis/Documents/CSCI/2041/repo-goess006/Hwk_01/puzzle.ml",
+				"/home/louis/Documents/CSCI/2041/repo-goess006/Hwk_01/higher.ml",
+				"/home/louis/Documents/CSCI/2041/repo-goess006/Hwk_01/intro.ml",
+				"/home/louis/Documents/CSCI/2041/repo-goess006/Hwk_01/formatter.ml",
+				"/home/louis/Documents/CSCI/2041/repo-goess006/misclib/iterators.ml",
+				"/home/louis/Documents/CSCI/2041/repo-goess006/Lab_03/lab_02.ml",
+				"/home/louis/Documents/CSCI/2041/repo-goess006/misclib/exprs.ml",
+				"/home/louis/Documents/sports-medicine-manager/server/models.py",
+				"/home/louis/Documents/sports-medicine-manager/server/server.py",
+				"/home/louis/Documents/sports-medicine-manager/server/static/graph.html",
+				"/home/louis/.i3/config",
+				"/home/louis/.i3/fullwidth.py",
+				"/home/louis/.i3/pasta.sh",
+				"/home/louis/Documents/CSCI/1133/repo-goess006/lab2/olympics.py",
+				"/home/louis/Documents/CSCI/2041/repo-goess006/Lab_02/lab_02.ml",
+				"/home/louis/Documents/CSCI/2041/repo-goess006/misclib/test.ml",
 				"/home/louis/Documents/CSCI/1133/repo-goess006/drawsquare.py",
 				"/home/louis/Documents/CSCI/1133/repo-goess006/olympics.py",
 				"/home/louis/Documents/CSCI/1133/drawsquare.py",
-				"/home/louis/Documents/CSCI/2041/repo-goess006/Lab_02/lab_02.ml",
-				"/home/louis/.i3/config",
 				"/home/louis/Documents/orth/shoc/src/transformers/__init__.ort",
 				"/home/louis/Documents/orth/shoc/src/transformers/lower/expand_augassign.ort",
 				"/home/louis/.steam/steam/steamapps/common/Fistful of Frags/fof/fof_001.vpk",
@@ -1337,24 +1361,7 @@
 				"/home/louis/Documents/orth/shoc/src/llvm/__init__.ort",
 				"/home/louis/.Xresources",
 				"/home/louis/.XResources",
-				"/home/louis/Documents/orth/lib/progressbar.ort",
-				"/home/louis/Documents/orth/shoc/nontrivial.ort",
-				"/home/louis/Documents/t20/test_console.py",
-				"/home/louis/Documents/t20/client.py",
-				"/home/louis/Documents/t20/server.py",
-				"/home/louis/Documents/t20/ansi.py",
-				"/home/louis/Documents/dotfiles/import.sh",
-				"/home/louis/Documents/orth/shoc/tests/aug.ort",
-				"/home/louis/Documents/orth/shoc/tests/type.ort",
-				"/home/louis/Documents/orth/shoc/src/grammar/tuple.ort",
-				"/home/louis/Documents/orth/shoc/tests/call.ort",
-				"/home/louis/Documents/orth/shoc/tests/func.ort",
-				"/home/louis/Documents/orth/shoc/tests/extern.ort",
-				"/home/louis/Documents/orth/shoc/src/grammar/grouping.ort",
-				"/home/louis/Documents/orth/shoc/src/transformers/opt/elide_funcs.ort",
-				"/home/louis/Documents/orth/shoc/src/llvm/emitters/method.ort",
-				"/home/louis/Documents/orth/shoc/tests/decl.ort",
-				"/home/louis/Documents/orth/shoc/tests/member_decl_imp.ort"
+				"/home/louis/Documents/orth/lib/progressbar.ort"
 			],
 			"find":
 			{
@@ -1418,6 +1425,16 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"after",
+					"gcd",
+					"tail",
+					"head",
+					"xs",
+					"radius",
+					"x",
+					"python",
+					"print",
+					"bash",
 					"rest",
 					"xs",
 					"acpi_video0",
@@ -1535,17 +1552,7 @@
 					"method",
 					"implement_generics",
 					"GM",
-					"0",
-					"MGethod",
-					"define_types",
-					"Cell",
-					"define_syms",
-					"visit_grouping",
-					"elide_groupings",
-					"resolve_type",
-					"NodeType",
-					"name",
-					"head.name"
+					"0"
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -1594,114 +1601,24 @@
 			"groups":
 			[
 				{
-					"selected": 3,
+					"selected": 2,
 					"sheets":
 					[
 						{
 							"buffer": 0,
-							"file": "/home/louis/Documents/CSCI/1133/repo-goess006/lab2/olympics.py",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 452,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										452,
-										452
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/Python/Python.sublime-syntax",
-									"translate_tabs_to_spaces": false
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 3,
-							"type": "text"
-						},
-						{
-							"buffer": 1,
-							"file": "/home/louis/Documents/CSCI/2041/repo-goess006/Lab_02/lab_02.ml",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 532,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										532,
-										532
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/OCaml/OCaml.sublime-syntax",
-									"translate_tabs_to_spaces": false
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 2,
-							"type": "text"
-						},
-						{
-							"buffer": 2,
-							"file": "/home/louis/Documents/CSCI/2041/repo-goess006/misclib/test.ml",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 168,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										27,
-										27
-									],
-									[
-										95,
-										95
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/OCaml/OCaml.sublime-syntax"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 1,
-							"type": "text"
-						},
-						{
-							"buffer": 3,
 							"file": "/home/louis/.i3/config",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 29144,
+								"buffer_size": 26613,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										8417,
-										8417
+										9350,
+										9350
 									]
 								],
 								"settings":
@@ -1711,10 +1628,123 @@
 									"translate_tabs_to_spaces": true
 								},
 								"translation.x": 0.0,
-								"translation.y": 3339.0,
+								"translation.y": 3888.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 4,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/home/louis/.i3/set_fullwidth.sh",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 969,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										67,
+										33
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 54,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										54,
+										54
+									]
+								],
+								"settings":
+								{
+									"auto_name": "ｔｈｉｓ ｉｓ ｍｅ ｔｙｐｉｎｇ ｉｎ ＦＵＬＬＷＩＤＴＨ ｍｏｄｅ",
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "/home/louis/.i3/make_set_fullwidth.py",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 385,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										335,
+										335
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Python/Python.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						},
+						{
+							"buffer": 4,
+							"file": "/home/louis/.i3/unset_fullwidth.sh",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 25,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										25,
+										0
+									]
+								],
+								"settings":
+								{
+									"auto_name": "",
+									"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 3,
 							"type": "text"
 						}
 					]

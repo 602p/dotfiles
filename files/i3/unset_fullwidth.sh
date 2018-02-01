@@ -1,0 +1,1 @@
+xmodmap ~/.i3/old.xmodmap

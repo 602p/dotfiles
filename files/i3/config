@@ -229,7 +229,7 @@ mode "$mode_shitpost" {
     bindsym Shift+question exec bash ~/.i3/qmark.sh; mode "default"
     bindsym Shift+exclam exec bash ~/.i3/exclaim.sh; mode "default"
     bindsym n exec bash ~/.i3/funnyn.sh; mode "default"
-    bindsym w mode "$mode_shitpost_fullwidth"
+    bindsym w exec bash ~/.i3/set_fullwidth.sh; mode "$mode_shitpost_fullwidth"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -237,60 +237,7 @@ mode "$mode_shitpost" {
 
 set $mode_shitpost_fullwidth FULLWIDTH (esc) exit
 mode "$mode_shitpost_fullwidth" {
-    bindsym q exec bash ~/.i3/p_fullwidth.sh q
-    bindsym w exec bash ~/.i3/p_fullwidth.sh w
-    bindsym e exec bash ~/.i3/p_fullwidth.sh e
-    bindsym r exec bash ~/.i3/p_fullwidth.sh r
-    bindsym t exec bash ~/.i3/p_fullwidth.sh t
-    bindsym y exec bash ~/.i3/p_fullwidth.sh y
-    bindsym u exec bash ~/.i3/p_fullwidth.sh u
-    bindsym i exec bash ~/.i3/p_fullwidth.sh i
-    bindsym o exec bash ~/.i3/p_fullwidth.sh o
-    bindsym p exec bash ~/.i3/p_fullwidth.sh p
-    bindsym a exec bash ~/.i3/p_fullwidth.sh a
-    bindsym s exec bash ~/.i3/p_fullwidth.sh s
-    bindsym d exec bash ~/.i3/p_fullwidth.sh d
-    bindsym f exec bash ~/.i3/p_fullwidth.sh f
-    bindsym g exec bash ~/.i3/p_fullwidth.sh g
-    bindsym h exec bash ~/.i3/p_fullwidth.sh h
-    bindsym j exec bash ~/.i3/p_fullwidth.sh j
-    bindsym k exec bash ~/.i3/p_fullwidth.sh k
-    bindsym l exec bash ~/.i3/p_fullwidth.sh l
-    bindsym z exec bash ~/.i3/p_fullwidth.sh z
-    bindsym x exec bash ~/.i3/p_fullwidth.sh x
-    bindsym c exec bash ~/.i3/p_fullwidth.sh c
-    bindsym v exec bash ~/.i3/p_fullwidth.sh v
-    bindsym b exec bash ~/.i3/p_fullwidth.sh b
-    bindsym n exec bash ~/.i3/p_fullwidth.sh n
-    bindsym m exec bash ~/.i3/p_fullwidth.sh m
-    bindsym Shift+q exec bash ~/.i3/p_fullwidth.sh Q
-    bindsym Shift+w exec bash ~/.i3/p_fullwidth.sh W
-    bindsym Shift+e exec bash ~/.i3/p_fullwidth.sh E
-    bindsym Shift+r exec bash ~/.i3/p_fullwidth.sh R
-    bindsym Shift+t exec bash ~/.i3/p_fullwidth.sh T
-    bindsym Shift+y exec bash ~/.i3/p_fullwidth.sh Y
-    bindsym Shift+u exec bash ~/.i3/p_fullwidth.sh U
-    bindsym Shift+i exec bash ~/.i3/p_fullwidth.sh I
-    bindsym Shift+o exec bash ~/.i3/p_fullwidth.sh O
-    bindsym Shift+p exec bash ~/.i3/p_fullwidth.sh P
-    bindsym Shift+a exec bash ~/.i3/p_fullwidth.sh A
-    bindsym Shift+s exec bash ~/.i3/p_fullwidth.sh S
-    bindsym Shift+d exec bash ~/.i3/p_fullwidth.sh D
-    bindsym Shift+f exec bash ~/.i3/p_fullwidth.sh F
-    bindsym Shift+g exec bash ~/.i3/p_fullwidth.sh G
-    bindsym Shift+h exec bash ~/.i3/p_fullwidth.sh H
-    bindsym Shift+j exec bash ~/.i3/p_fullwidth.sh J
-    bindsym Shift+k exec bash ~/.i3/p_fullwidth.sh K
-    bindsym Shift+l exec bash ~/.i3/p_fullwidth.sh L
-    bindsym Shift+z exec bash ~/.i3/p_fullwidth.sh Z
-    bindsym Shift+x exec bash ~/.i3/p_fullwidth.sh X
-    bindsym Shift+c exec bash ~/.i3/p_fullwidth.sh C
-    bindsym Shift+v exec bash ~/.i3/p_fullwidth.sh V
-    bindsym Shift+b exec bash ~/.i3/p_fullwidth.sh B
-    bindsym Shift+n exec bash ~/.i3/p_fullwidth.sh N
-    bindsym Shift+m exec bash ~/.i3/p_fullwidth.sh M
-
-    bindsym Escape mode "default"
+    bindsym Escape exec bash ~/.i3/unset_fullwidth.sh; mode "default"
 }
 
 bindsym $mod+p mode "$mode_shitpost"
