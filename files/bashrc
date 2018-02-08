@@ -3,10 +3,9 @@
 # for examples
 
 # If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+if [ -z "$PS1" ]; then
+  shopt -s expand_aliases
+fi
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -65,8 +64,8 @@ unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+xterm*|*rxvt*)
+    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
     ;;
 *)
     ;;

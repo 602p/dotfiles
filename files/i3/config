@@ -268,7 +268,7 @@ exec --no-startup-id i3-msg 'workspace 2:web; exec google-chrome'
 exec --no-startup-id i3-msg 'workspace 3:edit; exec subl'
 exec --no-startup-id i3-msg 'workspace 6:stat; exec urxvt -e htop'
 exec --no-startup-id i3-msg 'workspace 5:file; exec dolphin'
-exec --no-startup-id i3-msg 'workspace 999:py; exec urxvt -e python3'
+exec --no-startup-id i3-msg 'workspace 999:py; exec urxvt -e bash -lc p'
 #assign [title=".*Google Chrome.*"] 2:web
 
 bindsym XF86MonBrightnessUp exec bash ~/.i3/bright_up.sh
