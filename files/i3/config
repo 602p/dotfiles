@@ -41,7 +41,7 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-set $mode_layout (h) Horiz. Split (v) Vert. Split (s) Stack (t) Tab (e) Split (o) Other output
+set $mode_layout (h) Horiz. Split (v) Vert. Split (s) Sticky (t) Tab (e) Split (o) Other output
 mode "$mode_layout" {
     # split in horizontal orientation
     bindsym h split h; mode "default"
@@ -50,7 +50,7 @@ mode "$mode_layout" {
     bindsym v split v; mode "default"
 
     # change container layout (stacked, tabbed, toggle split)
-    bindsym s layout stacking; mode "default"
+    bindsym s sticky toggle; mode "default"
     bindsym t layout tabbed; mode "default"
     bindsym e layout toggle split; mode "default"
 
@@ -158,7 +158,7 @@ bindsym $mod+Mod1+Shift+9 move container to workspace 19
 bindsym $mod+Mod1+Shift+0 move container to workspace 20
 
 # resize window (you can also use the mouse for that)
-set $mode_resize Resize w/ arrow keys/vimnav. Hold shift for fine
+set $mode_resize Resize w/ arrow keys/vimnav. Hold shift for fine. Ctrl for coarse
 mode "$mode_resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -176,6 +176,11 @@ mode "$mode_resize" {
         bindsym Shift+j resize shrink height 1 px or 1 ppt
         bindsym Shift+l resize grow width 1 px or 1 ppt
 
+        bindsym Control+h resize shrink width 10 px or 10 ppt
+        bindsym Control+k resize grow height 10 px or 10 ppt
+        bindsym Control+j resize shrink height 10 px or 10 ppt
+        bindsym Control+l resize grow width 10 px or 10 ppt
+
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 5 px or 5 ppt
         bindsym Down resize grow height 5 px or 5 ppt
@@ -186,6 +191,11 @@ mode "$mode_resize" {
         bindsym Shift+Down resize grow height 1 px or 1 ppt
         bindsym Shift+Up resize shrink height 1 px or 1 ppt
         bindsym Shift+Right resize grow width 1 px or 1 ppt
+
+        bindsym Control+Left resize shrink width 10 px or 10 ppt
+        bindsym Control+Down resize grow height 10 px or 10 ppt
+        bindsym Control+Up resize shrink height 10 px or 10 ppt
+        bindsym Control+Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
