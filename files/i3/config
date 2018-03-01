@@ -243,10 +243,10 @@ mode "$mode_settings" {
 }
 bindsym $mod+End mode "$mode_settings"
 
-set $mode_settings2 (q) Sound Options (w) nmtui (a) ARandR (s) SShuttle into ACM (z) goto WS
+set $mode_settings2 (q) Sound Options (w) wicd (a) ARandR (s) SShuttle into ACM (z) goto WS
 mode "$mode_settings2" {
     bindsym q mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e alsamixer && i3-msg [con_mark="quickmark_snapback"] focus
-    bindsym w mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e nmtui-connect && i3-msg [con_mark="quickmark_snapback"] focus
+    bindsym w mark --add quickmark_snapback; workspace tool; mode "default"; exec wicd-gtk -n && i3-msg [con_mark="quickmark_snapback"] focus
     bindsym a mark --add quickmark_snapback; workspace tool; mode "default"; exec bash -c "arandr && i3-msg [con_mark=\"quickmark_snapback\"] focus"
     bindsym s mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e bash -c "source .bashrc && python3 -m sshuttle -r argo.acm.umn.edu 0/0"
     bindsym z workspace tool; mode "default"
