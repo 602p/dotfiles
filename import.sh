@@ -12,3 +12,4 @@ cp ~/.config/sublime-text-3/ files/sublime-text-3 -r
 cp ~/.Xresources files/Xresources
 rm -rf files/sublime-text-3/sublime-text-3/Index
 cp ~/.ssh/config files/ssh/config
+cp ~/.ssh/known_hosts files/ssh/known_hosts

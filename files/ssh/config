@@ -1,11 +1,10 @@
-Host hestia
-	HostName 10.10.1.36
-	Port 2021
-	ForwardAgent yes
-
-Host acm
+Host argo
 	HostName argo.acm.umn.edu
 	ForwardAgent yes
+
+Host hestia
+	HostName 10.10.1.105
+	ProxyCommand ssh argo -W %h:%p
 
 Host lind
 	HostName csel-lind40-42.cselabs.umn.edu
