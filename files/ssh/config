@@ -3,8 +3,13 @@ Host argo
 	ForwardAgent yes
 
 Host hestia
-	HostName 10.10.1.105
-	ProxyCommand ssh argo -W %h:%p
+	HostName 160.94.179.129
+	ForwardAgent yes
+
+Host clubby
+	HostName 10.10.1.197
+	User clubby
+	ProxyCommand ssh hestia nc %h %p
 
 Host lind
 	HostName csel-lind40-42.cselabs.umn.edu
