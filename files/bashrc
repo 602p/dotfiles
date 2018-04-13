@@ -1,3 +1,5 @@
+IS_SERVER=0
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -171,12 +173,15 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$HOME/.cargo/bin":$PATH
 export PYTHONSTARTUP="$HOME/.pythonrc.py"
 
-source ~/.ssh-agent-info
-if [ $? != 0 ]; then
-   echo Setting up ssh-agent
-   ssh-agent > ~/.ssh-agent-info
-   source ~/.ssh-agent-info
-   ssh-add
+if [ $IS_SERVER -ne 1 ]
+then
+	source ~/.ssh-agent-info
+	if [ $? != 0 ]; then
+	   echo Setting up ssh-agent
+	   ssh-agent > ~/.ssh-agent-info
+	   source ~/.ssh-agent-info
+	   ssh-add
+	fi
 fi
 
 eval `opam config env`

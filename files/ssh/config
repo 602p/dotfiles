@@ -1,9 +1,16 @@
 Host argo
 	HostName argo.acm.umn.edu
+	User louis
 	ForwardAgent yes
 
 Host hestia
-	HostName 160.94.179.129
+	HostName hestia.acm.umn.edu
+	User louis
+	ForwardAgent yes
+
+Host attic
+	HostName home.louis.goessling.com
+	User goessling
 	ForwardAgent yes
 
 Host clubby
