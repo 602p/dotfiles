@@ -1,5 +1,6 @@
 Host argo
-	HostName argo.acm.umn.edu
+	HostName 10.10.0.148
+	ProxyCommand ssh hestia nc %h %p
 	User louis
 	ForwardAgent yes
 
@@ -17,6 +18,12 @@ Host clubby
 	HostName 10.10.1.197
 	User clubby
 	ProxyCommand ssh hestia nc %h %p
+
+Host medusa
+	HostName 10.10.0.149
+	ProxyCommand ssh hestia nc %h %p
+	User louis
+	ForwardAgent yes
 
 Host lind
 	HostName csel-lind40-42.cselabs.umn.edu
