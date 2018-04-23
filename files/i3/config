@@ -256,7 +256,7 @@ mode "$mode_settings2" {
 }
 bindsym $mod+Prior mode "$mode_settings2"
 
-set $mode_shitpost (s) Shruggie (c) Commie Tree (q) Inverted ? (e) Inverted ! (n) enyeae thign (w) FULLWIDTH
+set $mode_shitpost (s) Shruggie (c) Commie Tree (q) Inverted ? (e) Inverted ! (n) enyeae thign (w) FULLWIDTH (t) THICC
 
 mode "$mode_shitpost" {
     bindsym s exec bash ~/.i3/shruggie.sh; mode "default"
@@ -265,13 +265,19 @@ mode "$mode_shitpost" {
     bindsym Shift+exclam exec bash ~/.i3/exclaim.sh; mode "default"
     bindsym n exec bash ~/.i3/funnyn.sh; mode "default"
     bindsym w exec bash ~/.i3/set_fullwidth.sh; mode "$mode_shitpost_fullwidth"
+    bindsym t exec bash ~/.i3/set_thicc.sh; mode "$mode_shitpost_fullwidth"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 
-set $mode_shitpost_fullwidth FULLWIDTH (esc) exit
+set $mode_shitpost_fullwidth THICC (esc) exit
 mode "$mode_shitpost_fullwidth" {
+    bindsym Escape exec bash ~/.i3/unset_fullwidth.sh; mode "default"
+}
+
+set $mode_shitpost_thicc thicc (esc) exit
+mode "$mode_shitpost_thicc" {
     bindsym Escape exec bash ~/.i3/unset_fullwidth.sh; mode "default"
 }
 
