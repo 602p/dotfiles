@@ -15,7 +15,7 @@ Host attic
 	ForwardAgent yes
 
 Host clubby
-	HostName 10.10.1.197
+	HostName 10.10.1.1
 	User clubby
 	ProxyCommand ssh hestia nc %h %p
 

@@ -6,12 +6,20 @@ pygame.init()
 screen = pygame.display.set_mode((200,200))
 pygame.event.set_grab(True)
 
-# time.sleep(1)
+time.sleep(0.1)
+conn.stdin.write(b"export DISPLAY=:0\n")
+conn.stdin.flush()
 
 clock=pygame.time.Clock()
 
 
 pygame.key.set_repeat(125, 50)
+
+def do_command(s):
+	if False:
+		print(s)
+	conn.stdin.write(b"xdotool "+s+b"\n")
+	conn.stdin.flush()
 
 run=True
 while run:
@@ -66,8 +74,8 @@ while run:
 					keystr="Alt_L+"+keystr
 				# print("--->", keystr)
 				try:
-					conn.stdin.write(b"DISPLAY=:0 xdotool key \"%b\"\n"%keystr.encode("ascii"))
-					conn.stdin.flush()
+					do_command(b"key \"%b\""%keystr.encode("ascii"))
+					
 				except UnicodeEncodeError:
 					pass
 		if e.type==pygame.MOUSEMOTION:
@@ -75,13 +83,13 @@ while run:
 				total_rel[0]+=e.rel[0]
 				total_rel[1]+=e.rel[1]
 		if e.type==pygame.MOUSEBUTTONDOWN:
-			conn.stdin.write(b"DISPLAY=:0 xdotool mousedown %i\n"%e.button)
-			conn.stdin.flush()
+			do_command(b"mousedown %i"%e.button)
+			
 		if e.type==pygame.MOUSEBUTTONUP:
-			conn.stdin.write(b"DISPLAY=:0 xdotool mousedown %i\n"%e.button)
-			conn.stdin.flush()
+			do_command(b"mouseup %i"%e.button)
+			
 	if sum(total_rel):
 		# print(total_rel)
-		conn.stdin.write(b"DISPLAY=:0 xdotool mousemove_relative -- %i %i\n"%tuple(total_rel))
-		conn.stdin.flush()
+		do_command(b"mousemove_relative -- %i %i"%tuple(total_rel))
+		
 		pygame.mouse.set_pos((100,100))
