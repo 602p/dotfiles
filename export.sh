@@ -4,7 +4,7 @@ mkdir ~/.ssh
 cp -r files/ssh/* ~/.ssh
 if [ ! -e ~/.boxrc ]
 then
-	cp files/min_boxrc ~/.boxrc
+	cp min_boxrc ~/.boxrc
 else
 	echo ".boxrc present"
 fi

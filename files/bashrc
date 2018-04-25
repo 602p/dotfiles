@@ -167,7 +167,7 @@ function nonzero_return() {
 IS_SERVER=0
 BOX_PREFIX=
 DO_OPAM=1
-if [ -f "~/.boxrc" ]
+if [ -f ~/.boxrc ]
 then
 	source ~/.boxrc
 fi
