@@ -1,0 +1,4 @@
+cp files/bashrc ~/.bashrc
+cp files/bash_aliases ~/.bash_aliases
+mkdir ~/.ssh
+cp -r files/ssh/* ~/.ssh
