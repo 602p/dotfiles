@@ -1,7 +1,3 @@
-IS_SERVER=0
-BOX_PREFIX=
-DO_OPAM=1
-
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -166,6 +162,15 @@ function nonzero_return() {
 	RETVAL=$?
 	[ $RETVAL -ne 0 ] && echo "$RETVAL"
 }
+
+
+IS_SERVER=0
+BOX_PREFIX=
+DO_OPAM=1
+if [ -f "~/.boxrc" ]
+then
+	source ~/.boxrc
+fi
 
 export PS1="\[\e[41m\]\`nonzero_return\`\[\e[m\]\[\e[34m\]\`parse_git_branch\`\[\e[m\]\W\[\e[32m\]$BOX_PREFIX\\$\[\e[m\] "
 

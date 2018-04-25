@@ -1,0 +1,3 @@
+IS_SERVER=1
+BOX_PREFIX=unset
+DO_OPAM=0
