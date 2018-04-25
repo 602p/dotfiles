@@ -9,7 +9,7 @@ screen = pygame.display.set_mode((200,200))
 pygame.event.set_grab(True)
 
 time.sleep(0.1)
-conn.stdin.write(b"export DISPLAY=:0\n")
+conn.stdin.write(b"export DISPLAY=:0\nalias x=xdotool\n")
 conn.stdin.flush()
 
 clock=pygame.time.Clock()
@@ -20,7 +20,7 @@ pygame.key.set_repeat(125, 50)
 def do_command(s):
 	if False:
 		print(s)
-	conn.stdin.write(b"xdotool "+s+b"\n")
+	conn.stdin.write(b"x "+s+b"\n")
 	conn.stdin.flush()
 
 run=True

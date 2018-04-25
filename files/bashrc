@@ -1,4 +1,5 @@
 IS_SERVER=0
+BOX_PREFIX=
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -165,7 +166,7 @@ function nonzero_return() {
 	[ $RETVAL -ne 0 ] && echo "$RETVAL"
 }
 
-export PS1="\[\e[41m\]\`nonzero_return\`\[\e[m\]\[\e[34m\]\`parse_git_branch\`\[\e[m\]\W\[\e[32m\]\\$\[\e[m\] "
+export PS1="\[\e[41m\]\`nonzero_return\`\[\e[m\]\[\e[34m\]\`parse_git_branch\`\[\e[m\]\W\[\e[32m\]$BOX_PREFIX\\$\[\e[m\] "
 
 source /usr/share/autojump/autojump.sh
 export PATH=/usr/lib/dart/bin:$PATH
