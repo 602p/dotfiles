@@ -1,6 +1,8 @@
 import subprocess, pygame, time, sys
 
-conn = subprocess.Popen(['ssh', '-C', sys.argv[1]],
+cmd=['ssh', '-C', sys.argv[1]]
+# cmd=['ssh', 'hestia', 'nc 10.10.1.1 4444']
+conn = subprocess.Popen(cmd,
 	stdin=subprocess.PIPE)
 pygame.init()
 screen = pygame.display.set_mode((200,200))
