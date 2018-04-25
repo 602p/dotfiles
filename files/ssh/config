@@ -28,3 +28,4 @@ Host medusa
 Host lind
 	HostName csel-lind40-42.cselabs.umn.edu
 	User goess006
+	ForwardAgent yes
