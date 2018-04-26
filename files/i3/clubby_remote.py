@@ -10,6 +10,7 @@ pygame.event.set_grab(True)
 
 time.sleep(0.1)
 conn.stdin.write(b"export DISPLAY=:0\nalias x=xdotool\n")
+conn.stdin.write(b"xset -display :0 dpms force on\n")
 conn.stdin.flush()
 
 clock=pygame.time.Clock()
