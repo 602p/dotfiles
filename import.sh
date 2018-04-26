@@ -2,6 +2,8 @@ rm -rf files/*
 mkdir files/i3
 mkdir files/sublime-text-3
 mkdir files/ssh
+mkdir files/ssh/controlmasters
+touch files/ssh/controlmasters/.exists
 cp -r ~/.i3/* files/i3
 cp ~/.bash_aliases files/bash_aliases
 cp ~/.bashrc files/bashrc
