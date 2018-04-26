@@ -271,12 +271,13 @@ mode "$mode_shitpost" {
     bindsym Escape mode "default"
 }
 
-set $mode_shitpost_clubby (h) horn (f) flamingo (r) rcon (k) kill mpv
+set $mode_shitpost_clubby (h) horn (f) flamingo (r) rcon (k) kill mpv (m) toggle mute
 mode "$mode_shitpost_clubby" {
     bindsym h exec bash -c "source ~/.ssh-agent-info && ssh clubby mpv \"/home/clubby/Downloads/mps/mlg.webm\""
     bindsym f exec bash -c "source ~/.ssh-agent-info && ssh clubby mpv \"/home/clubby/Downloads/mps/kkb.webm\""; mode "default"
     bindsym r exec bash -c "source ~/.ssh-agent-info && python ~/.i3/clubby_remote.py clubby"; mode "default"
     bindsym k exec bash -c "source ~/.ssh-agent-info && ssh clubby killall mpv"; mode "default"
+    bindsym m exec bash -c "source ~/.ssh-agent-info && ssh clubby amixer -q -D pulse sset Master toggle"; mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
