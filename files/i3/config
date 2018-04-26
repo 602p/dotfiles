@@ -256,7 +256,7 @@ mode "$mode_settings2" {
 }
 bindsym $mod+Prior mode "$mode_settings2"
 
-set $mode_shitpost (s) Shruggie (c) Commie Tree (q) Inverted ? (e) Inverted ! (n) enyeae thign (w) FULLWIDTH (t) THICC
+set $mode_shitpost (s) Shruggie (c) Commie Tree (q) Inverted ? (e) Inverted ! (n) enyeae thign (w) FULLWIDTH (t) THICC clubby{ (h) horn (f) flamingo (r) rcon}
 
 mode "$mode_shitpost" {
     bindsym s exec bash ~/.i3/shruggie.sh; mode "default"
@@ -266,6 +266,9 @@ mode "$mode_shitpost" {
     bindsym n exec bash ~/.i3/funnyn.sh; mode "default"
     bindsym w exec bash ~/.i3/set_fullwidth.sh; mode "$mode_shitpost_fullwidth"
     bindsym t exec bash ~/.i3/set_thicc.sh; mode "$mode_shitpost_fullwidth"
+    bindsym h exec bash -c "source ~/.ssh-agent-info && ssh clubby mpv \"/home/clubby/Downloads/mps/mlg.webm\""
+    bindsym f exec bash -c "source ~/.ssh-agent-info && ssh clubby mpv \"/home/clubby/Downloads/mps/kkb.webm\""; mode "default"
+    bindsym r exec bash -c "source ~/.ssh-agent-info && python ~/.i3/clubby_remote.py clubby"; mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
