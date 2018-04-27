@@ -3,6 +3,9 @@ Host argo
 	ProxyCommand ssh hestia nc %h %p
 	User louis
 	ForwardAgent yes
+	ControlPath ~/.ssh/controlmasters/%r@%h:%p
+        ControlMaster auto
+        ControlPersist 10m
 
 Host hestia
 	HostName hestia.acm.umn.edu
@@ -18,6 +21,14 @@ Host attic
 	ForwardAgent yes
 
 Host clubby
+        HostName 10.10.1.74
+        User clubby
+        ProxyCommand ssh hestia nc %h %p
+        ControlPath ~/.ssh/controlmasters/%r@%h:%p
+        ControlMaster auto
+        ControlPersist 10m
+
+Host clubbyl
 	HostName 10.10.1.1
 	User clubby
 	ProxyCommand ssh hestia nc %h %p
@@ -30,6 +41,9 @@ Host medusa
 	ProxyCommand ssh hestia nc %h %p
 	User louis
 	ForwardAgent yes
+	ControlPath ~/.ssh/controlmasters/%r@%h:%p
+        ControlMaster auto
+        ControlPersist 10m
 
 Host lind
 	HostName csel-lind40-42.cselabs.umn.edu
