@@ -22,7 +22,7 @@ Host attic
 
 Host clubby
         HostName 10.10.1.74
-        User clubby
+	ForwardAgent yes
         ProxyCommand ssh hestia nc %h %p
         ControlPath ~/.ssh/controlmasters/%r@%h:%p
         ControlMaster auto
