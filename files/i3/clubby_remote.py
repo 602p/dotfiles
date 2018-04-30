@@ -11,6 +11,7 @@ pygame.event.set_grab(True)
 time.sleep(0.2)
 conn.stdin.write(b"export DISPLAY=:0\n")
 conn.stdin.write(b"xset -display :0 dpms force on\n")
+conn.stdin.write(b"gnome-screensaver-command -d\n")
 conn.stdin.flush()
 
 clock=pygame.time.Clock()
