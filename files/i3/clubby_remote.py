@@ -1,4 +1,4 @@
-import subprocess, pygame, time, sys
+import subprocess, pygame, time, sys, pyperclip, shlex
 
 cmd=['ssh', '-C', sys.argv[1]]
 # cmd=['ssh', 'hestia', 'nc 10.10.1.1 4444']
@@ -15,7 +15,6 @@ conn.stdin.write(b"gnome-screensaver-command -d\n")
 conn.stdin.flush()
 
 clock=pygame.time.Clock()
-
 
 pygame.key.set_repeat(125, 50)
 
@@ -36,6 +35,8 @@ while run:
 		if e.type==pygame.KEYDOWN:
 			if e.key==pygame.K_F1:
 				run=False
+			elif e.key==pygame.K_F2:
+				do_command(b"type "+shlex.quote(pyperclip.paste()).encode("ascii"))
 			elif 'unicode' in dir(e):
 				# print(e)
 				keystr=chr(e.key)

@@ -1,3 +1,12 @@
+Host cclubby
+        HostName 10.10.1.74
+        ForwardAgent yes
+        ProxyCommand ssh hestia nc %h %p
+        ControlPath ~/.ssh/controlmasters/%r@%h:%p
+        ControlMaster auto
+        ControlPersist 10m
+	User clubby
+
 Host argo
 	HostName 10.10.0.148
 	ProxyCommand ssh hestia nc %h %p
