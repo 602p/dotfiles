@@ -1,6 +1,7 @@
 import subprocess, pygame, time, sys, pyperclip, shlex
 
-cmd=['ssh', '-C', sys.argv[1]]
+host = sys.argv[1] if len(sys.argv) > 1 else "clubby"
+cmd=['ssh', '-C', host]
 # cmd=['ssh', 'hestia', 'nc 10.10.1.1 4444']
 conn = subprocess.Popen(cmd,
 	stdin=subprocess.PIPE)
