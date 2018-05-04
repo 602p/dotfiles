@@ -1,5 +1,5 @@
 Host cclubby
-        HostName 10.10.1.74
+        HostName 10.10.1.2
         ForwardAgent yes
         ProxyCommand ssh hestia nc %h %p
         ControlPath ~/.ssh/controlmasters/%r@%h:%p
@@ -30,7 +30,7 @@ Host attic
 	ForwardAgent yes
 
 Host clubby
-        HostName 10.10.1.74
+        HostName 10.10.1.2
 	ForwardAgent yes
         ProxyCommand ssh hestia nc %h %p
         ControlPath ~/.ssh/controlmasters/%r@%h:%p
