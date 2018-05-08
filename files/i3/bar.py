@@ -8,7 +8,7 @@ def get_brightness():
             return (int(b.read())/int(m.read()))*100
 
 def get_ram_usage():
-    return (float([i for i in subprocess.check_output("free -h | grep Mem:", shell=True).decode("ascii").split(" ") if i][2][:-1])/7.8)*100
+    return (float([i for i in subprocess.check_output("free -h | grep Mem:", shell=True).decode("ascii").split(" ") if i][2][:-2])/7.8)*100
 
 
 def print_line(message):

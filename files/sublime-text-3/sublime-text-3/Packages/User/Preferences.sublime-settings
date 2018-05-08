@@ -5,7 +5,8 @@
 		"__pycache__",
 		".git"
 	],
-	"font_face": "RobotoMono Nerd Font",
+	"font_face": "Fira Code Medium",
+	"font_options": [],
 	"font_size": 14,
 	"ignored_packages":
 	[
