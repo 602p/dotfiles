@@ -6,8 +6,10 @@
 		".git"
 	],
 	"font_face": "Fira Code Medium",
-	"font_options": [],
-	"font_size": 14,
+	"font_options":
+	[
+	],
+	"font_size": 12,
 	"ignored_packages":
 	[
 		"Rust",
