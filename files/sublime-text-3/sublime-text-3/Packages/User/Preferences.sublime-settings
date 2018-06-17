@@ -1,5 +1,15 @@
 {
+	"added_words":
+	[
+		"Actionwriter",
+		"Goessling",
+		"microcontroller",
+		"keyswitch",
+		"Actionwriter's",
+		"indices"
+	],
 	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Monokai.tmTheme",
+	"dictionary": "Packages/Language - English/en_US.dic",
 	"folder_exclude_patterns":
 	[
 		"__pycache__",
@@ -9,16 +19,21 @@
 	"font_options":
 	[
 	],
-	"font_size": 12,
+	"font_size": 13,
 	"ignored_packages":
 	[
 		"Rust",
 		"Vintage"
 	],
+	"ignored_words":
+	[
+		"clicky"
+	],
 	"rulers":
 	[
 		80
 	],
+	"spell_check": true,
 	"theme": "Boxy Monokai.sublime-theme",
 	"theme_sidebar_font_xl": true,
 	"theme_sidebar_indent_sm": true,
