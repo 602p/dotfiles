@@ -195,3 +195,4 @@ if [ $DO_OPAM -ne 0 ]
 then
 	eval `opam config env`
 fi
+export GPG_TTY=$(tty)

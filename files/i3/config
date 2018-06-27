@@ -214,12 +214,13 @@ bar {
 
 set $Locker xscreensaver-command -lock && sleep 1
 
-set $mode_system System (l) lock, (Shift+e) logout, (Shift+u) suspend, (Shift+h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
+set $mode_system System (k) kill agents, (l) lock, (Shift+e) logout, (Shift+u) suspend, (Shift+h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
+    bindsym k exec bash ~/.i3/paranoia.sh, mode "default"
     bindsym l exec --no-startup-id $Locker, mode "default"
     bindsym Shift+e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym Shift+u exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym Shift+h exec --no-startup-id kdesudo bash -c "$Locker && systemctl hibernate"; mode "default"
+    bindsym Shift+u exec bash ~/.i3/paranoia.sh; exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym Shift+h exec bash ~/.i3/paranoia.sh; exec --no-startup-id kdesudo bash -c "$Locker && systemctl hibernate"; mode "default"
     bindsym Shift+r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
 
@@ -244,13 +245,14 @@ mode "$mode_settings" {
 }
 bindsym $mod+End mode "$mode_settings"
 
-set $mode_settings2 (q) Sound Options (w) wicd (a) ARandR (s) SShuttle into ACM  (c) ssh to clubby (z) goto WS
+set $mode_settings2 (q) Sound Options (w) wicd (a) ARandR (s) SShuttle into ACM  (c) ssh to clubby (k) kill agents (z) goto WS
 mode "$mode_settings2" {
     bindsym q mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e alsamixer && i3-msg [con_mark="quickmark_snapback"] focus
     bindsym w mark --add quickmark_snapback; workspace tool; mode "default"; exec wicd-gtk -n && i3-msg [con_mark="quickmark_snapback"] focus
     bindsym a mark --add quickmark_snapback; workspace tool; mode "default"; exec bash -c "arandr && i3-msg [con_mark=\"quickmark_snapback\"] focus"
     bindsym s mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e bash -c "source .bashrc && python3 -m sshuttle -r argo.acm.umn.edu 0/0"
     bindsym c mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e bash -c "source .bashrc && ssh clubby && i3-msg [con_mark=\"quickmark_snapback\"] focus"
+    bindsym k exec bash ~/.i3/paranoia.sh; mode "default"
     bindsym z workspace tool; mode "default"
     bindsym Return mode "default"
     bindsym Escape mode "default"

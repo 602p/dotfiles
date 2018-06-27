@@ -1,4 +1,4 @@
-*.font: xft:Nimbus Mono:size=14:antialias=true
+*.font: xft:Nimbus Mono:size=15:antialias=true
 
 *.background:  #1e1f29
 *.foreground:  #ebece6
