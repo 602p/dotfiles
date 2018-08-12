@@ -30,18 +30,11 @@ Host attic
 	ForwardAgent yes
 
 Host clubby
-        HostName 10.10.1.2
+        HostName 10.10.1.1
+	User clubby
 	ForwardAgent yes
         ProxyCommand ssh hestia nc %h %p
         ControlPath ~/.ssh/controlmasters/%r@%h:%p
-        ControlMaster auto
-        ControlPersist 10m
-
-Host clubbyl
-	HostName 10.10.1.1
-	User clubby
-	ProxyCommand ssh hestia nc %h %p
-	ControlPath ~/.ssh/controlmasters/%r@%h:%p
         ControlMaster auto
         ControlPersist 10m
 
@@ -58,3 +51,12 @@ Host lind
 	HostName csel-lind40-42.cselabs.umn.edu
 	User goess006
 	ForwardAgent yes
+
+Host hylaea
+        HostName 10.10.0.187
+        ProxyCommand ssh hestia nc %h %p
+        User louis
+        ForwardAgent yes
+        ControlPath ~/.ssh/controlmasters/%r@%h:%p
+        ControlMaster auto
+        ControlPersist 10m
