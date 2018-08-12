@@ -7,7 +7,14 @@ alias weather="curl http://wttr.in/"
 alias g="git"
 alias gs="git status"
 alias ga="git add"
-alias gc="git commit -S"
+
+if [ $IS_SERVER -ne 1 ]
+then
+	alias gc="git commit -S"
+else
+	alias gc="git commit"
+fi
+
 alias gcm="gc -m"
 alias gcam="gc -am"
 alias gp="git push"
