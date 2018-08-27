@@ -38,3 +38,9 @@ alias sshuttle-home="sshuttle -r attic 0/0 -x 50.93.254.146"
 alias ssh-start-agent="ssh-agent -k ; ssh-agent > ~/.ssh-agent-info && source ~/.ssh-agent-info && ssh-add"
 alias kill-agents="bash ~/.i3/paranoia.sh"
 alias kb=keybase
+alias sshuttle-acm="sshuttle -r argo 0/0 -x 160.94.179.129"
+alias sshuttle-acm-mgmt="sshuttle -r lightman@160.94.179.147 10.99.99.0/24"
+
+genpasswd () {
+	echo $(head /dev/urandom -c ${1:-20} | base64 | head - -c ${1:-20})
+}

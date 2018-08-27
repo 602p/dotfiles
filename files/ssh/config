@@ -53,10 +53,15 @@ Host lind
 	ForwardAgent yes
 
 Host hylaea
-        HostName 10.10.0.187
-        ProxyCommand ssh hestia nc %h %p
+        HostName louis.members.acm.umn.edu
         User louis
         ForwardAgent yes
         ControlPath ~/.ssh/controlmasters/%r@%h:%p
         ControlMaster auto
         ControlPersist 10m
+        ForwardX11 yes
+        ForwardX11Trusted yes
+
+Host wopr
+	HostName 160.94.179.147
+	User lightman
