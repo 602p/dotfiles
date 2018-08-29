@@ -5,6 +5,7 @@
 # If not running interactively, don't do anything
 if [ -z "$PS1" ]; then
   shopt -s expand_aliases
+  return
 fi
 
 # don't put duplicate lines or lines starting with space in the history.
