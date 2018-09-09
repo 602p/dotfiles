@@ -6,18 +6,18 @@ Host cclubby
         ControlMaster auto
         ControlPersist 10m
 	User clubby
-
-Host argo
-	HostName 10.10.0.148
-	ProxyCommand ssh hestia nc %h %p
+	
+Host hestia
+	HostName hestia.acm.umn.edu
 	User louis
 	ForwardAgent yes
 	ControlPath ~/.ssh/controlmasters/%r@%h:%p
         ControlMaster auto
         ControlPersist 10m
 
-Host hestia
-	HostName hestia.acm.umn.edu
+Host argo
+	HostName 10.10.0.148
+	ProxyCommand ssh hestia nc %h %p
 	User louis
 	ForwardAgent yes
 	ControlPath ~/.ssh/controlmasters/%r@%h:%p
