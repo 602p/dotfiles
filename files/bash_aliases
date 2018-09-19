@@ -20,6 +20,9 @@ alias gcam="gc -am"
 alias gp="git push"
 alias gl="git pull"
 alias gd="g diff --color | more"
+alias gy="gl && gp"
+alias g...="gcam ... && gy"
+alias g...-s="git commit -am ... && gy"
 alias fb="llc-3.5 llvm_out.ir&&gcc llvm_out.ir.s&&mv a.out out"
 alias pipenv="python3.6 -m pipenv"
 alias pp="pipenv run python"
@@ -31,7 +34,7 @@ alias l="ls"
 alias ll="ls -l"
 alias rcon="p ~/.i3/clubby_remote.py"
 alias ssh-clear-masters="rm ~/.ssh/controlmasters/*"
-alias nuclear-option="./.i3/nuclear-option.sh"
+alias nuclear-option="~/.i3/nuclear-option.sh"
 alias acmpaste="curl --data-binary @- https://p.acm.umn.edu/"
 alias aru="~/Documents/arduino-1.8.5/arduino --port /dev/ttyACM0 --board arduino:avr:leonardo --verbose-upload --upload"
 alias sshuttle-home="sshuttle -r attic 0/0 -x 50.93.254.146"
@@ -43,4 +46,8 @@ alias sshuttle-acm-mgmt="sshuttle -r lightman@160.94.179.147 10.99.99.0/24"
 
 genpasswd () {
 	echo $(head /dev/urandom -c ${1:-20} | base64 | head - -c ${1:-20})
+}
+
+runc () {
+	gcc -Wall -Wextra -g $1 && ./a.out $2
 }
