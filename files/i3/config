@@ -283,7 +283,7 @@ mode "$mode_shitpost_clubby" {
     bindsym r exec bash -c "source ~/.ssh-agent-info && python3 ~/.i3/clubby_remote.py clubby@clubby"; mode "default"
     bindsym k exec bash -c "source ~/.ssh-agent-info && ssh clubby@clubby killall mpv"; mode "default"
     bindsym m exec bash -c "source ~/.ssh-agent-info && ssh clubby@clubby amixer -q -D pulse sset Master toggle"; mode "default"
-    bindsym a exec bash -c "source ~/.ssh-agent-info && ssh clubby mpv AKSHAYVIDEO/$(ssh clubby ls AKSHAYVIDEO | dmenu -ip clip)"; mode default
+    bindsym a exec bash -c "source ~/.ssh-agent-info && ssh clubby mpv AKSHAYVIDEO/$(cat ~/.i3/akshayclips.txt | dmenu -i -p clip | python3 ~/.i3/akshayhelper.py)"; mode default
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
