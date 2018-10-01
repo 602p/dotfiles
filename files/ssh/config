@@ -52,6 +52,11 @@ Host lind
 	User goess006
 	ForwardAgent yes
 
+Host khkh
+        HostName csel-kh1250-09.cselabs.umn.edu
+        User goess006
+        ForwardAgent yes
+
 Host hylaea
         HostName louis.members.acm.umn.edu
         User louis
@@ -65,3 +70,4 @@ Host hylaea
 Host wopr
 	HostName 160.94.179.147
 	User lightman
+	ForwardAgent yes
