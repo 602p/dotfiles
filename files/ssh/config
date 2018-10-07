@@ -17,7 +17,7 @@ Host hestia
 
 Host argo
 	HostName 10.10.0.148
-	ProxyCommand ssh hestia nc %h %p
+#	ProxyCommand ssh hestia nc %h %p
 	User louis
 	ForwardAgent yes
 	ControlPath ~/.ssh/controlmasters/%r@%h:%p
@@ -40,7 +40,7 @@ Host clubby
 
 Host medusa
 	HostName 10.10.0.149
-	ProxyCommand ssh hestia nc %h %p
+#	ProxyCommand ssh hestia nc %h %p
 	User louis
 	ForwardAgent yes
 	ControlPath ~/.ssh/controlmasters/%r@%h:%p
