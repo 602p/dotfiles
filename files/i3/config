@@ -322,7 +322,7 @@ bindsym $mod+o mode "$mode_music"
 #gaps 10
 
 exec xscreensaver -nosplash
-#exec xbindkeys
+exec ~/.i3/unclutter -idle 1
 exec wicd-client -t
 exec rm ~/.ssh-agent-info
 exec bash ~/.i3/setup_mouse.sh
