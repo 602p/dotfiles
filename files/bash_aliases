@@ -42,7 +42,7 @@ alias sshuttle-home="sshuttle -r attic 0/0 -x 50.93.254.146"
 alias ssh-start-agent="ssh-agent -k ; ssh-agent > ~/.ssh-agent-info && source ~/.ssh-agent-info && ssh-add"
 alias kill-agents="bash ~/.i3/paranoia.sh"
 alias kb=keybase
-alias sshuttle-acm="sshuttle -r argo 0/0 -x 160.94.179.129"
+alias sshuttle-acm="sshuttle -r hylaea 0/0 -x 160.94.179.187"
 alias sshuttle-acm-mgmt="sshuttle -r lightman@160.94.179.147 10.99.99.0/24"
 
 genpasswd () {
@@ -62,3 +62,5 @@ alias clp=clubbyplay
 getcert () {
 	echo | openssl s_client -showcerts -servername $1 -connect $1:443 2>/dev/null | openssl x509 -inform pem -noout -text
 }
+
+alias d="banner d"

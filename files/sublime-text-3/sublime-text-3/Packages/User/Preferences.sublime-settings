@@ -6,7 +6,10 @@
 		"microcontroller",
 		"keyswitch",
 		"Actionwriter's",
-		"indices"
+		"indices",
+		"Isai",
+		"admin",
+		"google"
 	],
 	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Monokai.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
@@ -19,7 +22,7 @@
 	"font_options":
 	[
 	],
-	"font_size": 15,
+	"font_size": 16,
 	"ignored_packages":
 	[
 		"Rust",

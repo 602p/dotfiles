@@ -119,7 +119,6 @@ bindsym $mod+7 mark --add quickmark_snapback; workspace 7:watch
 bindsym $mod+8 mark --add quickmark_snapback; workspace 8
 bindsym $mod+9 mark --add quickmark_snapback; workspace 9
 bindsym $mod+0 mark --add quickmark_snapback; workspace 10:scratch
-bindsym F12 workspace 1:sh
 workspace_auto_back_and_forth yes
 
 # move focused container to workspace
@@ -322,7 +321,7 @@ bindsym $mod+o mode "$mode_music"
 #gaps 10
 
 exec xscreensaver -nosplash
-exec ~/.i3/unclutter -idle 1
+exec ~/.i3/unclutter -idle 1 -noevents
 exec wicd-client -t
 exec rm ~/.ssh-agent-info
 exec bash ~/.i3/setup_mouse.sh

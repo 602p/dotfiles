@@ -16,7 +16,7 @@ Host hestia
         ControlPersist 10m
 
 Host argo
-	HostName 10.10.0.148
+	HostName argo.acm.umn.edu
 #	ProxyCommand ssh hestia nc %h %p
 	User louis
 	ForwardAgent yes
@@ -39,7 +39,7 @@ Host clubby
         ControlPersist 10m
 
 Host medusa
-	HostName 10.10.0.149
+	HostName medusa.acm.umn.edu
 #	ProxyCommand ssh hestia nc %h %p
 	User louis
 	ForwardAgent yes
