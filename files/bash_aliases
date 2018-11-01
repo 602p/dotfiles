@@ -38,11 +38,11 @@ alias ssh-clear-masters="rm ~/.ssh/controlmasters/*"
 alias nuclear-option="~/.i3/nuclear-option.sh"
 alias acmpaste="curl --data-binary @- https://p.acm.umn.edu/"
 alias aru="~/Documents/arduino-1.8.5/arduino --port /dev/ttyACM0 --board arduino:avr:leonardo --verbose-upload --upload"
-alias sshuttle-home="sshuttle -r attic 0/0 -x 50.93.254.146"
+alias sshuttle-home="sshuttle --dns -r attic 0/0 -x 50.93.254.146"
 alias ssh-start-agent="ssh-agent -k ; ssh-agent > ~/.ssh-agent-info && source ~/.ssh-agent-info && ssh-add"
 alias kill-agents="bash ~/.i3/paranoia.sh"
 alias kb=keybase
-alias sshuttle-acm="sshuttle -r hylaea 0/0 -x 160.94.179.187"
+alias sshuttle-acm="sshuttle --dns -r hylaea 0/0 -x 160.94.179.187"
 alias sshuttle-acm-mgmt="sshuttle -r lightman@160.94.179.147 10.99.99.0/24"
 
 genpasswd () {
