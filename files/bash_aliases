@@ -64,3 +64,6 @@ getcert () {
 }
 
 alias d="banner d"
+
+alias resource="source ~/.bashrc"
+
