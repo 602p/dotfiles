@@ -9,3 +9,4 @@ then
 else
 	echo ".boxrc present"
 fi
+touch ~/.hushlogin

@@ -40,6 +40,15 @@ Host attic
         ControlMaster auto
         ControlPersist 10m
 
+Host scriber
+        HostName 10.0.0.12
+        ProxyCommand ssh cnous nc %h %p
+        User louis
+        ForwardAgent yes
+        ControlPath ~/.ssh/controlmasters/%r@%h:%p
+        ControlMaster auto
+        ControlPersist 10m
+
 
 Host clubby
         HostName 10.10.1.1
