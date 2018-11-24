@@ -22,7 +22,7 @@
 	"font_options":
 	[
 	],
-	"font_size": 18,
+	"font_size": 15,
 	"ignored_packages":
 	[
 		"Rust",

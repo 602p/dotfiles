@@ -24,31 +24,22 @@ Host argo
         ControlMaster auto
         ControlPersist 10m
 
-Host cnous
-	HostName home.louis.goessling.com
-	ForwardAgent yes
-        ControlPath ~/.ssh/controlmasters/%r@%h:%p
-        ControlMaster auto
-        ControlPersist 10m
-
-Host attic
-        HostName 10.0.0.10
-        ProxyCommand ssh cnous nc %h %p
-        User goessling
-        ForwardAgent yes
-        ControlPath ~/.ssh/controlmasters/%r@%h:%p
-        ControlMaster auto
-        ControlPersist 10m
-
 Host scriber
-        HostName 10.0.0.12
-        ProxyCommand ssh cnous nc %h %p
+        HostName home.louis.goessling.com
         User louis
         ForwardAgent yes
         ControlPath ~/.ssh/controlmasters/%r@%h:%p
         ControlMaster auto
         ControlPersist 10m
 
+Host attic
+        HostName 10.0.0.10
+        ProxyCommand ssh scriber nc %h %p
+        User goessling
+        ForwardAgent yes
+        ControlPath ~/.ssh/controlmasters/%r@%h:%p
+        ControlMaster auto
+        ControlPersist 10m
 
 Host clubby
         HostName 10.10.1.1
@@ -92,3 +83,11 @@ Host wopr
 	HostName 160.94.179.147
 	User lightman
 	ForwardAgent yes
+
+Host tchh
+	HostName frostbyte.cc
+	User 602p
+	ForwardAgent yes
+	ControlPath ~/.ssh/controlmasters/%r@%h:%p
+        ControlMaster auto
+        ControlPersist 10m
