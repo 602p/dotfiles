@@ -230,12 +230,13 @@ mode "$mode_system" {
 
 bindsym $mod+Home mode "$mode_system"
 
-set $mode_settings (o) Touchpad On (d) Touchpad Off (f) Toggle ffm (u) unclutter (s) Screenshot (l) leanshot (r) Reload (Shift+r) Restart [LOGOUT]
+set $mode_settings (o) Touchpad On (d) Touchpad Off (f) Toggle ffm (u) unclutter (s) Screenshot (l) leanshot (Shift+l) leanshot-upload (r) Reload (Shift+r) Restart [LOGOUT]
 mode "$mode_settings" {
     bindsym o exec synclient TapButton1=1&; exec synclient TapButton2=3&; mode "default"
     bindsym d exec synclient TapButton1=0&; exec synclient TapButton2=0&; mode "default"
     bindsym s exec mkdir ~/screenshots; exec bash -c "cd screenshots&&scrot"; mode "default"
     bindsym l exec bash ~/.i3/do_leanshot.sh; mode "default"
+    bindsym Shift+l exec bash ~/.i3/leanshot_upload.sh; mode "default"
     bindsym u exec ~/.i3/unclutter -idle 1 -noevents; mode "default"
     bindsym r reload; mode "default"
     bindsym Shift+r restart
