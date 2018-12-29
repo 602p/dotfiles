@@ -252,8 +252,8 @@ mode "$mode_settings2" {
     bindsym q mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e alsamixer && i3-msg [con_mark="quickmark_snapback"] focus
     bindsym w mark --add quickmark_snapback; workspace tool; mode "default"; exec wicd-gtk -n && i3-msg [con_mark="quickmark_snapback"] focus
     bindsym a mark --add quickmark_snapback; workspace tool; mode "default"; exec bash -c "arandr && i3-msg [con_mark=\"quickmark_snapback\"] focus"
-    bindsym s mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e bash -c "source .bashrc && python3 -m sshuttle -r argo.acm.umn.edu 0/0"
-    bindsym c mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e bash -c "source .bashrc && ssh clubby && i3-msg [con_mark=\"quickmark_snapback\"] focus"
+    bindsym s mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e bash -c "source .ssh-agent-info && python3 -m sshuttle -r argo.acm.umn.edu 0/0"
+    bindsym c mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e bash -c "source .ssh-agent-info && ssh clubby && i3-msg [con_mark=\"quickmark_snapback\"] focus"
     bindsym k exec bash ~/.i3/paranoia.sh; mode "default"
     bindsym z workspace tool; mode "default"
     bindsym Return mode "default"
