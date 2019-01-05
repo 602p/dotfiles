@@ -1,5 +1,5 @@
 #!/bin/bash
-SCREENSHOT=$HOME/.i3/leanshot
+SCREENSHOT=$HOME/.config/i3/leanshot
 # choose some file to save it to
 FILE="$HOME/last_screenshot.png"
 $SCREENSHOT selection -o $FILE

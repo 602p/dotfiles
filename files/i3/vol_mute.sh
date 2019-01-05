@@ -3,4 +3,4 @@ if amixer sget 'Master' | grep -o "\[on\]"; then
 else
 	amixer sset 'Master' unmute
 fi
-killall -USR1 i3status
+pkill -RTMIN+1 i3blocks

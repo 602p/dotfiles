@@ -155,6 +155,19 @@ function nonzero_return() {
 	[ $RETVAL -ne 0 ] && echo "$RETVAL"
 }
 
+_ssh() 
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts=$(grep '^Host' ~/.ssh/config ~/.ssh/config.d/* 2>/dev/null | grep -v '[?*]' | cut -d ' ' -f 2-)
+
+    COMPREPLY=( $(compgen -W "$opts" -- ${cur}) )
+    return 0
+}
+complete -F _ssh ssh
+
 
 IS_SERVER=0
 BOX_PREFIX=
@@ -166,7 +179,7 @@ fi
 
 export PS1="\[\e[41m\]\`nonzero_return\`\[\e[m\]\[\e[34m\]\`parse_git_branch\`\[\e[m\]\W\[\e[32m\]$BOX_PREFIX\\$\[\e[m\] "
 
-source /usr/share/autojump/autojump.sh
+source /etc/profile.d/autojump.bash
 export PATH=/usr/lib/dart/bin:$PATH
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$HOME/.cargo/bin":$PATH

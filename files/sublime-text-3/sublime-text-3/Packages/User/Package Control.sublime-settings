@@ -5,9 +5,8 @@
 	],
 	"installed_packages":
 	[
-		"Boxy Theme",
-		"Dart",
-		"Package Control",
-		"WordCount"
+		"Agila Theme",
+		"FileIcons",
+		"Package Control"
 	]
 }
