@@ -167,7 +167,7 @@ _ssh()
     return 0
 }
 complete -F _ssh ssh
-
+source /usr/share/bash-completion/bash_completion
 
 IS_SERVER=0
 BOX_PREFIX=

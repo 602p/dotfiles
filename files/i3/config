@@ -212,17 +212,15 @@ bar {
         font pango:Unifont
 }
 
-set $Locker xscreensaver-command -lock && sleep 1
-
 set $mode_system System (p) kill agents, (l) lock, (Shift+e) logout, (Shift+u) suspend, (Shift+h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym p exec bash ~/.config/i3/paranoia.sh
-    bindsym l exec --no-startup-id $Locker, mode "default"
-    bindsym Shift+e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym Shift+u exec bash ~/.config/i3/paranoia.sh; exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym Shift+h exec bash ~/.config/i3/paranoia.sh; exec --no-startup-id kdesudo bash -c "$Locker && systemctl hibernate"; mode "default"
-    bindsym Shift+r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+    bindsym l exec i3lock -ec 000000 && xset dpms force off, mode "default"
+    bindsym Shift+e exec i3-msg exit, mode "default"
+    bindsym Shift+u exec systemctl suspend && i3lock -ec 000000, mode "default"
+    bindsym Shift+h exec systemctl hibernate && i3lock -ec 000000, mode "default"
+    bindsym Shift+r exec systemctl reboot, mode "default"
+    bindsym Shift+s exec systemctl poweroff -i, mode "default"  
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -321,9 +319,6 @@ mode "$mode_music" {
 
 bindsym $mod+o mode "$mode_music"
 
-#gaps 10
-
-exec xscreensaver -nosplash
 exec ~/.config/i3/unclutter -idle 1 -noevents
 exec rm ~/.ssh-agent-info
 
@@ -341,6 +336,8 @@ bindsym XF86Calculator workspace 999:py
 
 exec i3-msg
 exec xset b 0
+exec xset dpms 60 60 60
+exec xautolock -time 1 -locker "i3lock -ec 000000; xset dpms force off" &
 
 
 ###START VGS AUTOGEN###
