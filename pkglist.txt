@@ -57,6 +57,7 @@ m4
 make
 man-db
 man-pages
+masterpdfeditor
 mdadm
 minecraft-launcher
 nano
