@@ -21,7 +21,7 @@
 	"font_options":
 	[
 	],
-	"font_size": 18,
+	"font_size": 19,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -36,9 +36,8 @@
 	],
 	"spell_check": true,
 	"theme": "Agila Monokai.sublime-theme",
-
-	"theme_agila_nano_mode": true,
-	"theme_agila_sidebar_selected_entry_white": true,
 	"theme_agila_active_tab_entry_white": true,
+	"theme_agila_nano_mode": true,
 	"theme_agila_sidebar_plus_minus": true,
+	"theme_agila_sidebar_selected_entry_white": true
 }

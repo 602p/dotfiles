@@ -336,8 +336,8 @@ bindsym XF86Calculator workspace 999:py
 
 exec i3-msg
 exec xset b 0
-exec xset dpms 120 120 120
-exec xautolock -time 1 -locker "i3lock -ei ~/.config/i3/locked.png" &
+exec xset dpms 300 300 300
+exec xautolock -time 4 -locker "i3lock -ei ~/.config/i3/locked.png" &
 exec xinput set-prop 12 307 0
 
 

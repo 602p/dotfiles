@@ -1,5 +1,3 @@
-alias python=python3
-alias pip="python3 -m pip"
 alias timer="time python -c \"input('Press [Enter] or [Ctrl+C] to stop...')\""
 alias wifi="python3 ~/Documents/dotfiles/wifimanager.py"
 alias dice="python3 ~/Documents/dotfiles/dice.py"
@@ -25,7 +23,6 @@ alias gy="gl && gp"
 alias g...="gcam ... && gy"
 alias g...-s="git commit -am ... && gy"
 alias fb="llc-3.5 llvm_out.ir&&gcc llvm_out.ir.s&&mv a.out out"
-alias pipenv="python3.6 -m pipenv"
 alias pp="pipenv run python"
 alias ssh="TERM=xterm ssh"
 alias sshuttle="python3 -m sshuttle"
