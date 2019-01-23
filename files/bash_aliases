@@ -46,6 +46,10 @@ genpasswd () {
 	echo $(head /dev/urandom -c ${1:-20} | base64 | head - -c ${1:-20})
 }
 
+batt () {
+	upower -i $(upower -e | grep BAT)
+}
+
 runc () {
 	gcc -Wall -Wextra -g $1 && ./a.out $2
 }
@@ -64,3 +68,7 @@ alias d="banner d"
 
 alias resource="source ~/.bashrc"
 alias nbfc=/opt/nbfc/nbfc.exe
+
+vpn () {
+	sudo systemctl $1 openvpn-client@scriber
+}

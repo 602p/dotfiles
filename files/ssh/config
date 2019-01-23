@@ -91,3 +91,11 @@ Host tchh
 	ControlPath ~/.ssh/controlmasters/%r@%h:%p
         ControlMaster auto
         ControlPersist 10m
+
+Host cerberus
+        HostName 160.94.179.129
+        User louis
+        ForwardAgent yes
+        ControlPath ~/.ssh/controlmasters/%r@%h:%p
+        ControlMaster auto
+        ControlPersist 10m

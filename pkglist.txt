@@ -1,6 +1,7 @@
 acpi
 alacritty
 alsa-utils
+arandr
 autoconf
 autojump
 automake
@@ -11,6 +12,7 @@ binutils
 bison
 brightnessctl
 bzip2
+cdrtools
 coreutils
 cpupower
 cryptsetup
@@ -27,6 +29,7 @@ fakeroot
 file
 filesystem
 findutils
+firefox
 flex
 gawk
 gcc
@@ -44,6 +47,7 @@ i3-gaps
 i3blocks-git
 i3lock
 i3status
+icedtea-web
 imlib2
 inetutils
 intel-ucode
@@ -52,12 +56,14 @@ iputils
 iw
 jfsutils
 keybase-bin
+lame
 less
 licenses
 linux
 linux-firmware
 logrotate
 lvm2
+lynx
 m4
 make
 man-db
@@ -69,9 +75,13 @@ mysql-workbench
 nano
 nbfc
 neofetch
+network-manager-applet
 networkmanager
+nmap
 noto-fonts-emoji
+openresolv
 openssh
+openvpn
 pacman
 parted
 patch
@@ -82,6 +92,7 @@ procps-ng
 psmisc
 python
 python-pip
+python36
 refind-efi
 reiserfsprogs
 rxvt-unicode
@@ -103,6 +114,7 @@ tar
 terminus-font
 texinfo
 tigervnc
+transmission-qt
 ttf-fira-code
 ttf-font-awesome
 ttf-input
@@ -113,6 +125,7 @@ upower
 usbutils
 util-linux
 vi
+vlc
 wget
 which
 xautolock

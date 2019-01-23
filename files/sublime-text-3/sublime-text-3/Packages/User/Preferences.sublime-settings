@@ -11,6 +11,7 @@
 		"admin",
 		"google"
 	],
+	"color_scheme": "Packages/Agila Theme/Agila Monokai Extended.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"folder_exclude_patterns":
 	[
@@ -37,7 +38,10 @@
 	"spell_check": true,
 	"theme": "Agila Monokai.sublime-theme",
 	"theme_agila_active_tab_entry_white": true,
-	"theme_agila_nano_mode": true,
+	"theme_agila_compact_sidebar": true,
+	"theme_agila_compact_tab": true,
+	"theme_agila_sidebar_font_small": true,
+	"theme_agila_sidebar_mini": true,
 	"theme_agila_sidebar_plus_minus": true,
 	"theme_agila_sidebar_selected_entry_white": true
 }
