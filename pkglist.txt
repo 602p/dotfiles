@@ -79,7 +79,6 @@ network-manager-applet
 networkmanager
 nmap
 noto-fonts-emoji
-openresolv
 openssh
 openvpn
 pacman

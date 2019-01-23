@@ -72,3 +72,29 @@ alias nbfc=/opt/nbfc/nbfc.exe
 vpn () {
 	sudo systemctl $1 openvpn-client@scriber
 }
+
+vpn-set-noleak-off () {
+	sudo ufw default allow incoming
+	sudo ufw default allow outgoing
+	sudo ufw delete deny 53
+	sudo ufw delete deny 53
+}
+
+vpn-set-noleak-on () {
+	vpn-set-noleak-off
+	HOMEIP=$(dig +short home.louis.goessling.com | sed -n 2p)
+	echo "remote $HOMEIP 1194 udp" | sudo tee /etc/openvpn/client/scriber-ip.conf.patch
+
+	sudo ufw default deny incoming
+	sudo ufw default deny outgoing
+
+	sudo ufw allow in on tun0
+	sudo ufw allow out on tun0
+
+	sudo ufw allow in from $HOMEIP
+	sudo ufw allow out to $HOMEIP
+
+	sudo ufw deny 53
+	sudo ufw allow in from 10.0.0.1 port 53
+	sudo ufw allow out to 10.0.0.1 port 53
+}
