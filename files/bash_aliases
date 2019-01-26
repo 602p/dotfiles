@@ -81,10 +81,7 @@ vpn-set-noleak-off () {
 }
 
 vpn-set-noleak-on () {
-	vpn-set-noleak-off
-	HOMEIP=$(dig +short home.louis.goessling.com | sed -n 2p)
-	echo "remote $HOMEIP 1194 udp" | sudo tee /etc/openvpn/client/scriber-ip.conf.patch
-
+	HOMEIP=$(cat ~/.homeip)
 	sudo ufw default deny incoming
 	sudo ufw default deny outgoing
 
@@ -95,6 +92,28 @@ vpn-set-noleak-on () {
 	sudo ufw allow out to $HOMEIP
 
 	sudo ufw deny 53
-	sudo ufw allow in from 10.0.0.1 port 53
-	sudo ufw allow out to 10.0.0.1 port 53
+	sudo ufw allow in on tun0 from 10.0.0.1 port 53
+	sudo ufw allow out on tun0 to 10.0.0.1 port 53
+	sudo conntrack -D
+	sudo conntrack -D
+	sudo conntrack -D
+}
+
+ufw-flush () {
+	sudo ufw reset
+	sudo ufw enable
+}
+
+vpn-refresh-ip () {
+	HOMEIP=$(dig +short home.louis.goessling.com | sed -n 2p)
+	echo "remote $HOMEIP 1194 udp" | sudo tee /etc/openvpn/client/scriber-ip.conf.patch
+	echo "$HOMEIP" > ~/.homeip
+}
+
+cpu-set-govenor-performance () {
+	sudo cpupower frequency-set -g performance
+}
+
+cpu-set-govenor-powersave () {
+	sudo cpupower frequency-set -g powersave
 }

@@ -13,7 +13,9 @@ bison
 brightnessctl
 bzip2
 cdrtools
+conntrack-tools
 coreutils
+cowsay
 cpupower
 cryptsetup
 cups
@@ -23,6 +25,7 @@ dhcpcd
 diffutils
 dmenu
 docker
+dsniff
 e2fsprogs
 efibootmgr
 fakeroot
@@ -58,6 +61,9 @@ jfsutils
 keybase-bin
 lame
 less
+libc++
+libc++abi
+libc++experimental
 licenses
 linux
 linux-firmware
@@ -71,14 +77,19 @@ man-pages
 masterpdfeditor
 mdadm
 minecraft-launcher
+mumble
 mysql-workbench
 nano
 nbfc
+ncdu
 neofetch
 network-manager-applet
 networkmanager
 nmap
 noto-fonts-emoji
+ocaml
+ocaml-findlib
+opam
 openssh
 openvpn
 pacman
@@ -86,9 +97,11 @@ parted
 patch
 pciutils
 perl
+pigz
 pkgconf
 procps-ng
 psmisc
+pulseaudio
 python
 python-pip
 python36
@@ -98,6 +111,7 @@ rxvt-unicode
 s-nail
 sed
 shadow
+signal
 sshfs
 sshuttle
 steam

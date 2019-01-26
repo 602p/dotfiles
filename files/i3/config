@@ -6,9 +6,12 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+workspace_layout tabbed
+
 # start a terminal
 bindsym $mod+Return exec urxvt
-bindsym $mod+Shift+Return exec google-chrome-stable --high-dpi-support=1 --force-device-scale-factor=1
+bindsym $mod+Shift+Return exec firefox
+#bindsym $mod+Shift+Return exec google-chrome-stable --high-dpi-support=1 --force-device-scale-factor=1
 
 # kill focused window
 bindsym $mod+Shift+q kill
