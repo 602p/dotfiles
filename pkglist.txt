@@ -42,6 +42,7 @@ gimp
 git
 glibc
 gnome-keyring
+gnu-netcat
 google-chrome
 grep
 gzip
@@ -77,6 +78,7 @@ man-pages
 masterpdfeditor
 mdadm
 minecraft-launcher
+mprime
 mumble
 mysql-workbench
 nano

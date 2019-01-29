@@ -323,15 +323,16 @@ mode "$mode_music" {
 bindsym $mod+o mode "$mode_music"
 
 exec ~/.config/i3/unclutter -idle 1 -noevents
-exec rm ~/.ssh-agent-info
 
 exec --no-startup-id i3-msg 'workspace 2:web; exec google-chrome'
 exec --no-startup-id i3-msg 'workspace 3:edit; exec subl'
 exec --no-startup-id i3-msg 'workspace 6:stat; exec urxvt -e htop'
 exec --no-startup-id i3-msg 'workspace 1:sh; exec urxvt'
 
-bindsym XF86MonBrightnessUp exec bash ~/.config/i3/bright_up.sh
-bindsym XF86MonBrightnessDown exec bash ~/.config/i3/bright_down.sh
+bindsym XF86MonBrightnessUp exec bash ~/.config/i3/bright_up.sh 5%
+bindsym XF86MonBrightnessDown exec bash ~/.config/i3/bright_down.sh 5%
+bindsym Shift+XF86MonBrightnessUp exec bash ~/.config/i3/bright_up.sh 1
+bindsym Shift+XF86MonBrightnessDown exec bash ~/.config/i3/bright_down.sh 1
 bindsym XF86AudioRaiseVolume exec bash ~/.config/i3/vol_up.sh
 bindsym XF86AudioLowerVolume exec bash ~/.config/i3/vol_down.sh
 bindsym XF86AudioMute exec bash ~/.config/i3/vol_mute.sh
