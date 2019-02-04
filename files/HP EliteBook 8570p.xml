@@ -10,7 +10,7 @@
       <ReadRegister>46</ReadRegister>
       <WriteRegister>47</WriteRegister>
       <MinSpeedValue>105</MinSpeedValue>
-      <MaxSpeedValue>47</MaxSpeedValue>
+      <MaxSpeedValue>50</MaxSpeedValue>
       <ResetRequired>true</ResetRequired>
       <FanSpeedResetValue>255</FanSpeedResetValue>
       <FanDisplayName>CPU fan</FanDisplayName>
