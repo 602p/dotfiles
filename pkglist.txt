@@ -109,11 +109,13 @@ python-pip
 python36
 refind-efi
 reiserfsprogs
+rustup
 rxvt-unicode
 s-nail
 sed
 shadow
 signal
+speedtest-cli
 sshfs
 sshuttle
 steam
@@ -144,6 +146,7 @@ vlc
 wget
 which
 xautolock
+xdotool
 xf86-video-vesa
 xfsprogs
 xorg-bdftopcf
@@ -195,3 +198,4 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 xterm
+zola-bin

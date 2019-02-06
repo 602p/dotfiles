@@ -249,7 +249,7 @@ mode "$mode_settings" {
 }
 bindsym $mod+End mode "$mode_settings"
 
-set $mode_settings2 (q) Sound Options (w) wicd (a) ARandR (s) SShuttle into ACM  (c) ssh to clubby (k) kill agents (z) goto WS
+set $mode_settings2 (q) Sound Options (w) wicd (a) ARandR (s) SShuttle into ACM  (c) ssh to clubby (k) kill agents (z) goto WS (f) Set Fan
 mode "$mode_settings2" {
     bindsym q mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e alsamixer && i3-msg [con_mark="quickmark_snapback"] focus
     bindsym w mark --add quickmark_snapback; workspace tool; mode "default"; exec wicd-gtk -n && i3-msg [con_mark="quickmark_snapback"] focus
@@ -257,6 +257,7 @@ mode "$mode_settings2" {
     bindsym s mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e bash -c "source .ssh-agent-info && python3 -m sshuttle -r argo.acm.umn.edu 0/0"
     bindsym c mark --add quickmark_snapback; workspace tool; mode "default"; exec urxvt -e bash -c "source .ssh-agent-info && ssh clubby && i3-msg [con_mark=\"quickmark_snapback\"] focus"
     bindsym k exec bash ~/.config/i3/paranoia.sh; mode "default"
+    bindsym f exec bash ~/.config/i3/fan_dmenu.sh; mode "default"
     bindsym z workspace tool; mode "default"
     bindsym Return mode "default"
     bindsym Escape mode "default"

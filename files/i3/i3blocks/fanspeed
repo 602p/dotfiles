@@ -1,3 +1,0 @@
-#!/bin/bash
-SPD=$(nbfc status | grep Target | cut -d: -f2 | tr -d " " | cut -d. -f1)
-printf %3d\\n $SPD

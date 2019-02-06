@@ -16,6 +16,6 @@ rm -rf files/sublime-text-3/sublime-text-3/Index
 cp ~/.ssh/config files/ssh/config
 cp ~/.ssh/known_hosts files/ssh/known_hosts
 cp /opt/nbfc/Configs/HP\ EliteBook\ 8570p.xml files
-cp /etc/udev/rules.d/90-batbarupdate.rules files/udev-rules-90-batbarupdate.rules
+cp /etc/udev/rules.d/90-battery.rules files/udev-rules-90-battery.rules
 cp /etc/systemd/logind.conf.d/90-no-lid-action.conf files/logind-conf-d-90-no-lid-action.conf
 pacman -Qqe > pkglist.txt

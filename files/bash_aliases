@@ -30,17 +30,18 @@ alias c="clear"
 alias p="python"
 alias l="ls"
 alias ll="ls -lh"
-alias rcon="p ~/.i3/clubby_remote.py"
+alias rcon="p ~/.config/i3/clubby_remote.py"
 alias ssh-clear-masters="rm ~/.ssh/controlmasters/*"
-alias nuclear-option="~/.i3/nuclear-option.sh"
+alias nuclear-option="~/.config/i3/nuclear-option.sh"
 alias acmpaste="curl --data-binary @- https://p.acm.umn.edu/"
 alias aru="~/Documents/arduino-1.8.5/arduino --port /dev/ttyACM0 --board arduino:avr:leonardo --verbose-upload --upload"
-alias sshuttle-home="sshuttle --dns -r cnous 0/0 -x home.louis.goessling.com"
+alias sshuttle-home="sshuttle --dns -r scriber 0/0 -x home.louis.goessling.com"
 alias ssh-start-agent="ssh-agent -k ; ssh-agent > ~/.ssh-agent-info && source ~/.ssh-agent-info && ssh-add"
-alias kill-agents="bash ~/.i3/paranoia.sh"
+alias kill-agents="bash ~/.config/i3/paranoia.sh"
 alias kb=keybase
 alias sshuttle-acm="sshuttle --dns -r hylaea 0/0 -x 160.94.179.187"
 alias sshuttle-acm-mgmt="sshuttle -r lightman@160.94.179.147 10.99.99.0/24"
+alias sshuttle-dept-db="sshuttle -r argo 192.168.216.42"
 
 genpasswd () {
 	echo $(head /dev/urandom -c ${1:-20} | base64 | head - -c ${1:-20})
@@ -116,4 +117,16 @@ cpu-set-govenor-performance () {
 
 cpu-set-govenor-powersave () {
 	sudo cpupower frequency-set -g powersave
+}
+
+cpu-set-upper-limit () {
+	sudo cpupower frequency-set -u $1
+}
+
+cpu-set-lower-limit () {
+	sudo cpupower frequency-set -d $1
+}
+
+cpu-freq-info () {
+	cpupower frequency-info | egrep "should be within|kernel"
 }
