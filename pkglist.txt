@@ -29,6 +29,7 @@ dsniff
 e2fsprogs
 efibootmgr
 fakeroot
+figlet
 file
 filesystem
 findutils
@@ -44,6 +45,7 @@ glibc
 gnome-keyring
 gnu-netcat
 google-chrome
+graphviz
 grep
 gzip
 htop
@@ -198,4 +200,5 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 xterm
+zip
 zola-bin

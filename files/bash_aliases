@@ -13,6 +13,7 @@ else
 	alias gc="git commit"
 fi
 
+alias ipa="ip a"
 alias gcm="gc -m"
 alias gcam="gc -am"
 alias gcam-s="git commit -am"
