@@ -274,30 +274,30 @@ mode "$mode_shitpost" {
     bindsym equal exec bash ~/.config/i3/approx.sh; mode "default"
     bindsym m exec bash ~/.config/i3/tm.sh; mode "default"
     bindsym w exec bash ~/.config/i3/set_fullwidth.sh; mode "$mode_shitpost_fullwidth"
-    bindsym t exec bash ~/.config/i3/set_thicc.sh; mode "$mode_shitpost_fullwidth"
+    bindsym t exec bash ~/.config/i3/set_thicc.sh; mode "$mode_shitpost_thicc"
     bindsym c mode "$mode_shitpost_clubby"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 
-set $mode_shitpost_clubby (p) prime (h) horn (f) flamingo (r) rcon (k) kill mpv (m) toggle mute (a) AKSHAYVIDEO clips (t) TTS (d) deez nuts
+set $mode_shitpost_clubby (p) prime (h) horn (f) flamingo (r) rcon (k) kill cvlc (m) toggle mute (a) AKSHAYVIDEO clips (t) TTS (d) deez nuts
 mode "$mode_shitpost_clubby" {
     bindsym p exec bash -c "source ~/.ssh-agent-info && ssh clubby ls"
-    bindsym h exec bash -c "source ~/.ssh-agent-info && ssh clubby mpv \"/home/clubby/mps/mlg.webm\""
-    bindsym f exec bash -c "source ~/.ssh-agent-info && ssh clubby mpv \"/home/clubby/mps/kkb.webm\""; mode "default"
+    bindsym h exec bash -c "source ~/.ssh-agent-info && ssh clubby cvlc \"/home/clubby/mps/mlg.webm\""
+    bindsym f exec bash -c "source ~/.ssh-agent-info && ssh clubby cvlc \"/home/clubby/mps/kkb.webm\""; mode "default"
     bindsym r exec bash -c "source ~/.ssh-agent-info && python3 ~/.config/i3/clubby_remote.py clubby@clubby"; mode "default"
-    bindsym k exec bash -c "source ~/.ssh-agent-info && ssh clubby@clubby killall mpv"; mode "default"
+    bindsym k exec bash -c "source ~/.ssh-agent-info && ssh clubby@clubby killall vlc"; mode "default"
     bindsym m exec bash -c "source ~/.ssh-agent-info && ssh clubby@clubby amixer -q -D pulse sset Master toggle"; mode "default"
     bindsym t exec bash -c "source ~/.ssh-agent-info && dmenu -p TTS: </dev/null | ssh clubby festival --tts"; mode default
-    bindsym a exec bash -c "source ~/.ssh-agent-info && ssh clubby mpv AKSHAYVIDEO/$(cat ~/.config/i3/akshayclips.txt | dmenu -i -p clip | python3 ~/.config/i3/akshayhelper.py)"; mode default
+    bindsym a exec bash -c "source ~/.ssh-agent-info && ssh clubby cvlc AKSHAYVIDEO/$(cat ~/.config/i3/akshayclips.txt | dmenu -i -p clip | python3 ~/.config/i3/akshayhelper.py)"; mode default
     bindsym d exec bash -c "source ~/.ssh-agent-info && ssh clubby "echo deez nuts | lpr"; mode default
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 
-set $mode_shitpost_fullwidth THICC (esc) exit
+set $mode_shitpost_fullwidth F U L L W I D T H (esc) exit
 mode "$mode_shitpost_fullwidth" {
     bindsym Escape exec bash ~/.config/i3/unset_fullwidth.sh; mode "default"
 }
@@ -325,7 +325,7 @@ bindsym $mod+o mode "$mode_music"
 
 exec ~/.config/i3/unclutter -idle 1 -noevents
 
-exec --no-startup-id i3-msg 'workspace 2:web; exec google-chrome'
+#exec --no-startup-id i3-msg 'workspace 2:web; exec google-chrome'
 exec --no-startup-id i3-msg 'workspace 3:edit; exec subl'
 exec --no-startup-id i3-msg 'workspace 6:stat; exec urxvt -e htop'
 exec --no-startup-id i3-msg 'workspace 1:sh; exec urxvt'
@@ -336,6 +336,8 @@ bindsym Shift+XF86MonBrightnessUp exec bash ~/.config/i3/bright_up.sh 1
 bindsym Shift+XF86MonBrightnessDown exec bash ~/.config/i3/bright_down.sh 1
 bindsym XF86AudioRaiseVolume exec bash ~/.config/i3/vol_up.sh
 bindsym XF86AudioLowerVolume exec bash ~/.config/i3/vol_down.sh
+bindsym Shift+XF86AudioRaiseVolume exec bash ~/.config/i3/vol_up1.sh
+bindsym Shift+XF86AudioLowerVolume exec bash ~/.config/i3/vol_down1.sh
 bindsym XF86AudioMute exec bash ~/.config/i3/vol_mute.sh
 bindsym XF86Calculator workspace 999:py
 

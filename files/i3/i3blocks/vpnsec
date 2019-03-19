@@ -1,0 +1,24 @@
+#!/bin/bash
+STATUS=`sudo ufw status verbose`
+if [[ $STATUS == *"Status: active"* ]]; then
+	if [[ $STATUS == *"Default: deny (incoming), deny (outgoing)"* ]]; then
+		STATUS=`systemctl status openvpn-client@scriber.service`
+		if [[ $STATUS == *"active (running)"* ]]; then
+			echo "<span color=\"#00FF00\">NLUP</span>"
+			exit
+		fi
+
+		echo "<span color=\"#FF0000\" bgcolor=\"#006600\">NLDOWN</span>"
+		exit
+	fi
+fi
+
+
+STATUS=`systemctl status openvpn-client@scriber.service`
+if [[ $STATUS == *"active (running)"* ]]; then
+	echo "<span color=\"#00FF00\" bgcolor=\"#BB0000\">UPLEAK</span>"
+	exit
+fi
+
+echo "<span color=\"#FFFFFF\" bgcolor=\"#FF0000\">NOVPN</span>"
+exit

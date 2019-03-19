@@ -1,1 +1,1 @@
-xmodmap ~/.i3/old.xmodmap
+xmodmap ~/.config/i3/old.xmodmap

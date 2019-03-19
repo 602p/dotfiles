@@ -5,6 +5,7 @@ alias weather="curl http://wttr.in/"
 alias g="git"
 alias gs="git status"
 alias ga="git add"
+alias n="nano"
 
 if [ $IS_SERVER -ne 1 ]
 then
@@ -68,15 +69,19 @@ getcert () {
 
 alias d="banner d"
 
+alias neofetch="neofetch --disable theme --disable icons"
+
 alias resource="source ~/.bashrc"
 alias nbfc=/opt/nbfc/nbfc.exe
 
 vpn () {
 	sudo systemctl $1 openvpn-client@scriber
+	/usr/bin/pkill -RTMIN+3 i3blocks
 }
 
 vpn-set-noleak-off () {
 	sudo ufw default allow incoming
+	/usr/bin/pkill -RTMIN+3 i3blocks
 	sudo ufw default allow outgoing
 	sudo ufw delete deny 53
 	sudo ufw delete deny 53
@@ -99,17 +104,21 @@ vpn-set-noleak-on () {
 	sudo conntrack -D
 	sudo conntrack -D
 	sudo conntrack -D
+
+	/usr/bin/pkill -RTMIN+3 i3blocks
 }
 
 ufw-flush () {
 	sudo ufw reset
 	sudo ufw enable
+	/usr/bin/pkill -RTMIN+3 i3blocks
 }
 
 vpn-refresh-ip () {
 	HOMEIP=$(dig +short home.louis.goessling.com | sed -n 2p)
 	echo "remote $HOMEIP 1194 udp" | sudo tee /etc/openvpn/client/scriber-ip.conf.patch
 	echo "$HOMEIP" > ~/.homeip
+	/usr/bin/pkill -RTMIN+3 i3blocks
 }
 
 cpu-set-govenor-performance () {

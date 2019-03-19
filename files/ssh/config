@@ -42,7 +42,7 @@ Host attic
         ControlPersist 10m
 
 Host clubby
-        HostName 192.168.0.191
+        HostName 192.168.0.253
 	User clubby
 	ForwardAgent yes
         ProxyCommand ssh cerberus nc %h %p
