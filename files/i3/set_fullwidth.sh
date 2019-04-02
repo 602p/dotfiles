@@ -1,4 +1,4 @@
-xmodmap -pke > ~/.i3/old.xmodmap
+xmodmap -pke > ~/.config/i3/old.xmodmap
 xmodmap -e "keysym a = Uff41 Uff21"
 xmodmap -e "keysym b = Uff42 Uff22"
 xmodmap -e "keysym c = Uff43 Uff23"

@@ -191,7 +191,7 @@ if [ $IS_SERVER -ne 1 ]
 then
 	export GOPATH=/home/louis/go:/home/louis/Documents/gopath
 	source ~/.ssh-agent-info
-	if kill -0 $SSH_AGENT_PID 2>&1 | grep "No such process"; then
+	if killall -0 ssh-agent 2>&1 | grep "no process found"; then
 	   echo "(Re)Setting up ssh-agent"
 	   ssh-agent > ~/.ssh-agent-info
 	   source ~/.ssh-agent-info

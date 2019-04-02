@@ -29,7 +29,6 @@ docker
 dsniff
 e2fsprogs
 easytag
-efibootmgr
 fakeroot
 feh
 figlet
@@ -48,7 +47,6 @@ git
 glibc
 gnome-keyring
 gnu-netcat
-google-chrome
 graphviz
 grep
 gzip
@@ -66,11 +64,7 @@ iputils
 iw
 jfsutils
 keybase-bin
-lame
 less
-libc++
-libc++abi
-libc++experimental
 licenses
 linux
 linux-firmware
@@ -82,17 +76,15 @@ m4
 make
 man-db
 man-pages
-masterpdfeditor
 mdadm
-minecraft-launcher
 mosh
-mprime
 mumble
 mysql-workbench
 nano
 nbfc
 ncdu
 neofetch
+netctl
 network-manager-applet
 networkmanager
 nmap
@@ -115,7 +107,6 @@ psmisc
 pulseaudio
 python
 python-pip
-python36
 refind-efi
 reiserfsprogs
 rsync
@@ -125,14 +116,10 @@ s-nail
 sed
 shadow
 signal
-simple-mtpfs
 speedtest-cli
 sshfs
 sshuttle
-steam
-steam-fonts
 strace
-stress-ng
 sublime-text
 sudo
 sysfsutils
@@ -184,6 +171,7 @@ xorg-iceauth
 xorg-luit
 xorg-mkfontscale
 xorg-server
+xorg-server-common
 xorg-server-devel
 xorg-server-xdmx
 xorg-server-xephyr
@@ -191,6 +179,7 @@ xorg-server-xnest
 xorg-server-xvfb
 xorg-server-xwayland
 xorg-sessreg
+xorg-setxkbmap
 xorg-smproxy
 xorg-x11perf
 xorg-xauth
@@ -204,6 +193,7 @@ xorg-xgamma
 xorg-xhost
 xorg-xinit
 xorg-xinput
+xorg-xkbcomp
 xorg-xkbevd
 xorg-xkbutils
 xorg-xkill
