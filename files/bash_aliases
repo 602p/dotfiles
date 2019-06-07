@@ -29,7 +29,7 @@ alias pp="pipenv run python"
 alias ssh="TERM=xterm ssh"
 alias sshuttle="python3 -m sshuttle"
 alias c="clear"
-alias p="python"
+alias p="python -q"
 alias l="ls"
 alias ll="ls -lh"
 alias rcon="p ~/.config/i3/clubby_remote.py"
@@ -140,3 +140,13 @@ cpu-set-lower-limit () {
 cpu-freq-info () {
 	cpupower frequency-info | egrep "should be within|kernel"
 }
+
+alias share="~/.config/i3/share.py"
+alias rj="java -Xss512M -jar"
+alias jr=rj
+alias sv-confirm-self-build="mv build/silver.composed.Default.jar jars/"
+alias sv-revert-to-bak="cp JARS-BAK/silver.composed.Default.jar jars/"
+alias gf="g fetch"
+alias mountmedia="sshfs -o reconnect hylaea:/files/media/ /files/media"
+alias umountmedia="fusermount3 -u /files/media"
+alias umountmediaf="fusermount3 -zu /files/media"

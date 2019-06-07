@@ -24,6 +24,15 @@ Host argo
         ControlMaster auto
         ControlPersist 10m
 
+Host garlic
+        HostName garlic.acm.umn.edu
+#       ProxyCommand ssh cerberus nc %h %p
+        User louis
+        ForwardAgent yes
+        ControlPath ~/.ssh/controlmasters/%r@%h:%p
+        ControlMaster auto
+        ControlPersist 10m
+
 Host scriber
         HostName home.louis.goessling.com
         User louis
@@ -40,6 +49,12 @@ Host attic
         ControlPath ~/.ssh/controlmasters/%r@%h:%p
         ControlMaster auto
         ControlPersist 10m
+
+Host desktop
+        HostName 10.0.0.147
+        ProxyCommand ssh scriber nc %h %p
+        User louis
+        ForwardAgent yes
 
 Host clubby
         HostName 192.168.0.253
@@ -68,6 +83,11 @@ Host khkh
         HostName csel-kh1250-09.cselabs.umn.edu
         User goess006
         ForwardAgent yes
+
+Host apollo
+	HostName apollo.cselabs.umn.edu
+	User goess006
+	ForwardAgent yes
 
 Host hylaea
         HostName louis.members.acm.umn.edu

@@ -1,4 +1,16 @@
 [
 		{ "keys": ["ctrl+tab"], "command": "next_view" },
-{ "keys": ["ctrl+shift+tab"], "command": "prev_view" }
+		{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+		{ "keys": ["ctrl+["], "command": "move", "args": {"by": "words", "forward": false} },
+		{ "keys": ["ctrl+]"], "command": "move", "args": {"by": "word_ends", "forward": true} },
+		{ "keys": ["ctrl+shift+["], "command": "move", "args": {"by": "words", "forward": false, "extend": true} },
+		{ "keys": ["ctrl+shift+]"], "command": "move", "args": {"by": "word_ends", "forward": true, "extend": true} },
+		{ "keys": ["ctrl+shift+\\"], "command": "expand_selection", "args": {"to": "brackets"} },
+		{ "keys": ["ctrl+\\"], "command": "move_to", "args": {"to": "brackets"} },
+		{ "keys": ["ctrl+shift+enter"], "command": "move", "args": {"by": "lines", "forward": false} },
+		{ "keys": ["ctrl+enter"], "command": "move", "args": {"by": "lines", "forward": true} },
+		{ "keys": ["ctrl+,"], "command": "move", "args": {"by": "characters", "forward": false} },
+		{ "keys": ["ctrl+."], "command": "move", "args": {"by": "characters", "forward": true} },
+		{ "keys": ["ctrl+shift+,"], "command": "move", "args": {"by": "characters", "forward": false, "extend": true} },
+		{ "keys": ["ctrl+shift+."], "command": "move", "args": {"by": "characters", "forward": true, "extend": true} }
 ]

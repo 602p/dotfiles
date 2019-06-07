@@ -2,6 +2,8 @@
 
 set -e
 
+printf "<screenshot upload in progress...>" | xclip -selection clipboard
+
 SCREENSHOT=$HOME/.config/i3/leanshot
 # choose some file to save it to
 FILE="$HOME/.last_screenshot.png"
@@ -10,4 +12,4 @@ $SCREENSHOT selection -o $FILE
 TS=$(date +%s%N)
 source ~/.ssh-agent-info
 scp "$HOME/.last_screenshot.png" hylaea:www/.screenshots/.$TS.png
-echo -ne "https://louis.members.acm.umn.edu/www/.screenshots/.$TS.png" | xclip -selection clipboard
+printf "https://louis.members.acm.umn.edu/www/.screenshots/.$TS.png" | xclip -selection clipboard

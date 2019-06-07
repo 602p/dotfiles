@@ -215,10 +215,11 @@ bar {
         font pango:Unifont
 }
 
-set $mode_system System (p) kill agents, (l) lock, (Shift+e) logout, (Shift+u) suspend, (Shift+h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
+set $mode_system System (p) kill agents, (l) lock, (Shift+l) disable lock, (Shift+e) logout, (Shift+u) suspend, (Shift+h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym p exec bash ~/.config/i3/paranoia.sh
     bindsym l exec i3lock -ei ~/.config/i3/locked.png, mode "default"
+    bindsym Shift+l exec ~/.config/i3/disablelock.sh; mode "default"
     bindsym Shift+e exec i3-msg exit, mode "default"
     bindsym Shift+u exec systemctl suspend && i3lock -ec 000000, mode "default"
     bindsym Shift+h exec systemctl hibernate && i3lock -ec 000000, mode "default"
@@ -232,14 +233,15 @@ mode "$mode_system" {
 
 bindsym $mod+Home mode "$mode_system"
 
-set $mode_settings (o) Touchpad On (d) Touchpad Off (f) Toggle ffm (u) unclutter (s) Screenshot (l) leanshot (Shift+l) leanshot-upload (r) Reload (Shift+r) Restart [LOGOUT]
+set $mode_settings (o) Touchpad On (d) Touchpad Off (f) Toggle ffm (u) unclutter (s) Screenshot (l) leanshot (Shift+l) leanshot-upload (Shift+u) upload clipboard (r) Reload (Shift+r) Restart [LOGOUT]
 mode "$mode_settings" {
-    bindsym o exec xinput set-prop 12 299 1; mode "default"
-    bindsym d exec xinput set-prop 12 299 0; mode "default"
+    bindsym o exec xinput set-prop "SynPS/2 Synaptics TouchPad" 299 1; mode "default"
+    bindsym d exec xinput set-prop "SynPS/2 Synaptics TouchPad" 299 0; mode "default"
     bindsym s exec mkdir ~/screenshots; exec bash -c "cd screenshots&&scrot"; mode "default"
     bindsym l exec bash ~/.config/i3/do_leanshot.sh; mode "default"
     bindsym Shift+l exec bash ~/.config/i3/leanshot_upload.sh; mode "default"
-    bindsym u exec ~/.config/i3/unclutter -idle 1 -noevents; mode "default"
+    bindsym Shift+u exec python3 ~/.config/i3/upload_clipboard.py; mode "default"
+    bindsym u exec ~/.config/i3/unclutter -idle 1 -noevents -match -not Minecraft; mode "default"
     bindsym r reload; mode "default"
     bindsym Shift+r restart
     bindsym f exec python ~/.config/i3/toggle_ffm.py; mode "default"
@@ -323,7 +325,7 @@ mode "$mode_music" {
 
 bindsym $mod+o mode "$mode_music"
 
-exec ~/.config/i3/unclutter -idle 1 -noevents
+exec ~/.config/i3/unclutter -idle 1 -noevents -match -not Minecraft
 
 #exec --no-startup-id i3-msg 'workspace 2:web; exec google-chrome'
 exec --no-startup-id i3-msg 'workspace 3:edit; exec subl'
@@ -343,9 +345,14 @@ bindsym XF86Calculator workspace 999:py
 
 exec i3-msg
 exec xset b 0
-exec xset dpms 300 300 300
-exec xautolock -time 4 -locker "i3lock -ei ~/.config/i3/locked.png" &
-exec xinput set-prop 12 307 0
+exec ~/.fehbg
+exec ~/.config/i3/setupxautolock.sh &
+
+#disable disabling of mouse while typing
+exec xinput set-prop "SynPS/2 Synaptics TouchPad" 307 0
+
+#enable tapping
+exec xinput set-prop "SynPS/2 Synaptics TouchPad" 299 1
 
 
 ###START VGS AUTOGEN###
