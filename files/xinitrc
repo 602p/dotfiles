@@ -5,6 +5,8 @@ usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
+/usr/bin/prime-offload
+
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
@@ -51,5 +53,5 @@ fi
 xmodmap -e "keycode 108 = Multi_key"
 export GTK_IM_MODULE=xim
 export QT_IM_MODULE=xim
-
+xrandr --dpi 220
 i3

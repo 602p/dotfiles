@@ -152,6 +152,8 @@ alias mountmedia="sshfs -o reconnect hylaea:/files/media/ /files/media"
 alias mountmedias="sshfs -o reconnect scriber:/files/media/ /files/media"
 alias umountmedia="fusermount3 -u /files/media"
 alias umountmediaf="fusermount3 -zu /files/media"
+alias startx="~/.startx"
+
 
 alias makeguidlink_hylaea="ssh hylaea ./make_guid_link.sh"
 findshitpost () {
@@ -162,3 +164,4 @@ export PRINTERBOUNCE=kona
 6204print () {
 	scp $1 $PRINTERBOUNCE:PRINT && ssh $PRINTERBOUNCE lpr -P cs-p6-204 PRINT
 }
+

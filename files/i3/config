@@ -1,7 +1,7 @@
 set $mod Mod4
 set $alt Mod1
 
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font xft:Input Mono Narrow 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -213,9 +213,9 @@ bindsym $mod+r mode "$mode_resize"
 # Start i3bar to display a workspace bar (plus the system information i4status
 # finds out, if available)
 bar {
-        status_command /usr/local/bin/i3blocks -c ~/.config/i3/i3blocks/i3blocks.conf
+        status_command ~/.config/i3/i3blocks/i3blocks -c ~/.config/i3/i3blocks/i3blocks.conf
         strip_workspace_numbers yes
-        font pango:Unifont
+        font pango:Input Mono Narrow 10
 }
 
 set $mode_system System (p) kill agents, (l) lock, (Shift+l) disable lock, (Shift+e) logout, (Shift+u) suspend, (Shift+h) hibernate, (Shift+r) reboot, (Shift+s) shutdown

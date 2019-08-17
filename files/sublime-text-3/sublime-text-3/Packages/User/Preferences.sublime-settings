@@ -44,5 +44,6 @@
 	"theme_agila_sidebar_font_small": true,
 	"theme_agila_sidebar_mini": true,
 	"theme_agila_sidebar_plus_minus": true,
-	"theme_agila_sidebar_selected_entry_white": true
+	"theme_agila_sidebar_selected_entry_white": true,
+	"ui_scale": 2.0
 }

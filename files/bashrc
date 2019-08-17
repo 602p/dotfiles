@@ -176,6 +176,8 @@ if [ -f ~/.boxrc ]
 then
 	source ~/.boxrc
 fi
+. ~/.bash_aliases
+
 
 export PS1="\[\e[41m\]\`nonzero_return\`\[\e[m\]\[\e[34m\]\`parse_git_branch\`\[\e[m\]\W\[\e[32m\]$BOX_PREFIX\\$\[\e[m\] "
 
@@ -205,6 +207,3 @@ then
 fi
 export GPG_TTY=$(tty)
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
