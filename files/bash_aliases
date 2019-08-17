@@ -67,7 +67,8 @@ getcert () {
 	echo | openssl s_client -showcerts -servername $1 -connect $1:443 2>/dev/null | openssl x509 -inform pem -noout -text
 }
 
-alias d="banner d"
+alias d="banner -l d"
+alias D="banner -l D"
 
 alias neofetch="neofetch --disable theme --disable icons"
 
@@ -148,5 +149,16 @@ alias sv-confirm-self-build="mv build/silver.composed.Default.jar jars/"
 alias sv-revert-to-bak="cp JARS-BAK/silver.composed.Default.jar jars/"
 alias gf="g fetch"
 alias mountmedia="sshfs -o reconnect hylaea:/files/media/ /files/media"
+alias mountmedias="sshfs -o reconnect scriber:/files/media/ /files/media"
 alias umountmedia="fusermount3 -u /files/media"
 alias umountmediaf="fusermount3 -zu /files/media"
+
+alias makeguidlink_hylaea="ssh hylaea ./make_guid_link.sh"
+findshitpost () {
+	find /files/media/Images -name "*$1*" -name "*$2*" -name "*$3*" -name "*$4*" -name "*$5*" -name "*$6*"
+}
+
+export PRINTERBOUNCE=kona
+6204print () {
+	scp $1 $PRINTERBOUNCE:PRINT && ssh $PRINTERBOUNCE lpr -P cs-p6-204 PRINT
+}

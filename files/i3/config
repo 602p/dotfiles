@@ -10,6 +10,9 @@ workspace_layout tabbed
 
 # start a terminal
 bindsym $mod+Return exec urxvt
+bindsym $mod+$alt+Return exec urxvt -name floating
+bindsym $mod+$alt+p exec urxvt -name floating -e python3
+for_window [class="URxvt" instance="floating"] floating enable
 bindsym $mod+Shift+Return exec firefox
 #bindsym $mod+Shift+Return exec google-chrome-stable --high-dpi-support=1 --force-device-scale-factor=1
 

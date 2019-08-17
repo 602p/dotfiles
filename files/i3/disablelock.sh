@@ -1,8 +1,8 @@
 if [ $1 ]
 then
-	i3-msg "[class=\"URxvt\" instance=\"lockdisable\"] floating enable; sticky enable; resize set 180 20; move position 1740 980" > /dev/null
-	i3-msg "focus mode_toggle"
-	printf "\033[1;31;5mLOCK DISABLED\033[0m"
+	i3-msg "[class=\"URxvt\" instance=\"lockdisable\"] floating enable; sticky enable; resize set 160 80; move position 1760 975" > /dev/null
+	i3-msg "focus mode_toggle" > /dev/null
+	printf "\033[1;31;5mAUTO LOCKING\nDISABLED\033[0m"
 	read
 else
 	killall xautolock

@@ -12,8 +12,8 @@ use utf8;
 use Getopt::Long;
 
 # default values
-my $t_warn = $ENV{T_WARN} // 50;
-my $t_crit = $ENV{T_CRIT} // 80;
+my $t_warn = $ENV{T_WARN} // 90;
+my $t_crit = $ENV{T_CRIT} // 150;
 my $cpu_usage = -1;
 my $decimals = $ENV{DECIMALS} // 2;
 my $label = $ENV{LABEL} // "";
@@ -45,11 +45,13 @@ close(MPSTAT);
 
 $cpu_usage eq -1 and die 'Can\'t find CPU information';
 
+$cpu_usage = $cpu_usage * 2;
+
 # Print short_text, full_text
 print "${label}";
-printf "%2.${decimals}f%%\n", $cpu_usage;
+printf "%3.${decimals}f%%\n", $cpu_usage;
 print "${label}";
-printf "%2.${decimals}f%%\n", $cpu_usage;
+printf "%3.${decimals}f%%\n", $cpu_usage;
 
 # Print color, if needed
 if ($cpu_usage >= $t_crit) {

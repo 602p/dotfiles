@@ -2,6 +2,8 @@
 
 import subprocess, sys, time, os
 
+os.system("printf <clipboard upload in progress...> | xclip -selection clipboard")
+
 def r(*a): return subprocess.run(*a, capture_output=True).stdout
 
 opts = r(["xclip", "-selection", "clipboard", "-t", "TARGETS", "-o"]).decode("utf-8", "ignore").split()

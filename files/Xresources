@@ -25,6 +25,7 @@ URxvt.depth: 32
 URxvt.saveLines: 1000000
 URxvt.scrollBar: false
 URxvt.scrollTtyKeypress: true
+URxvt*urgentOnBell: true
 URxvt.scrollTtyOutput: false
 URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 0

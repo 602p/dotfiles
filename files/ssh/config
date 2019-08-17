@@ -15,6 +15,15 @@ Host hestia
         ControlMaster auto
         ControlPersist 10m
 
+Host jotunn
+        HostName 160.94.179.181
+#       ProxyCommand ssh cerberus nc %h %p
+        User louis
+        ForwardAgent yes
+        ControlPath ~/.ssh/controlmasters/%r@%h:%p
+        ControlMaster auto
+        ControlPersist 10m
+
 Host argo
 	HostName argo.acm.umn.edu
 #	ProxyCommand ssh cerberus nc %h %p
@@ -51,7 +60,7 @@ Host attic
         ControlPersist 10m
 
 Host desktop
-        HostName 10.0.0.147
+        HostName 10.0.0.16
         ProxyCommand ssh scriber nc %h %p
         User louis
         ForwardAgent yes
@@ -76,17 +85,27 @@ Host medusa
 
 Host lind
 	HostName csel-lind40-42.cselabs.umn.edu
-	User goess006
+	User louisg
 	ForwardAgent yes
 
 Host khkh
         HostName csel-kh1250-09.cselabs.umn.edu
-        User goess006
+        User louisg
+        ForwardAgent yes
+
+Host kona
+        HostName kona.cs.umn.edu
+        User louisg
+        ForwardAgent yes
+
+Host coldpress
+        HostName coldpress.cs.umn.edu
+        User louisg
         ForwardAgent yes
 
 Host apollo
 	HostName apollo.cselabs.umn.edu
-	User goess006
+	User louisg
 	ForwardAgent yes
 
 Host hylaea

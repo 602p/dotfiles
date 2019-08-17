@@ -1,4 +1,10 @@
 #!/bin/bash
+
+if [[ $(pvpn --status) == *"[OpenVPN Status]: Running"* ]]; then
+	echo "<span color=\"#00BB00\">PRUP</span>"
+	exit
+fi
+
 STATUS=`sudo ufw status verbose`
 if [[ $STATUS == *"Status: active"* ]]; then
 	if [[ $STATUS == *"Default: deny (incoming), deny (outgoing)"* ]]; then
