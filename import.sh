@@ -18,4 +18,5 @@ cp ~/.ssh/known_hosts files/ssh/known_hosts
 cp /opt/nbfc/Configs/HP\ EliteBook\ 8570p.xml files
 cp /etc/udev/rules.d/90-battery.rules files/udev-rules-90-battery.rules
 cp /etc/systemd/logind.conf.d/90-no-lid-action.conf files/logind-conf-d-90-no-lid-action.conf
+cp ~/.xinitrc files/xinitrc
 pacman -Qqe > pkglist.txt
