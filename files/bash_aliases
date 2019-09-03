@@ -166,3 +166,15 @@ export PRINTERBOUNCE=kona
 }
 
 alias m=more
+
+cpu-corepwr () {
+	for i in {1,5,2,6,3,7} ; do echo $1 | sudo tee /sys/devices/system/cpu/cpu$i/online ; done
+}
+
+gpu-off () {
+	echo \_SB.PCI0.LPC.EC.PUBS._OFF | sudo tee /proc/acpi/call
+}
+
+ram-ctrl () {
+	for i in {0..275} ; do echo $1 | sudo tee /sys/devices/system/memory/memory$i/online ; done
+}

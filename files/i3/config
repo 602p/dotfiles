@@ -344,6 +344,7 @@ bindsym XF86AudioLowerVolume exec bash ~/.config/i3/vol_down.sh
 bindsym Shift+XF86AudioRaiseVolume exec bash ~/.config/i3/vol_up1.sh
 bindsym Shift+XF86AudioLowerVolume exec bash ~/.config/i3/vol_down1.sh
 bindsym XF86AudioMute exec bash ~/.config/i3/vol_mute.sh
+bindsym XF86AudioMicMute exec amixer sset Capture toggle
 bindsym XF86Calculator workspace 999:py
 
 exec i3-msg
