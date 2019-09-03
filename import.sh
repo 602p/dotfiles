@@ -3,6 +3,7 @@ mkdir files/i3
 mkdir files/sublime-text-3
 mkdir files/ssh
 mkdir files/ssh/controlmasters
+mkdir files/tmpfiles.d
 touch files/ssh/controlmasters/.exists
 cp -r ~/.config/i3/* files/i3
 cp ~/.bash_aliases files/bash_aliases
@@ -15,8 +16,7 @@ cp ~/.Xresources files/Xresources
 rm -rf files/sublime-text-3/sublime-text-3/Index
 cp ~/.ssh/config files/ssh/config
 cp ~/.ssh/known_hosts files/ssh/known_hosts
-cp /opt/nbfc/Configs/HP\ EliteBook\ 8570p.xml files
-cp /etc/udev/rules.d/90-battery.rules files/udev-rules-90-battery.rules
-cp /etc/systemd/logind.conf.d/90-no-lid-action.conf files/logind-conf-d-90-no-lid-action.conf
+cp /etc/tmpfiles.d/* files/tmpfiles.d/
+cp /etc/systemd/logind.conf files/logind.conf
 cp ~/.xinitrc files/xinitrc
 pacman -Qqe > pkglist.txt

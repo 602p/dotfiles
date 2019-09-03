@@ -24,6 +24,8 @@ bluez-utils
 brightnessctl
 bzip2
 calibre
+cardpeek
+ccid
 cdrtools
 cloc
 conntrack-tools
@@ -44,6 +46,7 @@ dsniff
 e2fsprogs
 easytag
 elinks
+ethtool
 evince
 exfat-utils
 fakeroot
@@ -65,7 +68,10 @@ git
 glibc
 gnome-keyring
 gnu-netcat
+google-chrome
 gparted
+graal-bin
+graal-native-image-bin
 graphviz
 grep
 groff
@@ -84,6 +90,7 @@ iperf
 iproute2
 iputils
 iw
+jdk-openjdk
 jdk7-openjdk
 jdk9
 jfsutils
@@ -130,6 +137,7 @@ nvidia
 ocaml
 ocaml-findlib
 opam
+opensc
 openssh
 openvpn
 optimus-manager
@@ -139,11 +147,13 @@ pass
 patch
 pavucontrol
 pciutils
+pcsc-tools
 perl
 picard
 pigz
 pkgconf
 postfix
+powertop
 procps-ng
 psmisc
 pulseaudio
@@ -174,8 +184,10 @@ steam
 steam-fonts
 strace
 stress
+stress-ng
 sublime-text
 sudo
+sysbench
 sysfsutils
 sysstat
 systemd
@@ -213,6 +225,7 @@ upower
 usbutils
 util-linux
 vi
+visualvm
 vlc
 weechat
 wget
@@ -222,6 +235,7 @@ wireshark-qt
 wpa_supplicant
 x11vnc
 xautolock
+xcalib
 xdotool
 xf86-video-nouveau
 xf86-video-vesa

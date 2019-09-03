@@ -19,7 +19,7 @@
 *.color8:      #555555
 *.color9:      #fc4346
 
-URxvt.font: xft:Input Mono Narrow:style=Regular:size=14:antialias=true,xft:Symbola:style=Regular:size=16:antialias=true,xft:Unifont:pixelsize=22:antialias=false
+URxvt.font: xft:Input Mono Narrow:style=Regular:size=12:antialias=true,xft:Symbola:style=Regular:size=16:antialias=true,xft:Unifont:pixelsize=22:antialias=false
 URxvt.background: [90]#1e1f29
 URxvt.depth: 32
 URxvt.saveLines: 1000000
@@ -30,6 +30,8 @@ URxvt.scrollTtyOutput: false
 URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 0
 !URxvt.letterSpace: -5
+URxvt.perl-ext-common: font-size
+
 
 Xft.dpi: 220
 Xft.autohint: 0

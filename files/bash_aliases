@@ -165,3 +165,4 @@ export PRINTERBOUNCE=kona
 	scp $1 $PRINTERBOUNCE:PRINT && ssh $PRINTERBOUNCE lpr -P cs-p6-204 PRINT
 }
 
+alias m=more
