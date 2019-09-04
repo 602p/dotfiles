@@ -178,3 +178,7 @@ gpu-off () {
 ram-ctrl () {
 	for i in {0..275} ; do echo $1 | sudo tee /sys/devices/system/memory/memory$i/online ; done
 }
+
+alias laundry="p ~/.config/i3/laundry.py"
+alias comstock-laundry="laundry 64 203036"
+alias comstock-laundry-w="watch -cn 45 python3 ~/.config/i3/laundry.py 64 203036"
