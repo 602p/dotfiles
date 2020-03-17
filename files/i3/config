@@ -349,7 +349,7 @@ bindsym XF86Calculator workspace 999:py
 
 exec i3-msg
 exec xset b 0
-exec ~/.fehbg
+exec feh --bg-scale ~/.config/i3/gargantua.jpg
 exec ~/.config/i3/setupxautolock.sh &
 
 #disable disabling of mouse while typing

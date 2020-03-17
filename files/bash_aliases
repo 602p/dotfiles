@@ -20,6 +20,9 @@ alias gcam="gc -am"
 alias gcam-s="git commit -am"
 alias gp="git push"
 alias gl="git pull"
+alias gf="git fetch"
+alias go="git log"
+alias gog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 alias gd="g diff --color | more"
 alias gy="gl && gp"
 alias g...="gcam ... && gy"
@@ -56,6 +59,7 @@ batt () {
 runc () {
 	gcc -Wall -Wextra -g $1 && ./a.out $2
 }
+
 clubbyplay () {
 	scp $1 clubby:
 	ssh clubby mpv $1 $2>1 1>/dev/null
@@ -151,7 +155,18 @@ alias gf="g fetch"
 alias mountmedia="sshfs -o reconnect hylaea:/files/media/ /files/media"
 alias mountmedias="sshfs -o reconnect scriber:/files/media/ /files/media"
 alias umountmedia="fusermount3 -u /files/media"
-alias umountmediaf="fusermount3 -zu /files/media"
+
+umountmediaf () {
+	fusermount3 -zu /files/media
+	killall -9 sshfs
+}
+
+rmountmediaf () {
+	umountmediaf
+	ssh-clear-masters
+	mountmedia
+}
+
 alias startx="~/.startx"
 
 
@@ -182,3 +197,18 @@ ram-ctrl () {
 alias laundry="p ~/.config/i3/laundry.py"
 alias comstock-laundry="laundry 64 203036"
 alias comstock-laundry-w="watch -cn 45 python3 ~/.config/i3/laundry.py 64 203036"
+
+watch-and-run () {
+	inotifywait -q -m -e close_write $1 |
+	while read -r filename event; do
+		$2
+	done
+}
+
+tex-to-pdf-watch () {
+	texi2pdf -b $1
+	watch-and-run $1 "texi2pdf -b $1"
+}
+
+alias suspend-disable="sudo systemctl mask suspend.target"
+alias suspend-enable="sudo systemctl unmask suspend.target"

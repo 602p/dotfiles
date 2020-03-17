@@ -53,5 +53,6 @@ fi
 xmodmap -e "keycode 108 = Multi_key"
 export GTK_IM_MODULE=xim
 export QT_IM_MODULE=xim
+#xrandr --dpi 220
 xrandr --dpi 220
 i3

@@ -32,7 +32,6 @@ URxvt.secondaryScroll: 0
 !URxvt.letterSpace: -5
 URxvt.perl-ext-common: font-size
 
-
 Xft.dpi: 220
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault

@@ -14,7 +14,7 @@
 		{ "keys": ["ctrl+shift+,"], "command": "move", "args": {"by": "characters", "forward": false, "extend": true} },
 		{ "keys": ["ctrl+shift+."], "command": "move", "args": {"by": "characters", "forward": true, "extend": true} },
 
-		{ "keys": ["alt+1"], "command": "select_by_index", "args": { "index": 0 } },
+		{ "keys": ["ctrl+1"], "command": "select_by_index", "args": { "index": 0 } },
 		{ "keys": ["ctrl+2"], "command": "select_by_index", "args": { "index": 1 } },
 		{ "keys": ["ctrl+3"], "command": "select_by_index", "args": { "index": 2 } },
 		{ "keys": ["ctrl+4"], "command": "select_by_index", "args": { "index": 3 } },

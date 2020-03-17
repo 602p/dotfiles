@@ -1,3 +1,11 @@
+Host deat
+        HostName 10.0.0.2
+        ForwardAgent yes
+        ProxyCommand ssh hylaea nc %h %p
+        ControlPath ~/.ssh/controlmasters/%r@%h:%p
+        ControlMaster auto
+        ControlPersist 10m
+
 Host cclubby
         HostName 10.10.1.2
         ForwardAgent yes
@@ -16,7 +24,7 @@ Host hestia
         ControlPersist 10m
 
 Host jotunn
-        HostName 160.94.179.181
+        HostName jotunn.acm.umn.edu
 #       ProxyCommand ssh cerberus nc %h %p
         User louis
         ForwardAgent yes

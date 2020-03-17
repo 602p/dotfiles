@@ -9,7 +9,20 @@
 		"indices",
 		"Isai",
 		"admin",
-		"google"
+		"google",
+		"compatibilism",
+		"incompatibilist",
+		"incompatibilism",
+		"determinist",
+		"determinists",
+		"contractualism",
+		"Scanlon's",
+		"Gödel",
+		"Kripke",
+		"Kripke's",
+		"Frege",
+		"Dinkytown",
+		"descriptivist"
 	],
 	"color_scheme": "Packages/Agila Theme/Agila Monokai Extended.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
@@ -22,7 +35,7 @@
 	"font_options":
 	[
 	],
-	"font_size": 13,
+	"font_size": 14,
 	"ignored_packages":
 	[
 		"Vintage"
