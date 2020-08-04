@@ -17,6 +17,7 @@ automake
 banner
 bash
 bash-completion
+bashtop-git
 beep
 bind-tools
 binutils
@@ -29,6 +30,7 @@ bzip2
 cardpeek
 ccid
 cdrtools
+ckan
 clementine
 cloc
 cmus
@@ -41,11 +43,13 @@ cpupower
 cryptsetup
 cups
 cups-pdf
+dart-sass
 device-mapper
 dhcpcd
 dialog
 diffutils
 digikam
+discord
 djview
 dmenu
 dmidecode
@@ -53,6 +57,7 @@ docker
 dsniff
 e2fsprogs
 easytag
+edk2-shell
 elinks
 eog
 ethtool
@@ -94,8 +99,10 @@ gstreamer0.10
 gstreamer0.10-base
 gstreamer0.10-base-plugins
 gzip
+hplip
 htop
 hugin
+hyperfine
 i3-gaps
 i3lock
 i3status
@@ -201,7 +208,7 @@ qtpass
 r
 racket
 read-edid
-refind-efi
+refind
 reiserfsprogs
 ripgrep
 rstudio-desktop-bin
@@ -223,6 +230,7 @@ sl
 smartmontools
 solid
 speedtest-cli
+sqlitebrowser
 sshfs
 sshuttle
 steam
@@ -283,7 +291,6 @@ weechat
 wget
 which
 whois
-wireguard-arch
 wireguard-tools
 wireshark-qt
 woeusb

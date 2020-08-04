@@ -188,6 +188,7 @@ export PATH="$HOME/.cargo/bin":$PATH
 export PATH="$HOME/bin":$PATH
 export PATH="$HOME/.local/bin":$PATH
 export PYTHONSTARTUP="$HOME/.pythonrc.py"
+export PATH="$PATH":"/home/louis/.gem/ruby/2.7.0/bin"
 
 if [ $IS_SERVER -ne 1 ]
 then

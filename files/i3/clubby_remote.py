@@ -94,7 +94,7 @@ while run:
 		if e.type==pygame.MOUSEBUTTONUP:
 			do_command(b"mouseup %i"%e.button)
 			
-	if sum(total_rel):
+	if any(total_rel):
 		# print(total_rel)
 		do_command(b"mousemove_relative -- %i %i"%tuple(total_rel))
 		
