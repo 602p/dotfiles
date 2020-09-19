@@ -7,11 +7,8 @@ set -e
 NOTIFYpASTE_PID=$!
 
 
-SCREENSHOT=$HOME/.config/i3/leanshot
-# choose some file to save it to
-FILE="$HOME/.last_screenshot.png"
-$SCREENSHOT selection -o $FILE
-# optional: copy to clipboard
+maim -s -u > "$HOME/.last_screenshot.png"
+
 TS=$(date +%s%N)
 source ~/.ssh-agent-info
 scp "$HOME/.last_screenshot.png" hylaea:www/.screenshots/.$TS.png

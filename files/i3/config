@@ -7,6 +7,7 @@ font xft:Input Mono Narrow 10
 floating_modifier $mod
 
 workspace_layout tabbed
+focus_wrapping workspace
 
 # start a terminal
 bindsym $mod+Return exec urxvt
@@ -63,7 +64,7 @@ mode "$mode_layout" {
 
     bindsym f exec python ~/.config/i3/toggle_ffm.py; mode "default"
 
-    bindsym o move workspace to output up
+    bindsym o move workspace to output left
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -236,11 +237,10 @@ mode "$mode_system" {
 
 bindsym $mod+Home mode "$mode_system"
 
-set $mode_settings (o) Touchpad On (d) Touchpad Off (f) Toggle ffm (u) unclutter (s) Screenshot (l) leanshot (Shift+l) leanshot-upload (Shift+u) upload clipboard (r) Reload (Shift+r) Restart [LOGOUT]
+set $mode_settings (o) Touchpad On (d) Touchpad Off (f) Toggle ffm (u) unclutter (l) maim (Shift+l) maim-upload (Shift+u) upload clipboard (r) Reload (Shift+r) Restart [LOGOUT]
 mode "$mode_settings" {
     bindsym o exec xinput set-prop "SynPS/2 Synaptics TouchPad" 299 1; mode "default"
     bindsym d exec xinput set-prop "SynPS/2 Synaptics TouchPad" 299 0; mode "default"
-    bindsym s exec mkdir ~/screenshots; exec bash -c "cd screenshots&&scrot"; mode "default"
     bindsym l exec bash ~/.config/i3/do_leanshot.sh; mode "default"
     bindsym Shift+l exec bash ~/.config/i3/leanshot_upload.sh; mode "default"
     bindsym Shift+u exec python3 ~/.config/i3/upload_clipboard.py; mode "default"

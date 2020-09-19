@@ -19,7 +19,7 @@ bash
 bash-completion
 bashtop-git
 beep
-bind-tools
+bind
 binutils
 bison
 blueman
@@ -108,6 +108,7 @@ i3lock
 i3status
 i7z
 icedtea-web
+id3v2
 idris
 imlib2
 inetutils
@@ -138,12 +139,14 @@ licenses
 linux
 linux-firmware
 logrotate
+ltunify-git
 lvm2
 lynis
 lynx
 m4
 macchanger
 mailutils
+maim
 make
 man-db
 man-pages
@@ -240,6 +243,7 @@ stress
 stress-ng
 sublime-text
 sudo
+swi-prolog
 sysbench
 sysfsutils
 sysstat
@@ -355,4 +359,5 @@ xterm
 youtube-dl
 zip
 zola-bin
+zoom
 zsh
